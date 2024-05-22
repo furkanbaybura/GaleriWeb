@@ -1,0 +1,16 @@
+C:\Users\user\source\repos\GaleriWeb\CeylanMotors\Galeri.DTO\bin\Debug\net8.0\Galeri.DTO.deps.json
+C:\Users\user\source\repos\GaleriWeb\CeylanMotors\Galeri.DTO\bin\Debug\net8.0\Galeri.DTO.dll
+C:\Users\user\source\repos\GaleriWeb\CeylanMotors\Galeri.DTO\bin\Debug\net8.0\Galeri.DTO.pdb
+C:\Users\user\source\repos\GaleriWeb\CeylanMotors\Galeri.DTO\bin\Debug\net8.0\Galeri.Entities.dll
+C:\Users\user\source\repos\GaleriWeb\CeylanMotors\Galeri.DTO\bin\Debug\net8.0\Galeri.Entities.pdb
+C:\Users\user\source\repos\GaleriWeb\CeylanMotors\Galeri.DTO\obj\Debug\net8.0\Galeri.DTO.csproj.AssemblyReference.cache
+C:\Users\user\source\repos\GaleriWeb\CeylanMotors\Galeri.DTO\obj\Debug\net8.0\Galeri.DTO.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\source\repos\GaleriWeb\CeylanMotors\Galeri.DTO\obj\Debug\net8.0\Galeri.DTO.AssemblyInfoInputs.cache
+C:\Users\user\source\repos\GaleriWeb\CeylanMotors\Galeri.DTO\obj\Debug\net8.0\Galeri.DTO.AssemblyInfo.cs
+C:\Users\user\source\repos\GaleriWeb\CeylanMotors\Galeri.DTO\obj\Debug\net8.0\Galeri.DTO.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\GaleriWeb\CeylanMotors\Galeri.DTO\obj\Debug\net8.0\Galeri.DTO.sourcelink.json
+C:\Users\user\source\repos\GaleriWeb\CeylanMotors\Galeri.DTO\obj\Debug\net8.0\Galeri.DTO.csproj.Up2Date
+C:\Users\user\source\repos\GaleriWeb\CeylanMotors\Galeri.DTO\obj\Debug\net8.0\Galeri.DTO.dll
+C:\Users\user\source\repos\GaleriWeb\CeylanMotors\Galeri.DTO\obj\Debug\net8.0\refint\Galeri.DTO.dll
+C:\Users\user\source\repos\GaleriWeb\CeylanMotors\Galeri.DTO\obj\Debug\net8.0\Galeri.DTO.pdb
+C:\Users\user\source\repos\GaleriWeb\CeylanMotors\Galeri.DTO\obj\Debug\net8.0\ref\Galeri.DTO.dll
