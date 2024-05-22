@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Galeri.DTO\Galeri.DTO.csproj" />
+    <ProjectReference Include="..\Galeri.DAL\Galeri.DAL.csproj" />
+    <ProjectReference Include="..\Galeri.ViewModel\Galeri.ViewModel.csproj" />
+  </ItemGroup>
+
+</Project>
