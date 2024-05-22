@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "65yHJW61ryO3x43Lby4FAbxGttZ8DCJVscW6pxAIERDBSH7uFTILHwajaXO+ulRhzCrm75OGqbedGiffcZwDrA==",
+  "dgSpecHash": "VuXKTTi90dv7Yub5u+XmIT6VNU31Mfm4dIz83UoDt+41PwwuofcJixSqUo1fGyJAgVXHNZUfMoDeuUuhlTeeCg==",
   "success": true,
   "projectFilePath": "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\NTier\\Galeri.BLL\\Galeri.BLL.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\user\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\8.0.5\\microsoft.aspnetcore.cryptography.internal.8.0.5.nupkg.sha512",
