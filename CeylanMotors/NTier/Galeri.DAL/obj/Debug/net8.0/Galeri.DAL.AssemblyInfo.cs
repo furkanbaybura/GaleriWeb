@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Galeri.DAL")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f13857ff4b8021e2bca65d0df8a94918718c1895")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+90c44fe8b521bd321a81e5b64b5d6ad11b49a5d2")]
 [assembly: System.Reflection.AssemblyProductAttribute("Galeri.DAL")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Galeri.DAL")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

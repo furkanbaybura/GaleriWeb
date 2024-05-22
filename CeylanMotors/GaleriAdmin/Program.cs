@@ -1,7 +1,21 @@
+using Galeri.DAL.DataContext;
+using Galeri.Entities.Concrete;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddDbContext<GaleriDbContext>(opt =>
+{
+    opt.UseSqlServer(builder.Configuration.GetConnectionString("GaleriConStr"));
+});
+
+builder.Services.AddIdentityCore<AppUser>()
+                .AddDefaultTokenProviders()
+                .AddEntityFrameworkStores<GaleriDbContext>();
 
 var app = builder.Build();
 

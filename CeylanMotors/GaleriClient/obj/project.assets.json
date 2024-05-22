@@ -1100,6 +1100,16 @@
           "bin/placeholder/Galeri.BLL.dll": {}
         }
       },
+      "Galeri.Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/Galeri.Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Galeri.Common.dll": {}
+        }
+      },
       "Galeri.DAL/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
@@ -1134,6 +1144,10 @@
       "Galeri.Entities/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Galeri.Common": "1.0.0",
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "8.0.5"
+        },
         "compile": {
           "bin/placeholder/Galeri.Entities.dll": {}
         },
@@ -3015,6 +3029,11 @@
       "type": "project",
       "path": "../NTier/Galeri.BLL/Galeri.BLL.csproj",
       "msbuildProject": "../NTier/Galeri.BLL/Galeri.BLL.csproj"
+    },
+    "Galeri.Common/1.0.0": {
+      "type": "project",
+      "path": "../NTier/Galeri.Common/Galeri.Common.csproj",
+      "msbuildProject": "../NTier/Galeri.Common/Galeri.Common.csproj"
     },
     "Galeri.DAL/1.0.0": {
       "type": "project",
