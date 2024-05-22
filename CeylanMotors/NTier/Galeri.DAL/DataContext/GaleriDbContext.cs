@@ -17,5 +17,49 @@ namespace Galeri.DAL.DataContext
             
         }
         public DbSet<Category> Categories { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            base.OnModelCreating(builder);
+
+            string admin = "Admin";
+            string mail = admin + "@mail.com";
+            var hasher = new PasswordHasher<AppUser>();
+
+            builder.Entity<AppUser>()
+                   .HasData(new AppUser{
+                   Id=1,
+                   Name= admin,
+                   Surname= admin,
+                   UserName= admin,
+                   NormalizedUserName = admin.ToUpper(),
+                   Email= mail,
+                   NormalizedEmail = mail.ToUpper(),
+                   Birthdate = new DateOnly(2000,1,1),
+                   Gender = Common.Gender.None,
+                   EmailConfirmed = true,
+                   PhoneNumberConfirmed = true,
+                   PhoneNumber = "-",
+                   PasswordHash = hasher.HashPassword(null,"Az-123456")
+                   });
+            //admin role add
+
+            builder.Entity <IdentityRole<int>>()
+                          .HasData(new IdentityRole<int>
+                          {
+                              Id = 1,
+                              Name = admin,
+                              NormalizedName = admin.ToUpper()
+                          });
+            //user to roll add
+            builder.Entity<IdentityUserRole<int>>()
+                   .HasData(new IdentityUserRole<int>
+                   {
+                       UserId=1,
+                       RoleId=1
+
+                   });
+                   
+        }
     }
 }
