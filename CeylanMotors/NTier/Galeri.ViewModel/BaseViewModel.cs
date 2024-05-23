@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Galeri.DTO
+namespace Galeri.ViewModel
 {
-    public class BaseDto
+    public abstract class BaseViewModel
     {
         public int Id { get; set; }
-        public int AppUserId { get; set; }
+
     }
 }

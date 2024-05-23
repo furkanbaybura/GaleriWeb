@@ -1,4 +1,7 @@
+using Galeri.BLL.Managers.Concrete;
 using Galeri.DAL.DataContext;
+using Galeri.DAL.Repositories.Concrete;
+using Galeri.DAL.Services.Concrete;
 using Galeri.Entities.Concrete;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -11,11 +14,15 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<GaleriDbContext>(opt =>
 {
     opt.UseSqlServer(builder.Configuration.GetConnectionString("GaleriConStr"));
-});
+}, ServiceLifetime.Scoped);
 
 builder.Services.AddIdentityCore<AppUser>()
                 .AddDefaultTokenProviders()
                 .AddEntityFrameworkStores<GaleriDbContext>();
+
+builder.Services.AddScoped<CategoryRepo>();
+builder.Services.AddScoped<CategoryService>();
+builder.Services.AddScoped<CategoryManager>();
 
 var app = builder.Build();
 

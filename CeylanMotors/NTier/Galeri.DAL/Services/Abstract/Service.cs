@@ -49,7 +49,11 @@ namespace Galeri.DAL.Services.Abstract
             TEntity entity = _mapper.Map<TEntity>(dto);
             return _repo.Delete(entity);
         }
-
+        public int Delete(int id)
+        {
+            TEntity entity = _mapper.Map<TEntity>(id);
+            return _repo.Delete(entity);
+        }
         public IEnumerable<TDto> GetAll()
         {
             IEnumerable<TEntity> entities = _repo.GetAll();

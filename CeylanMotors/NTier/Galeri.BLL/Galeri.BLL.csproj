@@ -12,8 +12,4 @@
     <ProjectReference Include="..\Galeri.ViewModel\Galeri.ViewModel.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Managers\Concrete\" />
-  </ItemGroup>
-
 </Project>

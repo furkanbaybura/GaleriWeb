@@ -6,9 +6,11 @@ using System.Threading.Tasks;
 
 namespace Galeri.DTO
 {
-    public class BaseDto
+    public class CategoryDto : BaseDto
     {
-        public int Id { get; set; }
+        public string Name { get; set; }
+        public string Description { get; set; }
         public int AppUserId { get; set; }
+
     }
 }
