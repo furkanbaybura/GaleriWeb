@@ -1,10 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "P+EzG2f+Wh+MLF3pLtFtTusFG1qFT5o8/lxq3SkzIoNjFN8czusbd2Zpe4Iwp9qNZmv1DxUreip46Jo8h0fWbg==",
+  "dgSpecHash": "VChuuvV0B33ZpGhdviIxWFszAIYKbrAQBRjCsWiRvNXePPbGM+qrC3htFlUm94lB4oYPQsXvnZeYjeuN6yXZEA==",
   "success": true,
   "projectFilePath": "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\GaleriAdmin\\GaleriAdmin.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\user\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\automapper.collection\\10.0.0\\automapper.collection.10.0.0.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\automapper.extensions.expressionmapping\\7.0.1\\automapper.extensions.expressionmapping.7.0.1.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\fluentvalidation\\11.5.1\\fluentvalidation.11.5.1.nupkg.sha512",

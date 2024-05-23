@@ -1,10 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "0K9RrruOHIpK9aeeCAVEqI4+y2QgQ8hURp1X3paDxRaogmeOkxX6e7chsKnWRfZ4bQA/MqaHVxEYnYsJW+sCBg==",
+  "dgSpecHash": "qhQnT7VX3+yVpLXKmqgnoVWyXnqq5mfvSHf+9f5mC4R3f32U6B6MW17YCiSqW72xaZUXruAe4yZunxfGm0WRUw==",
   "success": true,
   "projectFilePath": "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\NTier\\Galeri.DAL\\Galeri.DAL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\user\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\automapper.collection\\10.0.0\\automapper.collection.10.0.0.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\automapper.extensions.expressionmapping\\7.0.1\\automapper.extensions.expressionmapping.7.0.1.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
