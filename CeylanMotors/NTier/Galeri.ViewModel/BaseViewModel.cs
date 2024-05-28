@@ -7,8 +7,5 @@ using System.Threading.Tasks;
 namespace Galeri.ViewModel
 {
     public abstract class BaseViewModel
-    {
-        public int Id { get; set; }
-
-    }
+    {}
 }

@@ -3,52 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{869FFA3F-6509-4685-ADBC-F62F2C3DCAC5}|GaleriAdmin\\GaleriAdmin.csproj|c:\\users\\user\\source\\repos\\galeriweb\\ceylanmotors\\galeriadmin\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{869FFA3F-6509-4685-ADBC-F62F2C3DCAC5}|GaleriAdmin\\GaleriAdmin.csproj|solutionrelative:galeriadmin\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{869FFA3F-6509-4685-ADBC-F62F2C3DCAC5}|GaleriAdmin\\GaleriAdmin.csproj|c:\\users\\user\\source\\repos\\galeriweb\\ceylanmotors\\galeriadmin\\views\\category\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{869FFA3F-6509-4685-ADBC-F62F2C3DCAC5}|GaleriAdmin\\GaleriAdmin.csproj|solutionrelative:galeriadmin\\views\\category\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{869FFA3F-6509-4685-ADBC-F62F2C3DCAC5}|GaleriAdmin\\GaleriAdmin.csproj|c:\\users\\user\\source\\repos\\galeriweb\\ceylanmotors\\galeriadmin\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{869FFA3F-6509-4685-ADBC-F62F2C3DCAC5}|GaleriAdmin\\GaleriAdmin.csproj|solutionrelative:galeriadmin\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6E52D836-26B1-4437-87B1-2EF1F390155B}|NTier\\Galeri.BLL\\Galeri.BLL.csproj|c:\\users\\user\\source\\repos\\galeriweb\\ceylanmotors\\ntier\\galeri.bll\\managers\\concrete\\categorymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6E52D836-26B1-4437-87B1-2EF1F390155B}|NTier\\Galeri.BLL\\Galeri.BLL.csproj|solutionrelative:ntier\\galeri.bll\\managers\\concrete\\categorymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6E52D836-26B1-4437-87B1-2EF1F390155B}|NTier\\Galeri.BLL\\Galeri.BLL.csproj|c:\\users\\user\\source\\repos\\galeriweb\\ceylanmotors\\ntier\\galeri.bll\\managers\\abstract\\manager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6E52D836-26B1-4437-87B1-2EF1F390155B}|NTier\\Galeri.BLL\\Galeri.BLL.csproj|solutionrelative:ntier\\galeri.bll\\managers\\abstract\\manager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{74E49CFB-6B79-4E0E-BDC8-201060966743}|NTier\\Galeri.ViewModel\\Galeri.ViewModel.csproj|c:\\users\\user\\source\\repos\\galeriweb\\ceylanmotors\\ntier\\galeri.viewmodel\\category\\categoryviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{74E49CFB-6B79-4E0E-BDC8-201060966743}|NTier\\Galeri.ViewModel\\Galeri.ViewModel.csproj|solutionrelative:ntier\\galeri.viewmodel\\category\\categoryviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CC3C43BB-B2A5-4566-B9C3-C981DF485D42}|Galeri.DTO\\Galeri.DTO.csproj|c:\\users\\user\\source\\repos\\galeriweb\\ceylanmotors\\galeri.dto\\basedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CC3C43BB-B2A5-4566-B9C3-C981DF485D42}|Galeri.DTO\\Galeri.DTO.csproj|solutionrelative:galeri.dto\\basedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{74E49CFB-6B79-4E0E-BDC8-201060966743}|NTier\\Galeri.ViewModel\\Galeri.ViewModel.csproj|c:\\users\\user\\source\\repos\\galeriweb\\ceylanmotors\\ntier\\galeri.viewmodel\\baseviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{74E49CFB-6B79-4E0E-BDC8-201060966743}|NTier\\Galeri.ViewModel\\Galeri.ViewModel.csproj|solutionrelative:ntier\\galeri.viewmodel\\baseviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AEDE952F-E7B9-4B80-8865-494792333C98}|NTier\\Galeri.DAL\\Galeri.DAL.csproj|c:\\users\\user\\source\\repos\\galeriweb\\ceylanmotors\\ntier\\galeri.dal\\services\\concrete\\categoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AEDE952F-E7B9-4B80-8865-494792333C98}|NTier\\Galeri.DAL\\Galeri.DAL.csproj|solutionrelative:ntier\\galeri.dal\\services\\concrete\\categoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AEDE952F-E7B9-4B80-8865-494792333C98}|NTier\\Galeri.DAL\\Galeri.DAL.csproj|c:\\users\\user\\source\\repos\\galeriweb\\ceylanmotors\\ntier\\galeri.dal\\repositories\\concrete\\categoryrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AEDE952F-E7B9-4B80-8865-494792333C98}|NTier\\Galeri.DAL\\Galeri.DAL.csproj|solutionrelative:ntier\\galeri.dal\\repositories\\concrete\\categoryrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CC3C43BB-B2A5-4566-B9C3-C981DF485D42}|Galeri.DTO\\Galeri.DTO.csproj|c:\\users\\user\\source\\repos\\galeriweb\\ceylanmotors\\galeri.dto\\categorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CC3C43BB-B2A5-4566-B9C3-C981DF485D42}|Galeri.DTO\\Galeri.DTO.csproj|solutionrelative:galeri.dto\\categorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6E52D836-26B1-4437-87B1-2EF1F390155B}|NTier\\Galeri.BLL\\Galeri.BLL.csproj|c:\\users\\user\\source\\repos\\galeriweb\\ceylanmotors\\ntier\\galeri.bll\\managers\\abstract\\imanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6E52D836-26B1-4437-87B1-2EF1F390155B}|NTier\\Galeri.BLL\\Galeri.BLL.csproj|solutionrelative:ntier\\galeri.bll\\managers\\abstract\\imanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{869FFA3F-6509-4685-ADBC-F62F2C3DCAC5}|GaleriAdmin\\GaleriAdmin.csproj|c:\\users\\user\\source\\repos\\galeriweb\\ceylanmotors\\galeriadmin\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{869FFA3F-6509-4685-ADBC-F62F2C3DCAC5}|GaleriAdmin\\GaleriAdmin.csproj|solutionrelative:galeriadmin\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -58,86 +18,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\GaleriAdmin\\Program.cs",
-              "RelativeDocumentMoniker": "GaleriAdmin\\Program.cs",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\GaleriAdmin\\Program.cs",
-              "RelativeToolTip": "GaleriAdmin\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAbAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-23T20:25:53.002Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\GaleriAdmin\\Views\\Category\\Index.cshtml",
-              "RelativeDocumentMoniker": "GaleriAdmin\\Views\\Category\\Index.cshtml",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\GaleriAdmin\\Views\\Category\\Index.cshtml",
-              "RelativeToolTip": "GaleriAdmin\\Views\\Category\\Index.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAVAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-23T20:16:32.342Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "CategoryController.cs",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\GaleriAdmin\\Controllers\\CategoryController.cs",
-              "RelativeDocumentMoniker": "GaleriAdmin\\Controllers\\CategoryController.cs",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\GaleriAdmin\\Controllers\\CategoryController.cs",
-              "RelativeToolTip": "GaleriAdmin\\Controllers\\CategoryController.cs",
-              "ViewState": "AQIAAAcAAAAAAAAAAAAAABUAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-23T20:13:59.234Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "BaseDto.cs",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\Galeri.DTO\\BaseDto.cs",
-              "RelativeDocumentMoniker": "Galeri.DTO\\BaseDto.cs",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\Galeri.DTO\\BaseDto.cs",
-              "RelativeToolTip": "Galeri.DTO\\BaseDto.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAqAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-23T19:52:50.021Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "BaseViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\NTier\\Galeri.ViewModel\\BaseViewModel.cs",
-              "RelativeDocumentMoniker": "NTier\\Galeri.ViewModel\\BaseViewModel.cs",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\NTier\\Galeri.ViewModel\\BaseViewModel.cs",
-              "RelativeToolTip": "NTier\\Galeri.ViewModel\\BaseViewModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-23T19:50:51.202Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "CategoryViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\NTier\\Galeri.ViewModel\\Category\\CategoryViewModel.cs",
-              "RelativeDocumentMoniker": "NTier\\Galeri.ViewModel\\Category\\CategoryViewModel.cs",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\NTier\\Galeri.ViewModel\\Category\\CategoryViewModel.cs",
-              "RelativeToolTip": "NTier\\Galeri.ViewModel\\Category\\CategoryViewModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAoAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-23T19:48:05.922Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
@@ -152,80 +34,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "CategoryManager.cs",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\NTier\\Galeri.BLL\\Managers\\Concrete\\CategoryManager.cs",
-              "RelativeDocumentMoniker": "NTier\\Galeri.BLL\\Managers\\Concrete\\CategoryManager.cs",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\NTier\\Galeri.BLL\\Managers\\Concrete\\CategoryManager.cs",
-              "RelativeToolTip": "NTier\\Galeri.BLL\\Managers\\Concrete\\CategoryManager.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-23T19:46:29.886Z",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\GaleriAdmin\\Views\\Category\\Index.cshtml",
+              "RelativeDocumentMoniker": "GaleriAdmin\\Views\\Category\\Index.cshtml",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\GaleriAdmin\\Views\\Category\\Index.cshtml",
+              "RelativeToolTip": "GaleriAdmin\\Views\\Category\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAA6AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-28T20:48:32.059Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "CategoryRepo.cs",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\NTier\\Galeri.DAL\\Repositories\\Concrete\\CategoryRepo.cs",
-              "RelativeDocumentMoniker": "NTier\\Galeri.DAL\\Repositories\\Concrete\\CategoryRepo.cs",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\NTier\\Galeri.DAL\\Repositories\\Concrete\\CategoryRepo.cs",
-              "RelativeToolTip": "NTier\\Galeri.DAL\\Repositories\\Concrete\\CategoryRepo.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-23T19:44:46.107Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "CategoryDto.cs",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\Galeri.DTO\\CategoryDto.cs",
-              "RelativeDocumentMoniker": "Galeri.DTO\\CategoryDto.cs",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\Galeri.DTO\\CategoryDto.cs",
-              "RelativeToolTip": "Galeri.DTO\\CategoryDto.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-23T19:43:05.002Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "CategoryService.cs",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\NTier\\Galeri.DAL\\Services\\Concrete\\CategoryService.cs",
-              "RelativeDocumentMoniker": "NTier\\Galeri.DAL\\Services\\Concrete\\CategoryService.cs",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\NTier\\Galeri.DAL\\Services\\Concrete\\CategoryService.cs",
-              "RelativeToolTip": "NTier\\Galeri.DAL\\Services\\Concrete\\CategoryService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-23T19:42:09.509Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Manager.cs",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\NTier\\Galeri.BLL\\Managers\\Abstract\\Manager.cs",
-              "RelativeDocumentMoniker": "NTier\\Galeri.BLL\\Managers\\Abstract\\Manager.cs",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\NTier\\Galeri.BLL\\Managers\\Abstract\\Manager.cs",
-              "RelativeToolTip": "NTier\\Galeri.BLL\\Managers\\Abstract\\Manager.cs",
-              "ViewState": "AQIAABoAAAAAAAAAAAAQwB0AAAA4AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-23T18:15:48.002Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "IManager.cs",
-              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\NTier\\Galeri.BLL\\Managers\\Abstract\\IManager.cs",
-              "RelativeDocumentMoniker": "NTier\\Galeri.BLL\\Managers\\Abstract\\IManager.cs",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\NTier\\Galeri.BLL\\Managers\\Abstract\\IManager.cs",
-              "RelativeToolTip": "NTier\\Galeri.BLL\\Managers\\Abstract\\IManager.cs",
-              "ViewState": "AQIAAAQAAAAAAAAAAAAAABMAAAAbAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-23T18:12:00.182Z",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\GaleriAdmin\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "GaleriAdmin\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\GaleriAdmin\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "GaleriAdmin\\Views\\Home\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-28T20:48:08.222Z",
               "EditorCaption": ""
             }
           ]

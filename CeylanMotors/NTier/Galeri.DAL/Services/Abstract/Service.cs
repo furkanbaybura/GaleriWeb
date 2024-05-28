@@ -31,6 +31,7 @@ namespace Galeri.DAL.Services.Abstract
 
              });
             _mapper = _config.CreateMapper();
+            _repo = repo;
         }
         
         public IMapper Mapper 
@@ -51,10 +52,10 @@ namespace Galeri.DAL.Services.Abstract
         }
         public int Delete(int id)
         {
-            TEntity entity = _mapper.Map<TEntity>(id);
-            return _repo.Delete(entity);
+            TDto? dto = this.Get(id);
+            return this.Delete(dto);
         }
-        public IEnumerable<TDto> GetAll()
+        public virtual IEnumerable<TDto> GetAll()
         {
             IEnumerable<TEntity> entities = _repo.GetAll();
             IEnumerable<TDto> dtos = _mapper.Map<IEnumerable<TDto>>(entities.ToList());

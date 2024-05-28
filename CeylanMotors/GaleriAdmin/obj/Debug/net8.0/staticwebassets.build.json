@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "JBYr9knU7aI8wWlLrjNYgZddkQoc1OeZ1JxevoPgUBA=",
+  "Hash": "MM7dgh0P/5scz7z4W5tD4JiMi6rIfYBKdQNOKPs1sSw=",
   "Source": "GaleriAdmin",
   "BasePath": "_content/GaleriAdmin",
   "Mode": "Default",
@@ -91,6 +91,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\GaleriAdmin\\wwwroot\\js\\Category\\index.js",
+      "SourceId": "GaleriAdmin",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\GaleriAdmin\\wwwroot\\",
+      "BasePath": "_content/GaleriAdmin",
+      "RelativePath": "js/Category/index.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\Category\\index.js"
     },
     {
       "Identity": "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\GaleriAdmin\\wwwroot\\js\\site.js",

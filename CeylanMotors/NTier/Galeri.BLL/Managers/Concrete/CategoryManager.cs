@@ -3,6 +3,7 @@ using Galeri.DAL.Services.Abstract;
 using Galeri.DAL.Services.Concrete;
 using Galeri.DTO;
 using Galeri.Entities.Concrete;
+using Galeri.ViewModel;
 using Galeri.ViewModel.Category;
 using Microsoft.Identity.Client;
 using System;

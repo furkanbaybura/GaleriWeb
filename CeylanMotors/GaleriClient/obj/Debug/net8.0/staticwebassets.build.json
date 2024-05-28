@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "yVH87LIebzsB0u7475MsAru9ytOLXdxxyzsT97n1Z+8=",
+  "Hash": "TGMXAOkTMJAMbBenQDddn3Hs0azK1Z3+xCC0kDReaUw=",
   "Source": "GaleriClient",
   "BasePath": "_content/GaleriClient",
   "Mode": "Default",
@@ -91,6 +91,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\GaleriClient\\wwwroot\\images\\car-10.jpg",
+      "SourceId": "GaleriClient",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\GaleriClient\\wwwroot\\",
+      "BasePath": "_content/GaleriClient",
+      "RelativePath": "images/car-10.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\car-10.jpg"
     },
     {
       "Identity": "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\GaleriClient\\wwwroot\\js\\site.js",

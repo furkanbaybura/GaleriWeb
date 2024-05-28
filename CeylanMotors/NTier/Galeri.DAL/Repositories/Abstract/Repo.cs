@@ -1,5 +1,6 @@
 ﻿using Galeri.DAL.DataContext;
 using Galeri.Entities.Abstract;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,6 +15,8 @@ namespace Galeri.DAL.Repositories.Abstract
         protected Repo(GaleriDbContext dbContext)
         {
             _dbcContext = dbContext;
+
+            _dbcContext.ChangeTracker.QueryTrackingBehavior = QueryTrackingBehavior.NoTrackingWithIdentityResolution;
         }
 
         public int Add(TEntity entity)
@@ -31,13 +34,13 @@ namespace Galeri.DAL.Repositories.Abstract
 
         public virtual TEntity? Get(int id)
         {
-            return _dbcContext.Set<TEntity>().Find(id);
+            return _dbcContext.Set<TEntity>().AsNoTracking().SingleOrDefault(e=>e.Id==id);
             
         }
 
         public virtual IEnumerable<TEntity> GetAll()
         {
-            return _dbcContext.Set<TEntity>().ToList();
+            return _dbcContext.Set<TEntity>().AsNoTracking().ToList();
         }
 
         public int Update(TEntity entity)
