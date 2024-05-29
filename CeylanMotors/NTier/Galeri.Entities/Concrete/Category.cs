@@ -1,4 +1,5 @@
-﻿using Galeri.Entities.Abstract;
+﻿using Galeri.Common;
+using Galeri.Entities.Abstract;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +12,7 @@ namespace Galeri.Entities.Concrete
     {
         public string Name { get; set; }
         public string Description { get; set; }
-
+    
         //public virtual ICollection<Product> Products {  get; set; }
     }
 }

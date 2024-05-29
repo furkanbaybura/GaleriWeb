@@ -109,7 +109,7 @@ namespace Galeri.DAL.Migrations
                             Id = 1,
                             AccessFailedCount = 0,
                             Birthdate = new DateOnly(2000, 1, 1),
-                            ConcurrencyStamp = "f0cdf3c9-d5ce-44b7-9b12-61d7aa151ca4",
+                            ConcurrencyStamp = "ccbec6b4-f828-4bf6-8a5e-d1150ccf2c95",
                             Email = "Admin@mail.com",
                             EmailConfirmed = true,
                             Gender = 0,
@@ -117,7 +117,7 @@ namespace Galeri.DAL.Migrations
                             Name = "Admin",
                             NormalizedEmail = "ADMİN@MAİL.COM",
                             NormalizedUserName = "ADMİN",
-                            PasswordHash = "AQAAAAIAAYagAAAAEMW3kvtPt1muobaBeDYXzya2Isfo2W6i5ZzJdWI3eYxykn+9zHs+lTElAgaeslcitw==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEJe67upTPZODIEPPwkAg5hd+JjfoZ2vYBAsKTqkXivhqZ+BlCJJ8rpQGc3MkvxBqjQ==",
                             PhoneNumber = "-",
                             PhoneNumberConfirmed = true,
                             Surname = "Admin",
@@ -137,10 +137,21 @@ namespace Galeri.DAL.Migrations
                     b.Property<int>("AppUserId")
                         .HasColumnType("int");
 
+                    b.Property<int>("Beygir")
+                        .HasColumnType("int");
+
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Km")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Marka")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -150,6 +161,12 @@ namespace Galeri.DAL.Migrations
 
                     b.Property<DateTime?>("UpdatedDate")
                         .HasColumnType("datetime2");
+
+                    b.Property<int>("Vites")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Yil")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 

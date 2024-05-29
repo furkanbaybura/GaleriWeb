@@ -1,49 +1,120 @@
-﻿<!DOCTYPE html>
+﻿@addTagHelper *,Microsoft.AspNetCore.Mvc.TagHelpers
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - GaleriClient</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/GaleriClient.styles.css" asp-append-version="true" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>@ViewBag.Title</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
+
+
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">GaleriClient</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
+<header>
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light  border-bottom box-shadow mb-3" style="background-color:darkred;">
+        <div class="container-fluid" style="background-color:black;">
+            <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index" style="font-size:35px;color:white">Ceylan Motors</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a style="font-size:20px;color:white" class=" nav-link @(ViewBag.Title == "Anasayfa" ? "active" : "")" text-dark" asp-area="" asp-controller="Home" asp-action="Index">Anasayfa</a>
+                    </li>
+                    <li class="nav-item">
+                        <a style="font-size:20px;color:white" class=" nav-link @(ViewBag.Title == "İlanlarımız" ? "active" : "")" text-dark" asp-area="" asp-controller="IlanlarContreller" asp-action="Index">İlanlarımız</a>
+                    </li>
+                    <li class="nav-item">
+                        <a style="font-size:20px;color:white" class=" nav-link @(ViewBag.Title == "Referanslarımız" ? "active" : "")" text-dark" asp-area="" asp-controller="Reference" asp-action="Index">Referanslarımız</a>
+                    </li>
+                    <li class="nav-item">
+                        <a style="font-size:20px;color:white" class="nav-link @(ViewBag.Title == "Hakkımızda" ? "active" : "")" text-dark" asp-area="" asp-controller="Hakkımızda" asp-action="Index">Hakkımızda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a style="font-size:20px;color:white" class="nav-link @(ViewBag.Title == "İletişim" ? "active" : "")" text-dark" asp-area="" asp-controller="İletisim" asp-action="Index">İletişim</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<body>
+    <div>
+        @RenderBody()
+    </div>
+</body>
+</html>
+<footer class="ftco-footer ftco-bg-dark ftco-section" style="background-color:#191919">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-md">
+                <div class="ftco-footer-widget mb-4">
+                    <h2 class="ftco-heading-2"><a href="#" class="logo">Ceylan<span style="color:darkred">Motors</span></a></h2>
+                    <p>Satış ve pazarlamasını üstlendiğimiz rekabetçi ve sürekli gelişme potansiyeline sahip otomotiv markalarını, bölgemizdeki tüketici ihtiyaçlarını da göz önüne alarak, geniş bir ürün yelpazesi altında, satış ve satış sonrası süreci koşulsuz müşteri memnuniyetini sağlayarak, tüketicilere ulaştırmaktır.</p>
+                    <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
+                        <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+                        <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+                        <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
                     </ul>
                 </div>
             </div>
-        </nav>
-    </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
+            <div class="col-md">
+                <div class="ftco-footer-widget mb-4 ml-md-5">
+                    <h2 class="ftco-heading-2">Kategoriler</h2>
+                    <ul class="list-unstyled">
+                        <li><a asp-controller="Home" asp-action="Index" class="py-2 d-block">Anasayfa</a></li>
+                        <li><a asp-controller="IlanlarContreller" asp-action="Index" class="py-2 d-block">İlanlarımız</a></li>
+                        <li><a asp-controller="Hakkımızda" asp-action="Index" class="py-2 d-block">Hakkımızda</a></li>
+                        <li><a asp-controller="Reference" asp-action="Index" class="py-2 d-block">Referanslarımız</a></li>
+                        <li><a asp-controller="İletisim" asp-action="Index" class="py-2 d-block">İletişim</a></li>
+                    </ul>
+                </div>
+            </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2024 - GaleriClient - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            <div class="col-md">
+                <div class="ftco-footer-widget mb-4">
+                    <h2 class="ftco-heading-2">Bize Ulaşın !</h2>
+                    <div class="block-23 mb-3">
+                        <ul>
+                            <li><span class="icon icon-map-marker"></span><span class="text">Yenice Mh. 1248. Sk. No:1V, 03030 Afyonkarahisar Merkez/Afyonkarahisar</span></li>
+                            <li><a href="#"><span class="icon icon-phone"></span><span class="text">+90 507 499 91 95</span></a></li>
+                            <li><a href="#"><span class="icon icon-envelope"></span><span class="text">ulviceylan@hotmail.com</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
-    </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-    @await RenderSectionAsync("Scripts", required: false)
-</body>
-</html>
+        <div class="row">
+            <div class="col-md-12 text-center">
+
+                <p>
+                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    Copyright &copy;<script>document.write(new Date().getFullYear());</script> | Tüm Hakları Ceylan Motors'a Saklıdır
+                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>

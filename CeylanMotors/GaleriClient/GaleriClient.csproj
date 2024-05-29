@@ -7,6 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="wwwroot\wwwroot\**" />
+    <Content Remove="wwwroot\wwwroot\**" />
+    <EmbeddedResource Remove="wwwroot\wwwroot\**" />
+    <None Remove="wwwroot\wwwroot\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\NTier\Galeri.BLL\Galeri.BLL.csproj" />
     <ProjectReference Include="..\NTier\Galeri.ViewModel\Galeri.ViewModel.csproj" />
   </ItemGroup>

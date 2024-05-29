@@ -1,19 +1,199 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+
+    ViewBag.Title = "Anasayfa";
 }
+<body class="body" style="background-color:#191919;">
+    @* video baslangıc *@
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+    @* <div class="video-container" style=" position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;">
+    <video loop="true" autoplay="autoplay" playsinline="" muted="">
+    <source src="~/images/bmeacilis.MOV" type="video/mp4">
+    </video>
+    </div> *@
 
-<div class="col col-3 mt-3" style="width: 25rem;border:2px solid darkred">
-    <img src="~/images/car-10.jpg" class="card-img-top" alt="...">
-    <div class="card-body">
-        <h5 class="card-title" style="text-align:center">Skywell</h5>
-        <p class="card-text">SkyWell ET5</p>
-        <p class="card-text"> Otomatik </p>
-        <p class="card-text">Benzin&Elektrik</p>
-        <a href="#" class="btn btn-danger">İlan Detayı</a>
-    </div>
-</div>
+    @* video bitis *@
+  
+
+    <div>
+
+        <div id="carouselExampleCaptions" class="carousel slide" style="padding-left:400px;padding-right:400px;">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="~/images/bmw.jpg" class="d-block w-100" alt="..." style="border:5px solid darkred;border-radius:80px;">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>2015 BMW 1.18i </h5>
+                        <p>125.000 km Otomatik Benzin </p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="~/images/passat.jpg" class="d-block w-100" alt="..." style="border:5px solid darkred;border-radius:80px;">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>2015 Volkswagen Passat</h5>
+                        <p>180.00 km 1.6 TDI Highline DSG</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="~/images/2008.jpg" class="d-block w-100" alt="..." style="border:5px solid darkred;border-radius:80px;">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Peugeot 2008</h5>
+                        <p>50.000 km 1.5 BlueHDI Allure EAT8</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        <br />
+        <br />
+        <br />
+        @* ilanlar kısmı başlangıç*@
+        <h1 style="text-align:center;color:white">Çok Yakında ! </h1>
+        <div class="body" style="background-color:#191919;">
+
+            <div class="row">
+                <div class="card-group" style="border:4px solid black">
+                    <div class="col col-3 mt-3" style="width: 25rem;border:3px solid darkred;">
+                        <img src="~/images/bmw.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title" style="text-align:center">2015 BMW 1.18i</h5>
+                            <p class="card-text">BMW 1.18i Joy </p>
+                            <p class="card-text"> Otomatik </p>
+                            <p class="card-text">Benzin</p>
+                            <a href="#" class="btn btn-danger">İlan Detayı</a>
+                        </div>
+
+                    </div>
+
+
+                    <div class="col col-3 mt-3" style="width: 25rem;border:2px solid darkred">
+                        <img src="~/images/passat.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title" style="text-align:center">2015 VW Passat</h5>
+                            <p class="card-text">Passat</p>
+                            <p class="card-text"> Otomatik </p>
+                            <p class="card-text">Dizel</p>
+                            <a href="#" class="btn btn-danger">İlan Detayı</a>
+                        </div>
+                    </div>
+
+                    <div class="col col-3 mt-3" style="width: 25rem;border:2px solid darkred">
+                        <img src="~/images/superb.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title" style="text-align:center">2022 Skoda Superb</h5>
+                            <p class="card-text">Skoda Superb</p>
+                            <p class="card-text"> Otomatik </p>
+                            <p class="card-text">Benzin</p>
+                            <a href="#" class="btn btn-danger">İlan Detayı</a>
+                        </div>
+                    </div>
+                    <div class="col col-3 mt-3" style="width: 25rem;border:2px solid darkred">
+                        <img src="~/images/et5.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title" style="text-align:center">Skywell</h5>
+                            <p class="card-text">SkyWell ET5</p>
+                            <p class="card-text"> Otomatik </p>
+                            <p class="card-text">Benzin&Elektrik</p>
+                            <a href="#" class="btn btn-danger">İlan Detayı</a>
+                        </div>
+                    </div>
+                    <div class="col col-3 mt-3" style="width: 25rem;border:2px solid darkred">
+                        <img src="~/images/et5.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title" style="text-align:center">Skywell</h5>
+                            <p class="card-text">SkyWell ET5</p>
+                            <p class="card-text"> Otomatik </p>
+                            <p class="card-text">Benzin&Elektrik</p>
+                            <a href="#" class="btn btn-danger">İlan Detayı</a>
+                        </div>
+                    </div>
+
+                    <div class="col col-3 mt-3" style="width: 25rem;border:2px solid darkred">
+                        <img src="~/images/et5.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title" style="text-align:center">Skywell</h5>
+                            <p class="card-text">SkyWell ET5</p>
+                            <p class="card-text"> Otomatik </p>
+                            <p class="card-text">Benzin&Elektrik</p>
+                            <a href="#" class="btn btn-danger">İlan Detayı</a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            @* ilanlar kısmı bitiş *@
+
+
+            @* burdan sonra hizmetler *@
+
+            <section class="ftco-section" style="color:#191919;border:4px solid darkred">
+                <div class="container" style="border:4px solid darkred;background-color:lightgray;border-radius:80px">
+                    <div class="row justify-content-center mb-5">
+                        <div class="col-md-7 text-center heading-section ftco-animate fadeInUp ftco-animated">
+
+                            <h1 class="mb-3" style="color:darkred">Hizmetlerimiz</h1>
+                        </div>
+                    </div>
+                    <div class="row" style="">
+                        <div class="col-md-3">
+                            <div class="services services-2 w-100 text-center">
+                                <div class="icon d-flex align-items-center justify-content-center" style="background-color:darkred"><span class="flaticon-wedding-car"></span></div>
+                                <div class="text w-100">
+                                    <h2 class="heading mb-2" style="color:darkred">Araç Almak İstiyorum !</h2>
+                                    <p>En kısa zamanda showroom'umuza Pazartesiden Cumartesiye 09.00-18.00 Arası Bekliyoruz</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="services services-2 w-100 text-center">
+                                <div class="icon d-flex align-items-center justify-content-center" style="background-color:darkred"><span class="flaticon-transportation"></span></div>
+                                <div class="text w-100">
+                                    <h2 class="heading mb-2" style="color:darkred">Aracımı Satmak İstiyorum</h2>
+                                    <p>Aracınızı değerinde satın alır, ödemesini anında peşin olarak yaparız.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="services services-2 w-100 text-center">
+                                <div class="icon d-flex align-items-center justify-content-center" style="background-color:darkred"><span class="flaticon-car"></span></div>
+                                <div class="text w-100">
+                                    <h2 class="" style="color:darkred">Konsinye Hizmeti</h2>
+                                    <p>Aracınızı getirin sizin için tüm işlemleri yapalım ve Ceylan Motors Showroom’unda sergileyelim.Müşteri portföyümüzle aracınızı mümkün olan en kısa sürede satalım.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="services services-2 w-100 text-center">
+                                <div class="icon d-flex align-items-center justify-content-center" style="background-color:darkred"><span class="flaticon-transportation"></span></div>
+                                <div class="text w-100">
+                                    <h2 class="heading mb-2" style="color:darkred">Aradığım Aracı Bulamıyorum </h2>
+                                    <p>Aradığınız aracı sizin adınıza arar, en uygun koşullarda beğeninize sunarız.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+
+
+</body>
+
