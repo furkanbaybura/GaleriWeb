@@ -50,8 +50,7 @@
               "RelativeToolTip": "NTier\\Galeri.Entities\\Concrete\\Category.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T21:12:17.411Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-29T21:12:17.411Z"
             },
             {
               "$type": "Document",
@@ -61,7 +60,7 @@
               "RelativeDocumentMoniker": "GaleriAdmin\\Views\\Category\\Index.cshtml",
               "ToolTip": "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\GaleriAdmin\\Views\\Category\\Index.cshtml",
               "RelativeToolTip": "GaleriAdmin\\Views\\Category\\Index.cshtml",
-              "ViewState": "AQIAAAQAAAAAAAAAAAAYwAsAAAAnAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-05-29T20:58:22.674Z",
               "EditorCaption": ""
@@ -76,8 +75,7 @@
               "RelativeToolTip": "NTier\\Galeri.ViewModel\\Category\\CategoryViewModel.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAArAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T20:53:16.828Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-29T20:53:16.828Z"
             },
             {
               "$type": "Document",
@@ -89,8 +87,7 @@
               "RelativeToolTip": "GaleriAdmin\\Views\\Category\\Create.cshtml",
               "ViewState": "AQIAAAkAAAAAAAAAAAAYwBkAAAAaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-29T20:48:54.356Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-29T20:48:54.356Z"
             }
           ]
         }

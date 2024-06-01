@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GaleriAdmin")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+47a28c1a88ad2da047d1287244d856deb822cbed")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0ab1084e0802bba6b125d13fca6344592c819cb3")]
 [assembly: System.Reflection.AssemblyProductAttribute("GaleriAdmin")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GaleriAdmin")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
