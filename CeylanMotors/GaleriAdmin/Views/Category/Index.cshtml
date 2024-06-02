@@ -10,6 +10,7 @@
                 <tr>
                     <th>Adı</th>
                     <th>Açıklaması</th>                
+                    <th>Yıl</th>
                     <th>İşlem</th>
                 </tr>
             </thead>
@@ -19,6 +20,7 @@
                     <tr>
                         <td>@item.Name</td>
                         <td>@item.Description</td>
+                        <td>@item.Yil</td>
                      
                         <td>
                             <a class="btn btn-info" asp-controller="Category" asp-action="Edit" asp-route-id="@item.Id">Düzenle</a>
@@ -56,6 +58,7 @@
                 <tr>
                     <th>Adı</th>
                     <th>Açıklaması</th>
+                    <th>Yıl</th>
                     <th>İşlem</th>
                 </tr>
             </tfoot>

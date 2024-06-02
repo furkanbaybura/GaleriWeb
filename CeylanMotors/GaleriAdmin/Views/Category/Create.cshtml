@@ -24,6 +24,13 @@
                             <span asp-validation-for="Description" class="form-text text-danger"></span>
                         </div>
                     </div>
+                    <div class="row mb-3">
+                        <label asp-for="Yil" class="col-sm-2 col-form-label">@Html.DisplayNameFor(m => m.Yil)</label>
+                        <div class="col-sm-10">
+                            <input asp-for="Yil" class="form-control" placeholder="@Html.DisplayNameFor(m => m.Yil)" />
+                            <span asp-validation-for="Yil" class="form-text text-danger"></span>
+                        </div>
+                    </div>
                  
                     <div class="row mb-3">
                         <div class="col-sm-2"></div>

@@ -37,6 +37,11 @@ namespace GaleriAdmin.Controllers
             CategoryViewModel model = new CategoryViewModel();
             return View(model);
         }
+        public ActionResult Login()
+        {
+            CategoryViewModel model = new CategoryViewModel();
+            return View(model);
+        }
 
         // POST: CategoryController/Create
         [HttpPost]

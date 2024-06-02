@@ -12,6 +12,7 @@ namespace Galeri.ViewModel.Category
         public int? RowNum { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
+        public int Yil { get; set; }
         public int? AppUserId { get; set; }
     
     }
