@@ -1,4 +1,5 @@
-﻿@{
+﻿@model IEnumerable<CategoryViewModel>
+@{
     ViewBag.tittle = "CeylanMotorsAdmin";
 }
 <!DOCTYPE html>
@@ -141,96 +142,113 @@
                         </div>
                     </div>
                     <div class="nav-item dropdown">
-                       
-                    <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
-                            <img class="rounded-circle me-lg-2" src="~/Images/bmw.jpg" alt="" style="width: 40px; height: 40px;">
-                            <span class="d-none d-lg-inline-flex">Ceylan Motors</span>
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-end bg-secondary border-0 rounded-0 rounded-bottom m-0">
-                            <a href="#" class="dropdown-item">My Profile</a>
-                            <a href="#" class="dropdown-item">Settings</a>
-                            <a href="#" class="dropdown-item">Log Out</a>
+
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                                <img class="rounded-circle me-lg-2" src="~/Images/bmw.jpg" alt="" style="width: 40px; height: 40px;">
+                                <span class="d-none d-lg-inline-flex">Ceylan Motors</span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-end bg-secondary border-0 rounded-0 rounded-bottom m-0">
+                                <a href="#" class="dropdown-item">My Profile</a>
+                                <a href="#" class="dropdown-item">Settings</a>
+                                <a href="#" class="dropdown-item">Log Out</a>
+                            </div>
                         </div>
                     </div>
-                </div>
             </nav>
-            
+
             <!-- Navbar End -->
-      
             <!-- Widgets Start -->
             <div class="container-fluid pt-4 px-4">
-              
-                    <div class="col-sm-12 col-md-6 col-xl-4">
-                        <div class="h-100 bg-secondary rounded p-4">
-                            <div class="d-flex align-items-center justify-content-between mb-4">
-                                <h6 class="mb-0">Calender</h6>
-                                <a href="">Show All</a>
-                            </div>
-                            <div id="calender"></div>
+
+                <div class="col-sm-12 col-md-6 col-xl-4">
+                    <div class="h-100 bg-secondary rounded p-4">
+                        <div class="d-flex align-items-center justify-content-between mb-4">
+                            <h6 class="mb-0">Calender</h6>
+                            <a href="">Show All</a>
                         </div>
-                    </div>
-                <br />
-                <br />
-                
-                <!-- Category create start-->
-                @model CategoryViewModel
-
-                <div class="row">
-                    <div class="col">
-                        <div class="card" style="background-color:darkgray">
-                            <div class="card-header" >
-                                <h1 style="color:black; ">İlan Ekle</h1>
-                            </div>
-                            <div class="card-body">
-                                <form asp-action="Create">
-                                    <div asp-validation-summary="All"></div>
-                                    <div class="row mb-3">
-                                        <label asp-for="Name" class="col-sm-2 col-form-label">@Html.DisplayNameFor(m => m.Name)</label>
-                                        <div class="col-sm-10">
-                                            <input asp-for="Name" class="form-control" placeholder="@Html.DisplayNameFor(m => m.Name)" />
-                                            <span asp-validation-for="Name" class="form-text text-danger"></span>
-                                        </div>
-                                    </div>
-
-                                    <div class="row mb-3">
-                                        <label asp-for="Description" class="col-sm-2 col-form-label">@Html.DisplayNameFor(m => m.Description)</label>
-                                        <div class="col-sm-10">
-                                            <input asp-for="Description" class="form-control" placeholder="@Html.DisplayNameFor(m => m.Description)" />
-                                            <span asp-validation-for="Description" class="form-text text-danger"></span>
-                                        </div>
-                                    </div>
-                                    <div class="row mb-3">
-                                        <label asp-for="Yil" class="col-sm-2 col-form-label">@Html.DisplayNameFor(m => m.Yil)</label>
-                                        <div class="col-sm-10">
-                                            <input asp-for="Yil" class="form-control" placeholder="@Html.DisplayNameFor(m => m.Yil)" />
-                                            <span asp-validation-for="Yil" class="form-text text-danger"></span>
-                                        </div>
-                                    </div>
-
-                                    <div class="row mb-3">
-                                        <div class="col-sm-2"></div>
-                                        <div class="col-sm-10">
-                                            <input type="submit" class="btn btn-success" value="Kaydet" />
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
+                        <div id="calender"></div>
                     </div>
                 </div>
-                <!-- Category create end-->
-                     
-               
-            <!-- Widgets End -->
-            <!-- Footer Start -->
-            <div class="container-fluid pt-4 px-4">
-                <div class="bg-secondary rounded-top p-4">
-                    <div class="row">
-                        <div class="col-12 col-sm-6 text-center text-sm-start">
-                            &copy; <a href="">Ceylan Motors</a> Tüm Hakları Saklıdır.
-                        </div>
-                    
+                <br />
+                <br />
+
+                <!-- Category Index start-->
+                <div class="row">
+                    <div class="col">
+                        <h1>İlan Listesi</h1>
+                        <a class="btn btn-success" asp-controller="Category" asp-action="Create">Yeni</a>
+                        <hr />
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Adı</th>
+                                    <th>Açıklaması</th>
+                                    <th>Yıl</th>
+                                    <th>İşlem</th>
+                                </tr>
+                            </thead>
+                            <tbody id="category-list">
+                                @foreach (CategoryViewModel item in Model)
+                                {
+                                    <tr>
+                                        <td>@item.Name</td>
+                                        <td>@item.Description</td>
+                                        <td>@item.Yil</td>
+
+                                        <td>
+                                            <a class="btn btn-info" asp-controller="Category" asp-action="Edit" asp-route-id="@item.Id">Düzenle</a>
+                                            <a class="btn btn-secondary" asp-controller="Category" asp-action="Details" asp-route-id="@item.Id">Detay</a>
+                                            <a class="btn btn-danger"
+                                               id="remove-link-@item.Id"
+                                               data-url="@Url.ActionLink("Delete", "Category", new { id = item.Id })"
+                                               data-bs-toggle="modal"
+                                               data-bs-target="#removeConfirm-@item.Id">Sil</a>
+
+                                            <!-- Modal -->
+                                            <div class="modal fade" id="removeConfirm-@item.Id" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <p><strong>@item.Name</strong> kategorisini silmek istediğinizden emin misiniz?</p>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Geri</button>
+                                                            <button type="button" class="btn btn-danger" onclick="DeleteItem(@item.Id)">Evet</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <th>Adı</th>
+                                    <th>Açıklaması</th>
+                                    <th>Yıl</th>
+                                    <th>İşlem</th>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+                <!-- Category Index end-->
+                <!-- Widgets End -->
+                <!-- Footer Start -->
+                <div class="container-fluid pt-4 px-4">
+                    <div class="bg-secondary rounded-top p-4">
+                        <div class="row">
+                            <div class="col-12 col-sm-6 text-center text-sm-start">
+                                &copy; <a href="">Ceylan Motors</a> Tüm Hakları Saklıdır.
+                            </div>
+
                         </div>
                     </div>
                 </div>
