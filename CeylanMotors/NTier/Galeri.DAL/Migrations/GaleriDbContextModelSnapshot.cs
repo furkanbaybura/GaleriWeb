@@ -109,7 +109,7 @@ namespace Galeri.DAL.Migrations
                             Id = 1,
                             AccessFailedCount = 0,
                             Birthdate = new DateOnly(2000, 1, 1),
-                            ConcurrencyStamp = "3cc08a76-d79f-49c8-b251-4ad4503ca208",
+                            ConcurrencyStamp = "dba4f329-2989-4d50-a1f7-6ea987db85df",
                             Email = "Admin@mail.com",
                             EmailConfirmed = true,
                             Gender = 0,
@@ -117,7 +117,7 @@ namespace Galeri.DAL.Migrations
                             Name = "Admin",
                             NormalizedEmail = "ADMİN@MAİL.COM",
                             NormalizedUserName = "ADMİN",
-                            PasswordHash = "AQAAAAIAAYagAAAAEHRqIsoXTW4QLdzkvLWswHGTzuo2AAZt5zKYGPqdLi31xAbP5X0FjUyKugH1Kr8exQ==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEDID8R6TNvLPudL1yFfzOqJyaI9Bw/zyI49dcWVkfs3G6A9PSnadSZ8AEaLDw0+CJg==",
                             PhoneNumber = "-",
                             PhoneNumberConfirmed = true,
                             Surname = "Admin",
@@ -137,21 +137,46 @@ namespace Galeri.DAL.Migrations
                     b.Property<int>("AppUserId")
                         .HasColumnType("int");
 
+                    b.Property<int?>("Beygir")
+                        .HasColumnType("int");
+
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Description")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Name")
-                        .IsRequired()
+                    b.Property<string>("Kategori")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Km")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Marka")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Modeli")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<double?>("MotorHacmi")
+                        .HasColumnType("float");
+
+                    b.Property<string>("Paket")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Renk")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("Tork")
+                        .HasColumnType("int");
 
                     b.Property<DateTime?>("UpdatedDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("Yil")
+                    b.Property<bool?>("Vites")
+                        .HasColumnType("bit");
+
+                    b.Property<int?>("Yil")
                         .HasColumnType("int");
 
                     b.HasKey("Id");

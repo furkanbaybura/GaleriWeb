@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "fczxlYK9GJZOVf6zTA1MrGWlQ9r29TOCggbxj3ymg3o=",
+  "Hash": "QZw3O/jFCWoSgnJjzhmEsr4ABQA5smLYZUYj+WNrc90=",
   "Source": "GaleriClient",
   "BasePath": "_content/GaleriClient",
   "Mode": "Default",
@@ -16,44 +16,6 @@
     }
   ],
   "Assets": [
-    {
-      "Identity": "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\GaleriClient\\obj\\Debug\\net8.0\\scopedcss\\bundle\\GaleriClient.styles.css",
-      "SourceId": "GaleriClient",
-      "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\GaleriClient\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
-      "BasePath": "_content/GaleriClient",
-      "RelativePath": "GaleriClient.styles.css",
-      "AssetKind": "All",
-      "AssetMode": "CurrentProject",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "ScopedCss",
-      "AssetTraitValue": "ApplicationBundle",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\GaleriClient\\obj\\Debug\\net8.0\\scopedcss\\bundle\\GaleriClient.styles.css"
-    },
-    {
-      "Identity": "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\GaleriClient\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\GaleriClient.bundle.scp.css",
-      "SourceId": "GaleriClient",
-      "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\GaleriClient\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
-      "BasePath": "_content/GaleriClient",
-      "RelativePath": "GaleriClient.bundle.scp.css",
-      "AssetKind": "All",
-      "AssetMode": "Reference",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "ScopedCss",
-      "AssetTraitValue": "ProjectBundle",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\GaleriClient\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\GaleriClient.bundle.scp.css"
-    },
     {
       "Identity": "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\GaleriClient\\wwwroot\\css\\ajax-loader.gif",
       "SourceId": "GaleriClient",

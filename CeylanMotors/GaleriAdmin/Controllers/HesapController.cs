@@ -19,9 +19,13 @@ namespace GaleriAdmin.Controllers
             return View(list);
            
         }
-        public IActionResult Login()
+        public IActionResult Messages()
         {
 
+            return View();
+        }
+        public IActionResult Login()
+        {
             return View();
         }
     }

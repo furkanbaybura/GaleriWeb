@@ -1,10 +1,6 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\GaleriClient\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\GaleriClient.bundle.scp.css",
-      "PackagePath": "staticwebassets\\GaleriClient.bundle.scp.css"
-    },
-    {
       "Id": "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\GaleriClient\\wwwroot\\Images\\2008.jpg",
       "PackagePath": "staticwebassets\\Images\\2008.jpg"
     },

@@ -32,6 +32,7 @@ namespace GaleriAdmin.Controllers
         }
 
         // GET: CategoryController/Create
+        [HttpGet]
         public ActionResult Create()
         {
             CategoryViewModel model = new CategoryViewModel();
@@ -55,8 +56,8 @@ namespace GaleriAdmin.Controllers
                     return View(model);
                 }
                 model.AppUserId = 1 ; 
-               if( _categoryManager.Add(model)>0) 
-                return RedirectToAction(nameof(Index));
+               if( _categoryManager.Add(model)>0)
+                    return RedirectToAction("Index", "Hesap");
                else
                 {
                     ModelState.AddModelError("DbError","Veritabanına eklenemedi");
@@ -90,7 +91,7 @@ namespace GaleriAdmin.Controllers
                 }
                 model.AppUserId=1 ;
                 if (_categoryManager.Update(model)>0)
-                    return RedirectToAction(nameof(Index));
+                    return RedirectToAction("Index", "Hesap");
                 else
                 {
                     ModelState.AddModelError("DbError","Veritabanına eklenemedi");
@@ -117,11 +118,11 @@ namespace GaleriAdmin.Controllers
             catch (Exception ex)
             {
 
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction("Index", "Hesap");
             }
 
 
-            return RedirectToAction(nameof(Index));
+            return RedirectToAction("Index", "Hesap");
         }
 
         // POST: CategoryController/Delete/5
@@ -131,7 +132,7 @@ namespace GaleriAdmin.Controllers
         {
             try
             {
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction("Index", "Hesap");
             }
             catch
             {

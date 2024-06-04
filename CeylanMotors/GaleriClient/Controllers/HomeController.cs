@@ -1,3 +1,4 @@
+using Galeri.BLL.Managers.Concrete;
 using GaleriClient.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
@@ -18,10 +19,21 @@ namespace GaleriClient.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult Ilanlar()
         {
             return View();
         }
+        public IActionResult Hakkýmýzda()
+        {
+            ViewBag.resim = "./images/anadol.jpg";
+            return View();
+        }
+        public IActionResult Iletisim()
+        {
+            return View();
+        }
+
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
@@ -30,3 +42,4 @@ namespace GaleriClient.Controllers
         }
     }
 }
+

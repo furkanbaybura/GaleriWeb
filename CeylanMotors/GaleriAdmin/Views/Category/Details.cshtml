@@ -5,11 +5,19 @@
     <h5 class="card-header">@Model.Name</h5>
     <div class="card-body">
         @* <h5 class="card-title">Special title treatment</h5> *@
-        <p class="card-text">@Model.Name</p>
-        <p class="card-text">@Model.Description</p>
-        <p class="card-text">@Model.Yil</p>
+        <p class="card-text">Marka : @Model.Marka</p>
+        <p class="card-text">Model : @Model.Modeli</p>
+        <p class="card-text">Paket : @Model.Paket</p>
+        <p class="card-text">Kategori :  @Model.Kategori</p>
+        <p class="card-text">Motor Hacmi :  @Model.MotorHacmi</p>
+        <p class="card-text">Vites Tipi:  @Model.Vites</p>
+        <p class="card-text">Torku : @Model.Tork</p>
+        <p class="card-text">Beygir :  @Model.Beygir</p>
+        <p class="card-text">Renk :  @Model.Renk</p>
+        <p class="card-text">Kilometresi : @Model.Km</p>
+        <p class="card-text">Açıklaması :  @Model.Description</p>
         <a asp-controller="Category" asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-success">Düzenle</a>
-        <a asp-controller="Category" asp-action="Index" class="btn btn-primary">Geri</a>
+        <a asp-controller="Hesap" asp-action="Index" class="btn btn-primary">Geri</a>
         <!--
             TODO: Bu kategoriye ait ürünlerin listesi olabilir. bir düşünmek lazım
         -->

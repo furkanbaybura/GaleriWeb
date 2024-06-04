@@ -10,18 +10,74 @@
                 <form asp-action="Create">
                     <div asp-validation-summary="All"></div>
                     <div class="row mb-3">
-                        <label asp-for="Name" class="col-sm-2 col-form-label">@Html.DisplayNameFor(m => m.Name)</label>
+                        <label asp-for="Marka" class="col-sm-2 col-form-label">@Html.DisplayNameFor(m => m.Marka)</label>
                         <div class="col-sm-10">
-                            <input asp-for="Name" class="form-control" placeholder="@Html.DisplayNameFor(m => m.Name)" />
-                            <span asp-validation-for="Name" class="form-text text-danger"></span>
+                            <input asp-for="Marka" class="form-control" placeholder="@Html.DisplayNameFor(m => m.Marka)" />
+                            <span asp-validation-for="Marka" class="form-text text-danger"></span>
                         </div>
                     </div>
 
                     <div class="row mb-3">
-                        <label asp-for="Description" class="col-sm-2 col-form-label">@Html.DisplayNameFor(m => m.Description)</label>
+                        <label asp-for="Modeli" class="col-sm-2 col-form-label">@Html.DisplayNameFor(m => m.Modeli)</label>
                         <div class="col-sm-10">
-                            <input asp-for="Description" class="form-control" placeholder="@Html.DisplayNameFor(m => m.Description)" />
-                            <span asp-validation-for="Description" class="form-text text-danger"></span>
+                            <input asp-for="Modeli" class="form-control" placeholder="@Html.DisplayNameFor(m => m.Modeli)" />
+                            <span asp-validation-for="Modeli" class="form-text text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label asp-for="Paket" class="col-sm-2 col-form-label">@Html.DisplayNameFor(m => m.Paket)</label>
+                        <div class="col-sm-10">
+                            <input asp-for="Paket" class="form-control" placeholder="@Html.DisplayNameFor(m => m.Paket)" />
+                            <span asp-validation-for="Paket" class="form-text text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label asp-for="Kategori" class="col-sm-2 col-form-label">@Html.DisplayNameFor(m => m.Kategori)</label>
+                        <div class="col-sm-10">
+                            <input asp-for="Kategori" class="form-control" placeholder="@Html.DisplayNameFor(m => m.Kategori)" />
+                            <span asp-validation-for="Kategori" class="form-text text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label asp-for="MotorHacmi" class="col-sm-2 col-form-label">@Html.DisplayNameFor(m => m.MotorHacmi)</label>
+                        <div class="col-sm-10">
+                            <input asp-for="MotorHacmi" class="form-control" placeholder="@Html.DisplayNameFor(m => m.MotorHacmi)" />
+                            <span asp-validation-for="MotorHacmi" class="form-text text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label asp-for="Vites" class="col-sm-2 col-form-label">@Html.DisplayNameFor(m => m.Vites)</label>
+                        <div class="col-sm-10">
+                            <input asp-for="Vites" class="form-control" placeholder="@Html.DisplayNameFor(m => m.Vites)" />
+                            <span asp-validation-for="Vites" class="form-text text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label asp-for="Tork" class="col-sm-2 col-form-label">@Html.DisplayNameFor(m => m.Tork)</label>
+                        <div class="col-sm-10">
+                            <input asp-for="Tork" class="form-control" placeholder="@Html.DisplayNameFor(m => m.Tork)" />
+                            <span asp-validation-for="Tork" class="form-text text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label asp-for="Beygir" class="col-sm-2 col-form-label">@Html.DisplayNameFor(m => m.Beygir)</label>
+                        <div class="col-sm-10">
+                            <input asp-for="Beygir" class="form-control" placeholder="@Html.DisplayNameFor(m => m.Beygir)" />
+                            <span asp-validation-for="Beygir" class="form-text text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label asp-for="Renk" class="col-sm-2 col-form-label">@Html.DisplayNameFor(m => m.Renk)</label>
+                        <div class="col-sm-10">
+                            <input asp-for="Renk" class="form-control" placeholder="@Html.DisplayNameFor(m => m.Renk)" />
+                            <span asp-validation-for="Renk" class="form-text text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label asp-for="Km" class="col-sm-2 col-form-label">@Html.DisplayNameFor(m => m.Km)</label>
+                        <div class="col-sm-10">
+                            <input asp-for="Km" class="form-control" placeholder="@Html.DisplayNameFor(m => m.Km)" />
+                            <span asp-validation-for="Km" class="form-text text-danger"></span>
                         </div>
                     </div>
                     <div class="row mb-3">
@@ -35,7 +91,7 @@
                     <div class="row mb-3">
                         <div class="col-sm-2"></div>
                         <div class="col-sm-10">
-                            <input type="submit" class="btn btn-success" value="Kaydet" />
+                            <input  type="submit" class="btn btn-success" value="Kaydet" />
                         </div>
                     </div>
                 </form>
