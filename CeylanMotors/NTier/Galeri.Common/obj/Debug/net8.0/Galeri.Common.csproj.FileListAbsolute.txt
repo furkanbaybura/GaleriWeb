@@ -10,3 +10,15 @@ C:\Users\user\source\repos\GaleriWeb\CeylanMotors\NTier\Galeri.Common\obj\Debug\
 C:\Users\user\source\repos\GaleriWeb\CeylanMotors\NTier\Galeri.Common\obj\Debug\net8.0\refint\Galeri.Common.dll
 C:\Users\user\source\repos\GaleriWeb\CeylanMotors\NTier\Galeri.Common\obj\Debug\net8.0\Galeri.Common.pdb
 C:\Users\user\source\repos\GaleriWeb\CeylanMotors\NTier\Galeri.Common\obj\Debug\net8.0\ref\Galeri.Common.dll
+C:\Users\furkan.baybura\Source\Repos\GaleriWeb\CeylanMotors\NTier\Galeri.Common\bin\Debug\net8.0\Galeri.Common.deps.json
+C:\Users\furkan.baybura\Source\Repos\GaleriWeb\CeylanMotors\NTier\Galeri.Common\bin\Debug\net8.0\Galeri.Common.dll
+C:\Users\furkan.baybura\Source\Repos\GaleriWeb\CeylanMotors\NTier\Galeri.Common\bin\Debug\net8.0\Galeri.Common.pdb
+C:\Users\furkan.baybura\Source\Repos\GaleriWeb\CeylanMotors\NTier\Galeri.Common\obj\Debug\net8.0\Galeri.Common.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\furkan.baybura\Source\Repos\GaleriWeb\CeylanMotors\NTier\Galeri.Common\obj\Debug\net8.0\Galeri.Common.AssemblyInfoInputs.cache
+C:\Users\furkan.baybura\Source\Repos\GaleriWeb\CeylanMotors\NTier\Galeri.Common\obj\Debug\net8.0\Galeri.Common.AssemblyInfo.cs
+C:\Users\furkan.baybura\Source\Repos\GaleriWeb\CeylanMotors\NTier\Galeri.Common\obj\Debug\net8.0\Galeri.Common.csproj.CoreCompileInputs.cache
+C:\Users\furkan.baybura\Source\Repos\GaleriWeb\CeylanMotors\NTier\Galeri.Common\obj\Debug\net8.0\Galeri.Common.sourcelink.json
+C:\Users\furkan.baybura\Source\Repos\GaleriWeb\CeylanMotors\NTier\Galeri.Common\obj\Debug\net8.0\Galeri.Common.dll
+C:\Users\furkan.baybura\Source\Repos\GaleriWeb\CeylanMotors\NTier\Galeri.Common\obj\Debug\net8.0\refint\Galeri.Common.dll
+C:\Users\furkan.baybura\Source\Repos\GaleriWeb\CeylanMotors\NTier\Galeri.Common\obj\Debug\net8.0\Galeri.Common.pdb
+C:\Users\furkan.baybura\Source\Repos\GaleriWeb\CeylanMotors\NTier\Galeri.Common\obj\Debug\net8.0\ref\Galeri.Common.dll
