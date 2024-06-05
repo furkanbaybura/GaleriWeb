@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Galeri.DTO")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+186e1f2cfd4b0f5d11ab2c7d77c62e2f01edb786")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
 [assembly: System.Reflection.AssemblyProductAttribute("Galeri.DTO")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Galeri.DTO")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
