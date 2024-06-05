@@ -14,8 +14,20 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -24,7 +36,7 @@
               "RelativeDocumentMoniker": "GaleriAdmin\\Views\\Hesap\\Login.cshtml",
               "ToolTip": "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\GaleriAdmin\\Views\\Hesap\\Login.cshtml",
               "RelativeToolTip": "GaleriAdmin\\Views\\Hesap\\Login.cshtml",
-              "ViewState": "AQIAAD4AAAAAAAAAAAAAAFMAAAA/AAAA",
+              "ViewState": "AQIAADIAAAAAAAAAAAAAADoAAABpAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-06-04T20:38:03.846Z",
               "EditorCaption": ""
