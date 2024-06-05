@@ -20,6 +20,7 @@ namespace Galeri.DTO
         public string? Km { get; set; }
         public string? Description { get; set; }
         public int? Yil { get; set; }
+        public int? Fiyat { get; set; }
        
 
 

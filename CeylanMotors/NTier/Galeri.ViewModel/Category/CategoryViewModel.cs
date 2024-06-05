@@ -24,6 +24,7 @@ namespace Galeri.ViewModel.Category
         public int? Beygir { get; set; }
         public string? Renk { get; set; }
         public string? Km { get; set; }
+        public int? Fiyat { get; set; }
      
 
     }

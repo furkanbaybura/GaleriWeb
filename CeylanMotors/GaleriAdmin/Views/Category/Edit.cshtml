@@ -87,6 +87,13 @@
                             <span asp-validation-for="Yil" class="form-text text-danger"></span>
                         </div>
                     </div>
+                    <div class="row mb-3">
+                        <label asp-for="Fiyat" class="col-sm-2 col-form-label">@Html.DisplayNameFor(m => m.Fiyat)</label>
+                        <div class="col-sm-10">
+                            <input asp-for="Fiyat" class="form-control" placeholder="@Html.DisplayNameFor(m => m.Fiyat)" />
+                            <span asp-validation-for="Fiyat" class="form-text text-danger"></span>
+                        </div>
+                    </div>
 
                     <div class="row mb-3">
                         <div class="col-sm-2"></div>

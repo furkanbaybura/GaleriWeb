@@ -1,4 +1,5 @@
 using Galeri.BLL.Managers.Concrete;
+using Galeri.ViewModel.Category;
 using GaleriClient.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
@@ -8,15 +9,19 @@ namespace GaleriClient.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private CategoryManager _categoryManager;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, CategoryManager categoryManager)
         {
             _logger = logger;
+            _categoryManager = categoryManager;
         }
 
         public IActionResult Index()
         {
-            return View();
+            IEnumerable<CategoryViewModel> list = _categoryManager.GetAll().ToList();
+
+            return View(list);
         }
 
         public IActionResult Ilanlar()

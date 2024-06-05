@@ -1,7 +1,22 @@
+using Galeri.BLL.Managers.Concrete;
+using Galeri.DAL.DataContext;
+using Galeri.DAL.Repositories.Concrete;
+using Galeri.DAL.Services.Concrete;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddDbContext<GaleriDbContext>(opt =>
+{
+    opt.UseSqlServer(builder.Configuration.GetConnectionString("GaleriConStr"));
+}, ServiceLifetime.Scoped);
+
+builder.Services.AddScoped<CategoryRepo>();
+builder.Services.AddScoped<CategoryService>();
+builder.Services.AddScoped<CategoryManager>();
 
 var app = builder.Build();
 
