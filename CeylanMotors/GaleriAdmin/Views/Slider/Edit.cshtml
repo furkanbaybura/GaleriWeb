@@ -1,14 +1,14 @@
 ﻿@using Galeri.ViewModel.Slider
 @model SliderViewModel
 <body style="background-color:#191919 ; color:darkred ">
-<div class="row" >
+<div class="row">
     <div class="col">
         <div class="card">
             <div class="card-header">
-                <h1>Slider Ekle</h1>
+                <h1>Slider Güncelle</h1>
             </div>
-                <div class="card-body" style="background-color:#191919 ; color:darkred ">
-                <form asp-action="Create">
+            <div class="card-body">
+                <form asp-action="Edit">
                     <div asp-validation-summary="All"></div>
                     <div class="row mb-3">
                         <label asp-for="Sliderad" class="col-sm-2 col-form-label">@Html.DisplayNameFor(m => m.Sliderad)</label>
@@ -37,14 +37,6 @@
                         <div class="col-sm-10">
                             <input asp-for="SliderFileName" class="form-control" placeholder="@Html.DisplayNameFor(m => m.SliderFileName)" />
                             <span asp-validation-for="SliderFileName" class="form-text text-danger"></span>
-                        </div>
-                    </div>
-                    
-                    <div class="row mb-3">
-                        <div class="col-sm-2"></div>
-                        <div class="col-sm-10">
-                            <input type="submit" class="btn btn-success" value="Kaydet" />
-                            <a class="btn btn-danger" asp-controller="Account" asp-action="Index">Anasayfa</a>
                         </div>
                     </div>
                 </form>

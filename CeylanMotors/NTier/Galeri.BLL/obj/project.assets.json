@@ -3101,19 +3101,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\furkan.baybura\\.nuget\\packages\\": {}
+    "C:\\Users\\user\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\furkan.baybura\\Source\\Repos\\GaleriWeb\\CeylanMotors\\NTier\\Galeri.BLL\\Galeri.BLL.csproj",
+      "projectUniqueName": "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\NTier\\Galeri.BLL\\Galeri.BLL.csproj",
       "projectName": "Galeri.BLL",
-      "projectPath": "C:\\Users\\furkan.baybura\\Source\\Repos\\GaleriWeb\\CeylanMotors\\NTier\\Galeri.BLL\\Galeri.BLL.csproj",
-      "packagesPath": "C:\\Users\\furkan.baybura\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\furkan.baybura\\Source\\Repos\\GaleriWeb\\CeylanMotors\\NTier\\Galeri.BLL\\obj\\",
+      "projectPath": "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\NTier\\Galeri.BLL\\Galeri.BLL.csproj",
+      "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\NTier\\Galeri.BLL\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\furkan.baybura\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3127,14 +3127,14 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\furkan.baybura\\Source\\Repos\\GaleriWeb\\CeylanMotors\\Galeri.DTO\\Galeri.DTO.csproj": {
-              "projectPath": "C:\\Users\\furkan.baybura\\Source\\Repos\\GaleriWeb\\CeylanMotors\\Galeri.DTO\\Galeri.DTO.csproj"
+            "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\Galeri.DTO\\Galeri.DTO.csproj": {
+              "projectPath": "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\Galeri.DTO\\Galeri.DTO.csproj"
             },
-            "C:\\Users\\furkan.baybura\\Source\\Repos\\GaleriWeb\\CeylanMotors\\NTier\\Galeri.DAL\\Galeri.DAL.csproj": {
-              "projectPath": "C:\\Users\\furkan.baybura\\Source\\Repos\\GaleriWeb\\CeylanMotors\\NTier\\Galeri.DAL\\Galeri.DAL.csproj"
+            "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\NTier\\Galeri.DAL\\Galeri.DAL.csproj": {
+              "projectPath": "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\NTier\\Galeri.DAL\\Galeri.DAL.csproj"
             },
-            "C:\\Users\\furkan.baybura\\Source\\Repos\\GaleriWeb\\CeylanMotors\\NTier\\Galeri.ViewModel\\Galeri.ViewModel.csproj": {
-              "projectPath": "C:\\Users\\furkan.baybura\\Source\\Repos\\GaleriWeb\\CeylanMotors\\NTier\\Galeri.ViewModel\\Galeri.ViewModel.csproj"
+            "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\NTier\\Galeri.ViewModel\\Galeri.ViewModel.csproj": {
+              "projectPath": "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\NTier\\Galeri.ViewModel\\Galeri.ViewModel.csproj"
             }
           }
         }
@@ -3143,6 +3143,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -3164,7 +3169,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

@@ -1,0 +1,20 @@
+﻿@using Galeri.ViewModel.Slider
+@model SliderViewModel
+@{
+}
+<body style="background-color:#191919 ; color:darkred ">
+<div class="card">
+    <h5 class="card-header">@Model.Id</h5>
+        <div class="card-body" style="background-color:#191919 ; color:darkred ">
+       
+        <p class="card-text">Marka : @Model.Sliderad</p>
+        <p class="card-text">Model : @Model.SliderBaslik</p>
+        <p class="card-text">Paket : @Model.SliderAciklama</p>
+        <p class="card-text">Kategori :  @Model.SliderFileName</p>
+      
+        <a asp-controller="Slider" asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-success">Düzenle</a>
+        <a asp-controller="Account" asp-action="Index" class="btn btn-primary">Geri</a>
+      
+    </div>
+</div>
+</body>

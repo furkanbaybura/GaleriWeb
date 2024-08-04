@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Galeri.ViewModel")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c4e8fa615b9bb66976f31a9790aaca10e4f90352")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d0fdff4a1a178bf8f45ebb55e3b2bfef08885ce2")]
 [assembly: System.Reflection.AssemblyProductAttribute("Galeri.ViewModel")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Galeri.ViewModel")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

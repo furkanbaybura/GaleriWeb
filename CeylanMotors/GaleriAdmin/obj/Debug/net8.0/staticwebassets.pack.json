@@ -893,6 +893,10 @@
       "PackagePath": "staticwebassets\\js\\Category\\index.js"
     },
     {
+      "Id": "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\GaleriAdmin\\wwwroot\\js\\Slider\\Index.js",
+      "PackagePath": "staticwebassets\\js\\Slider\\Index.js"
+    },
+    {
       "Id": "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\GaleriAdmin\\wwwroot\\js\\aos.js",
       "PackagePath": "staticwebassets\\js\\aos.js"
     },

@@ -1,11 +1,11 @@
 ﻿@model IEnumerable<CategoryViewModel>
-
+<body style="background-color:#191919 ; color:darkred ">
 <div class="row">
     <div class="col">
-        <h1>Country List</h1>
+        <h1>İlan Listesi</h1>
         <a class="btn btn-success" asp-controller="Category" asp-action="Create">Yeni</a>
         <hr />
-        <table class="table">
+            <table class="table" style="background-color:#191919 ; color:darkred ">
             <thead>
                 <tr>
                     <th>Adı</th>
@@ -14,7 +14,7 @@
                     <th>İşlem</th>
                 </tr>
             </thead>
-            <tbody id="category-list">
+            <tbody id="category-list" >
                 @foreach (CategoryViewModel item in Model)
                 {
                     <tr>
@@ -36,7 +36,7 @@
                                 <div class="modal-dialog">
                                     <div class="modal-content">
                                         <div class="modal-header">
-                                            <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                                            <h1 class="modal-title fs-5" id="exampleModalLabel">İlan Silme</h1>
                                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                         </div>
                                         <div class="modal-body">
@@ -65,7 +65,7 @@
         </table>
     </div>
 </div>
-
+</body>
 @section Scripts {
     <script type="text/javascript" src="~/js/Category/index.js"></script>
 }

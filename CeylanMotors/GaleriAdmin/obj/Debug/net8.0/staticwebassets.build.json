@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "8ErgK3wRv6cYvAiB3g8DmheerMp8uXJs3oRzGJTuaLQ=",
+  "Hash": "w5hJW71RO1Bylxz8+NePz0dui3gjrpnMTuT0c7aeqBo=",
   "Source": "GaleriAdmin",
   "BasePath": "_content/GaleriAdmin",
   "Mode": "Default",
@@ -4841,6 +4841,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\site.js"
+    },
+    {
+      "Identity": "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\GaleriAdmin\\wwwroot\\js\\Slider\\Index.js",
+      "SourceId": "GaleriAdmin",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\GaleriAdmin\\wwwroot\\",
+      "BasePath": "_content/GaleriAdmin",
+      "RelativePath": "js/Slider/Index.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\Slider\\Index.js"
     },
     {
       "Identity": "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\GaleriAdmin\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
