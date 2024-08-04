@@ -160,3 +160,7 @@ C:\Users\user\source\repos\GaleriWeb\CeylanMotors\GaleriAdmin\obj\Debug\net8.0\r
 C:\Users\user\source\repos\GaleriWeb\CeylanMotors\GaleriAdmin\obj\Debug\net8.0\GaleriAdmin.pdb
 C:\Users\user\source\repos\GaleriWeb\CeylanMotors\GaleriAdmin\obj\Debug\net8.0\GaleriAdmin.genruntimeconfig.cache
 C:\Users\user\source\repos\GaleriWeb\CeylanMotors\GaleriAdmin\obj\Debug\net8.0\ref\GaleriAdmin.dll
+C:\Users\user\source\repos\GaleriWeb\CeylanMotors\GaleriAdmin\bin\Debug\net8.0\Microsoft.AspNetCore.Authorization.dll
+C:\Users\user\source\repos\GaleriWeb\CeylanMotors\GaleriAdmin\bin\Debug\net8.0\Microsoft.AspNetCore.Metadata.dll
+C:\Users\user\source\repos\GaleriWeb\CeylanMotors\GaleriAdmin\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\user\source\repos\GaleriWeb\CeylanMotors\GaleriAdmin\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll

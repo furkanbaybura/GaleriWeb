@@ -109,7 +109,7 @@ namespace Galeri.DAL.Migrations
                             Id = 1,
                             AccessFailedCount = 0,
                             Birthdate = new DateOnly(2000, 1, 1),
-                            ConcurrencyStamp = "5d88aaa4-f7ab-4e35-9af5-75d0f1403498",
+                            ConcurrencyStamp = "cc8eb312-096e-455c-8054-d3a81ddcf5dc",
                             Email = "Admin@mail.com",
                             EmailConfirmed = true,
                             Gender = 0,
@@ -117,7 +117,7 @@ namespace Galeri.DAL.Migrations
                             Name = "Admin",
                             NormalizedEmail = "ADMİN@MAİL.COM",
                             NormalizedUserName = "ADMİN",
-                            PasswordHash = "AQAAAAIAAYagAAAAEOXP4JebcCnES2A999oro8TD0TI0xyS2oPEpVwwlqvR/dJv6JfDcIMlfgG0hKC9UGw==",
+                            PasswordHash = "AQAAAAIAAYagAAAAECa43iq3svJcIw7649mUSL6mHT7d5eDBHl6ezxHSnePWKXuHQr9sQ+ejhhumnRDQpA==",
                             PhoneNumber = "-",
                             PhoneNumberConfirmed = true,
                             Surname = "Admin",
@@ -187,6 +187,82 @@ namespace Galeri.DAL.Migrations
                     b.HasIndex("AppUserId");
 
                     b.ToTable("Categories");
+                });
+
+            modelBuilder.Entity("Galeri.Entities.Concrete.Slider", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("AppUserId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("SliderAciklama")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("SliderBaslik")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("SliderFileName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Sliderad")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("UpdatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AppUserId");
+
+                    b.ToTable("Sliders");
+                });
+
+            modelBuilder.Entity("Galeri.Entities.Concrete.Yakinda", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("AppUserId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("UpdatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("YakindaAciklama")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("YakindaAd")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("YakindaBaslik")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("YakindaFileName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AppUserId");
+
+                    b.ToTable("Yakindas");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole<int>", b =>
@@ -338,6 +414,28 @@ namespace Galeri.DAL.Migrations
                 });
 
             modelBuilder.Entity("Galeri.Entities.Concrete.Category", b =>
+                {
+                    b.HasOne("Galeri.Entities.Concrete.AppUser", "AppUser")
+                        .WithMany()
+                        .HasForeignKey("AppUserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("AppUser");
+                });
+
+            modelBuilder.Entity("Galeri.Entities.Concrete.Slider", b =>
+                {
+                    b.HasOne("Galeri.Entities.Concrete.AppUser", "AppUser")
+                        .WithMany()
+                        .HasForeignKey("AppUserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("AppUser");
+                });
+
+            modelBuilder.Entity("Galeri.Entities.Concrete.Yakinda", b =>
                 {
                     b.HasOne("Galeri.Entities.Concrete.AppUser", "AppUser")
                         .WithMany()

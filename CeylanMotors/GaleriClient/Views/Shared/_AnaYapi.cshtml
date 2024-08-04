@@ -32,7 +32,7 @@
 <header>
     <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light  border-bottom box-shadow mb-3" style="background-color:darkred;">
         <div class="container-fluid" style="background-color:black;">
-            <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index" style="font-size:35px;color:white">Ceylan Motors</a>
+            <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index" style="font-size:35px;font-family:'Californian FB';color:white">Ceylan Motors</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -40,19 +40,19 @@
             <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a style="font-size:20px;color:white" class=" nav-link @(ViewBag.Title == "Anasayfa" ? "active" : "")" text-dark" asp-area="" asp-controller="Home" asp-action="Index">Anasayfa</a>
+                        <a style="font-size:20px;color:white" class=" nav-link @(ViewBag.Title == "Anasayfa" ? "active" : "") link123" text-dark" asp-area="" asp-controller="Home" asp-action="Index">Anasayfa</a>
                     </li>
                     <li class="nav-item">
-                        <a style="font-size:20px;color:white" class=" nav-link @(ViewBag.Title == "İlanlarımız" ? "active" : "")" text-dark" asp-area="" asp-controller="Ilanlar" asp-action="Index">İlanlarımız</a>
+                        <a style="font-size:20px;color:white" class=" nav-link @(ViewBag.Title == "İlanlarımız" ? "active" : "") link123" text-dark" asp-area="" asp-controller="Ilanlar" asp-action="Index">İlanlarımız</a>
                     </li>
-                    <li class="nav-item">
+                   @*  <li class="nav-item">
                         <a style="font-size:20px;color:white" class=" nav-link @(ViewBag.Title == "Referanslarımız" ? "active" : "")" text-dark" asp-area="" asp-controller="Reference" asp-action="Index">Referanslarımız</a>
+                    </li> *@
+                    <li class="nav-item">
+                        <a style="font-size:20px;color:white" class="nav-link @(ViewBag.Title == "Hakkımızda" ? "active" : "") link123" text-dark" asp-area="" asp-controller="Hakkımızda" asp-action="Index">Hakkımızda</a>
                     </li>
                     <li class="nav-item">
-                        <a style="font-size:20px;color:white" class="nav-link @(ViewBag.Title == "Hakkımızda" ? "active" : "")" text-dark" asp-area="" asp-controller="Hakkımızda" asp-action="Index">Hakkımızda</a>
-                    </li>
-                    <li class="nav-item">
-                        <a style="font-size:20px;color:white" class="nav-link @(ViewBag.Title == "İletişim" ? "active" : "")" text-dark" asp-area="" asp-controller="İletisim" asp-action="Index">İletişim</a>
+                        <a style="font-size:20px;color:white" class="nav-link @(ViewBag.Title == "İletişim" ? "active" : "") link123" text-dark" asp-area="" asp-controller="İletisim" asp-action="Index">İletişim</a>
                     </li>
                 </ul>
             </div>
@@ -85,9 +85,9 @@
                     <h2 class="ftco-heading-2">Kategoriler</h2>
                     <ul class="list-unstyled">
                         <li><a asp-controller="Home" asp-action="Index" class="py-2 d-block">Anasayfa</a></li>
-                        <li><a asp-controller="IlanlarContreller" asp-action="Index" class="py-2 d-block">İlanlarımız</a></li>
+                        <li><a asp-controller="Ilanlar" asp-action="Index" class="py-2 d-block">İlanlarımız</a></li>
                         <li><a asp-controller="Hakkımızda" asp-action="Index" class="py-2 d-block">Hakkımızda</a></li>
-                        <li><a asp-controller="Reference" asp-action="Index" class="py-2 d-block">Referanslarımız</a></li>
+                        @* <li><a asp-controller="Reference" asp-action="Index" class="py-2 d-block">Referanslarımız</a></li> *@
                         <li><a asp-controller="İletisim" asp-action="Index" class="py-2 d-block">İletişim</a></li>
                     </ul>
                 </div>

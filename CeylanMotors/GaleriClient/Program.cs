@@ -17,6 +17,9 @@ builder.Services.AddDbContext<GaleriDbContext>(opt =>
 builder.Services.AddScoped<CategoryRepo>();
 builder.Services.AddScoped<CategoryService>();
 builder.Services.AddScoped<CategoryManager>();
+builder.Services.AddScoped<SliderRepo>();
+builder.Services.AddScoped<SliderService>();
+builder.Services.AddScoped<SliderManager>();
 
 var app = builder.Build();
 

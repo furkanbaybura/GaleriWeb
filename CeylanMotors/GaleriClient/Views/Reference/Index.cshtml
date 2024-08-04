@@ -1,50 +1,107 @@
-﻿@{
-
-    ViewBag.Title = "Referanslarımız";
-}
-<h1 style="text-align:center;color:white">Referanslarımız</h1>
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Araç Detayları</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+</head>
 <body class="body" style="background-color:#191919;">
+    <h1 style="text-align:center;color:white">Güncel İlanlarımız</h1>
 
-    <div>
-        <div class="card-group" style="border:4px solid black">
-            <div class="card" style="width: 25rem;border:4px solid darkred">
-                <img src="~/images/bmw.jpg" class="card-img-top" alt="...">
+    <div style="display:flex;flex-wrap:wrap;gap:2px;padding-left:400px">
+        @foreach (var item in Model)
+        {
+            <div class="col col-3 mt-3 detail-card" style="width: 25rem; border:2px solid darkred;"
+                 data-marka="@item.Marka"
+                 data-modeli="@item.Modeli"
+                 data-paket="@item.Paket"
+                 data-kategori="@item.Kategori"
+                 data-motorhacmi="@item.MotorHacmi"
+                 data-vites="@item.Vites"
+                 data-tork="@item.Tork"
+                 data-beygir="@item.Beygir"
+                 data-renk="@item.Renk"
+                 data-km="@item.Km"
+                 data-description="@item.Description"
+                 data-yil="@item.Yil"
+                 data-fiyat="@item.Fiyat"
+                 data-image="~/images/bmw.jpg">
+                <img src="~/images/bmw.jpg" class="card-img-top" alt="Araç Resmi">
                 <div class="card-body">
-                    <h5 class="card-title">2015 BMW 1.18i</h5>
-                    <p class="card-text">BMW 1.18i Joy</p>
-                    <a href="#" class="btn btn-danger">İlan Detayı</a>
-                </div>
-
-            </div>
-
-
-            <div class="card " style="width: 25rem;border:4px solid darkred">
-                <img src="~/images/passat.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">2015 VW Passat</h5>
-                    <p class="card-text">Passat</p>
-                    <a href="#" class="btn btn-danger">İlan Detayı</a>
-                </div>
-            </div>
-
-            <div class="card" style="width: 25rem;border:4px solid darkred">
-                <img src="~/images/superb.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">2022 Skoda Superb</h5>
-                    <p class="card-text">Skoda Superb</p>
-                    <a href="#" class="btn btn-danger">İlan Detayı</a>
+                    <h5 class="card-title" style="text-align:center; color:white;">@item.Marka</h5>
+                    <p class="card-text" style="color:white;">@item.Modeli</p>
+                    <p class="card-text" style="color:white;">@item.Renk</p>
+                    <p class="card-text" style="color:white;">@item.Fiyat ₺</p>
+                    <a href="#" class="btn btn-danger detail-btn" style="align-items:end">İlan Detayı</a>
                 </div>
             </div>
-            <div class="card" style="width: 25rem;border:4px solid darkred">
-                <img src="~/images/et5.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Skywell</h5>
-                    <p class="card-text">SkyWell ET5</p>
-                    <a href="#" class="btn btn-danger">İlan Detayı</a>
+        }
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="detailModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Araç Detayları</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Araç detayları burada gösterilecek -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
                 </div>
             </div>
         </div>
-
-
     </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.detail-btn').click(function () {
+                var card = $(this).closest('.detail-card');
+                var marka = card.data('marka');
+                var modeli = card.data('modeli');
+                var paket = card.data('paket');
+                var kategori = card.data('kategori');
+                var motorHacmi = card.data('motorhacmi');
+                var vites = card.data('vites') ? "Otomatik" : "Manuel";
+                var tork = card.data('tork');
+                var beygir = card.data('beygir');
+                var renk = card.data('renk');
+                var km = card.data('km');
+                var description = card.data('description');
+                var yil = card.data('yil');
+                var fiyat = card.data('fiyat');
+                var image = card.data('image');
+
+                // Araç detaylarını güncelle
+                var aracDetails = `
+                  <h3>${marka} ${modeli}</h3>
+                  <p><strong>Paket:</strong> ${paket}</p>
+                  <p><strong>Kategori:</strong> ${kategori}</p>
+                  <p><strong>Motor Hacmi:</strong> ${motorHacmi} cc</p>
+                  <p><strong>Vites:</strong> ${vites}</p>
+                  <p><strong>Tork:</strong> ${tork} Nm</p>
+                  <p><strong>Beygir:</strong> ${beygir} hp</p>
+                  <p><strong>Renk:</strong> ${renk}</p>
+                  <p><strong>Km:</strong> ${km} km</p>
+                  <p><strong>Açıklama:</strong> ${description}</p>
+                  <p><strong>Yıl:</strong> ${yil}</p>
+                  <p><strong>Fiyat:</strong> ${fiyat} ₺</p>
+                  <img src="${image}" class="img-fluid" />
+                `;
+
+                // Modal içeriğini güncelle
+                $('#detailModal .modal-body').html(aracDetails);
+                // Modal'i aç
+                var detailModal = new bootstrap.Modal(document.getElementById('detailModal'));
+                detailModal.show();
+            });
+        });
+    </script>
 </body>
+</html>

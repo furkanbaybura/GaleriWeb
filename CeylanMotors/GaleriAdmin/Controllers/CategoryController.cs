@@ -1,10 +1,12 @@
 ﻿using Galeri.BLL.Managers.Concrete;
 using Galeri.ViewModel.Category;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace GaleriAdmin.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class CategoryController : Controller
     {
         private CategoryManager _categoryManager;
@@ -57,7 +59,7 @@ namespace GaleriAdmin.Controllers
                 }
                 model.AppUserId = 1 ; 
                if( _categoryManager.Add(model)>0)
-                    return RedirectToAction("Index", "Hesap");
+                    return RedirectToAction("Index", "Account");
                else
                 {
                     ModelState.AddModelError("DbError","Veritabanına eklenemedi");
@@ -91,7 +93,7 @@ namespace GaleriAdmin.Controllers
                 }
                 model.AppUserId=1 ;
                 if (_categoryManager.Update(model)>0)
-                    return RedirectToAction("Index", "Hesap");
+                    return RedirectToAction("Index", "Account");
                 else
                 {
                     ModelState.AddModelError("DbError","Veritabanına eklenemedi");
@@ -118,11 +120,11 @@ namespace GaleriAdmin.Controllers
             catch (Exception ex)
             {
 
-                return RedirectToAction("Index", "Hesap");
+                return RedirectToAction("Index", "Account");
             }
 
 
-            return RedirectToAction("Index", "Hesap");
+            return RedirectToAction("Index", "Account");
         }
 
         // POST: CategoryController/Delete/5
@@ -132,7 +134,7 @@ namespace GaleriAdmin.Controllers
         {
             try
             {
-                return RedirectToAction("Index", "Hesap");
+                return RedirectToAction("Index", "Account");
             }
             catch
             {

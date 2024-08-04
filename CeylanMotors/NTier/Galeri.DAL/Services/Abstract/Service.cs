@@ -12,7 +12,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Galeri.DAL.Services.Abstract
-{
+{   
     public abstract class Service<TEntity, TDto> : IService<TDto>
 
         where TEntity : BaseEntity

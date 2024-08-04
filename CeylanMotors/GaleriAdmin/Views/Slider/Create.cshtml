@@ -1,0 +1,53 @@
+﻿@using Galeri.ViewModel.Slider
+@model SliderViewModel
+<div class="row">
+    <div class="col">
+        <div class="card">
+            <div class="card-header">
+                <h1>Slider Ekle</h1>
+            </div>
+            <div class="card-body">
+                <form asp-action="Create">
+                    <div asp-validation-summary="All"></div>
+                    <div class="row mb-3">
+                        <label asp-for="Sliderad" class="col-sm-2 col-form-label">@Html.DisplayNameFor(m => m.Sliderad)</label>
+                        <div class="col-sm-10">
+                            <input asp-for="Sliderad" class="form-control" placeholder="@Html.DisplayNameFor(m => m.Sliderad)" />
+                            <span asp-validation-for="Sliderad" class="form-text text-danger"></span>
+                        </div>
+                    </div>
+
+                    <div class="row mb-3">
+                        <label asp-for="SliderBaslik" class="col-sm-2 col-form-label">@Html.DisplayNameFor(m => m.SliderBaslik)</label>
+                        <div class="col-sm-10">
+                            <input asp-for="SliderBaslik" class="form-control" placeholder="@Html.DisplayNameFor(m => m.SliderBaslik)" />
+                            <span asp-validation-for="SliderBaslik" class="form-text text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label asp-for="SliderAciklama" class="col-sm-2 col-form-label">@Html.DisplayNameFor(m => m.SliderAciklama)</label>
+                        <div class="col-sm-10">
+                            <input asp-for="SliderAciklama" class="form-control" placeholder="@Html.DisplayNameFor(m => m.SliderAciklama)" />
+                            <span asp-validation-for="SliderAciklama" class="form-text text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label asp-for="SliderFileName" class="col-sm-2 col-form-label">@Html.DisplayNameFor(m => m.SliderFileName)</label>
+                        <div class="col-sm-10">
+                            <input asp-for="SliderFileName" class="form-control" placeholder="@Html.DisplayNameFor(m => m.SliderFileName)" />
+                            <span asp-validation-for="SliderFileName" class="form-text text-danger"></span>
+                        </div>
+                    </div>
+                    
+                    <div class="row mb-3">
+                        <div class="col-sm-2"></div>
+                        <div class="col-sm-10">
+                            <input type="submit" class="btn btn-success" value="Kaydet" />
+                            <a class="btn btn-danger" asp-controller="Account" asp-action="Index">Anasayfa</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

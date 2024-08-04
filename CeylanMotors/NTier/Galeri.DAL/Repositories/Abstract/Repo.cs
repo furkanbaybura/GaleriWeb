@@ -39,6 +39,7 @@ namespace Galeri.DAL.Repositories.Abstract
         }
 
         public virtual IEnumerable<TEntity> GetAll()
+        
         {
             return _dbcContext.Set<TEntity>().AsNoTracking().ToList();
         }

@@ -4,27 +4,30 @@
     ViewBag.Title = "İlanlarımız";
 }
 <body class="body" style="background-color:#191919;">
-<h1 style="text-align:center;color:white">Güncel İlanlarımız</h1>
+
+    <h1 style="text-align:center;color:white">Güncel İlanlarımız</h1>
 
 
+    <div style="display:flex;flex-wrap:wrap;gap:2px;padding-left:400px">
 
-@foreach (CategoryViewModel item in Model)
-{
-    
-        
-            <div class="col col-3 mt-3" style="width: 25rem;border:3px solid darkred;">
-                <img src="~/images/bmw.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                        <h5 class="card-title" style="text-align:center">@item.Marka</h5>
-                        <p class="card-text">@item.Modeli</p>
-                    <p class="card-text">@item.Renk</p>
-                    <p class="card-text">@item.Fiyat</p>
-                    <a href="#" class="btn btn-danger">İlan Detayı</a>
-                </div>
+    @foreach (CategoryViewModel item in Model)
+    {
 
+      
+        <div  class="col col-3 mt-3" style="width: 25rem;border:2px solid darkred;">
+            <img src="~/images/bmw.jpg" class="card-img-top" alt="..." >
+            <div class="card-body" >
+                <h5 class="card-title" style="text-align:center">@item.Marka</h5>
+                <p class="card-text">@item.Modeli</p>
+                <p class="card-text">@item.Renk</p>
+                <p class="card-text">@item.Fiyat</p>
+                <a href="#" class="btn btn-danger" style="align-items:end">İlan Detayı</a>
             </div>
-        
-}
+       
+         </div>
+
+    }
+    </div>
 
 
 

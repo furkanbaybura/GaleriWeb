@@ -1,5 +1,6 @@
 using Galeri.BLL.Managers.Concrete;
 using Galeri.ViewModel.Category;
+using Galeri.ViewModel.Slider;
 using GaleriClient.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
@@ -10,17 +11,20 @@ namespace GaleriClient.Controllers
     {
         private readonly ILogger<HomeController> _logger;
         private CategoryManager _categoryManager;
+        private SliderManager _sliderManager;
 
-        public HomeController(ILogger<HomeController> logger, CategoryManager categoryManager)
+        public HomeController(ILogger<HomeController> logger, CategoryManager categoryManager,SliderManager slidermanager)
         {
             _logger = logger;
             _categoryManager = categoryManager;
+            _sliderManager = slidermanager;
         }
 
         public IActionResult Index()
         {
             IEnumerable<CategoryViewModel> list = _categoryManager.GetAll().ToList();
-
+            IEnumerable<SliderViewModel> sliderlist = _sliderManager.GetAll().ToList();
+            ViewBag.List = sliderlist;
             return View(list);
         }
 
