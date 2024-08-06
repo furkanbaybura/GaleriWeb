@@ -20,6 +20,9 @@ builder.Services.AddScoped<CategoryManager>();
 builder.Services.AddScoped<SliderRepo>();
 builder.Services.AddScoped<SliderService>();
 builder.Services.AddScoped<SliderManager>();
+builder.Services.AddScoped<YakindaRepo>();
+builder.Services.AddScoped<YakindaService>();
+builder.Services.AddScoped<YakindaManager>();
 
 var app = builder.Build();
 

@@ -1,4 +1,5 @@
-﻿@using Galeri.ViewModel.Slider
+﻿@using Galeri.ViewModel.Yakinda
+@using Galeri.ViewModel.Slider
 @model IEnumerable<CategoryViewModel>
 
 
@@ -159,7 +160,78 @@
                 <br />
                 <br />
 
-                <!-- Category Index start-->
+                <!-- yakinda Index start-->
+                <div class="row">
+                    <div class="col">
+                        <h1>Yakında Listesi</h1>
+                        <a class="btn btn-success" asp-controller="Yakinda" asp-action="Create">Yeni</a>
+                        <hr />
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Yakında Adı</th>
+                                    <th>Yakında Açıklaması</th>
+                                    <th>Yakında Başlığı</th>
+                                    <th>Yakında Dosyası</th>
+
+                                </tr>
+                            </thead>
+                            <tbody id="category-list">
+                                @foreach (YakindaViewModel item in ViewBag.Yakinda)
+                                {
+                                    <tr>
+                                        <td>@item.YakindaAd</td>
+                                        <td>@item.YakindaAciklama</td>
+                                        <td>@item.YakindaBaslik</td>
+                                        <td>@item.YakindaFileName</td>
+
+
+                                        <td>
+                                            <a class="btn btn-info" asp-controller="Yakinda" asp-action="Edit" asp-route-id="@item.Id">Düzenle</a>
+                                            <a class="btn btn-secondary" asp-controller="Yakinda" asp-action="Details" asp-route-id="@item.Id">Detay</a>
+                                            <a class="btn btn-danger"
+                                               id="remove-link-@item.Id"
+                                               data-url="@Url.ActionLink("Delete", "Yakinda", new { id = item.Id })"
+                                               data-bs-toggle="modal"
+                                               data-bs-target="#removeConfirm-@item.Id">Sil</a>
+
+                                            <!-- Modal -->
+                                            <div class="modal fade" id="removeConfirm-@item.Id" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <p><strong>@item.YakindaAd</strong> kategorisini silmek istediğinizden emin misiniz?</p>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Geri</button>
+                                                            <button type="button" class="btn btn-danger" onclick="DeleteItem(@item.Id)">Evet</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <th>Slider Adı</th>
+                                    <th>Slider Açıklaması</th>
+                                    <th>Slider Başlığı</th>
+                                    <th>Slider Dosyası</th>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+                <!-- yakinda Index end-->
+
+                <!-- slider Index start-->
                 <div class="row">
                     <div class="col">
                         <h1>Slider Listesi</h1>
@@ -176,7 +248,7 @@
                                 </tr>
                             </thead>
                             <tbody id="category-list">
-                               @*  @foreach (SliderViewModel item in ViewBag.List)
+                                @foreach (SliderViewModel item in ViewBag.List)
                                 {
                                     <tr>
                                         <td>@item.Sliderad</td>
@@ -215,7 +287,7 @@
 
                                         </td>
                                     </tr>
-                                } *@
+                                }
                             </tbody>
                             <tfoot>
                                 <tr>
@@ -228,22 +300,22 @@
                         </table>
                     </div>
                 </div>
-                <!-- Category Index end-->
+                <!-- slider Index end-->
 
 
-                @* Slider Kontrolü başlangıç  *@
+                @* categ Kontrolü başlangıç  *@
                 <div class="row">
                     <div class="col">
                         <h1>İlan Listesi</h1>
-                        <a class="btn btn-success" asp-controller="Slider" asp-action="Create">Yeni</a>
+                        <a class="btn btn-success" asp-controller="Category" asp-action="Create">Yeni</a>
                         <hr />
                         <table class="table">
                             <thead>
                                 <tr>
-                                    <th>Slider Adı</th>
-                                    <th>Dosya</th>
-                                    <th>Slider Açıklaması</th>
-                                    <th>Slider Başlık</th>
+                                    <th>Marka</th>
+                                    <th>Model</th>
+                                    <th>Paket</th>
+                                    <th>Kategori</th>
                                     <th>Motor Hacmi</th>
                                     <th>Vites</th>
                                     <th>Tork</th>

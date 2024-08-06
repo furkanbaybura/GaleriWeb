@@ -2,6 +2,8 @@
 using Galeri.Entities.Concrete;
 using Galeri.ViewModel.Category;
 using Galeri.ViewModel.Login;
+using Galeri.ViewModel.Slider;
+using Galeri.ViewModel.Yakinda;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -15,17 +17,24 @@ namespace GaleriAdmin.Controllers
         private CategoryManager _categoryManager;
         private readonly UserManager<AppUser> _userManager;
         private readonly SignInManager<AppUser> _signInManager;
-        public AccountController(CategoryManager categoryManager, UserManager<AppUser> userManager, SignInManager<AppUser> signInManager)
+        private readonly SliderManager _sliderManager;
+        private readonly YakindaManager _yakindaManager;
+        public AccountController(CategoryManager categoryManager, UserManager<AppUser> userManager, SignInManager<AppUser> signInManager, SliderManager sliderManager,YakindaManager yakindaManager)
         {
             _categoryManager = categoryManager;
             _userManager = userManager;
             _signInManager = signInManager;
+            _sliderManager = sliderManager;
+            _yakindaManager= yakindaManager;
         }
         
         public IActionResult Index()
         {
             IEnumerable<CategoryViewModel> list = _categoryManager.GetAll();
-
+            IEnumerable<SliderViewModel> slider = _sliderManager.GetAll();
+            IEnumerable<YakindaViewModel> yakinda = _yakindaManager.GetAll();
+            ViewBag.List=slider;
+            ViewBag.Yakinda=yakinda;
             return View(list);
            
         }

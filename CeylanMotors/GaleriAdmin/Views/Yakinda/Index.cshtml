@@ -1,0 +1,74 @@
+﻿@using Galeri.ViewModel.Yakinda
+@model IEnumerable<YakindaViewModel>
+<body style="background-color:#191919 ; color:darkred ">
+    <div class="row">
+        <div class="col">
+            <h1>Yakında Kısmı Listesi</h1>
+            <a class="btn btn-success" asp-controller="Yakinda" asp-action="Create">Yeni</a>
+            <hr />
+            <table class="table" style="background-color:#191919 ; color:darkred">
+                <thead>
+                    <tr>
+                        <th>Adı</th>
+                        <th>Başlık</th>
+                        <th>Açıklama</th>
+                        <th>İşlem</th>
+                    </tr>
+                </thead>
+                <tbody id="slider-list">
+                    @foreach (YakindaViewModel item in Model)
+                    {
+                        <tr>
+                            <td>@item.YakindaAd</td>
+                            <td>@item.YakindaBaslik</td>
+                            <td>@item.YakindaAciklama</td>
+
+                            <td>
+                                <a class="btn btn-info" asp-controller="Yakinda" asp-action="Edit" asp-route-id="@item.Id">Düzenle</a>
+                                <a class="btn btn-secondary" asp-controller="Yakinda" asp-action="Details" asp-route-id="@item.Id">Detay</a>
+                                <a class="btn btn-danger"
+                                   id="remove-link-@item.Id"
+                                   data-url="@Url.ActionLink("Delete", "Yakinda", new { id = item.Id })"
+                                   data-bs-toggle="modal"
+                                   data-bs-target="#removeConfirm-@item.Id">Sil</a>
+
+                                <!-- Modal -->
+                                <div class="modal fade" id="removeConfirm-@item.Id" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h1 class="modal-title fs-5" id="exampleModalLabel">Slider Silme</h1>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <p><strong>@item.YakindaAd</strong> Sliderını silmek istediğinizden emin misiniz?</p>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Geri</button>
+                                                <button type="button" class="btn btn-danger" onclick="DeleteItem(@item.Id)">Evet</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </td>
+                        </tr>
+                        
+                    }
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th>Adı</th>
+                        <th>Başlık</th>
+                        <th>Açıklama</th>
+                        <th>İşlem</th>
+                    </tr>
+                </tfoot>
+            </table>
+            <a class="btn btn-secondary" asp-controller="Account" asp-action="Index">Anasayfa</a>
+        </div>
+    </div>
+</body>
+@section Scripts {
+    <script type="text/javascript" src="~/js/Slider/index.js"></script>
+}

@@ -1,0 +1,55 @@
+﻿@using Galeri.ViewModel.Yakinda
+@model YakindaViewModel
+<body style="background-color:#191919 ; color:darkred ">
+    <div class="row">
+        <div class="col">
+            <div class="card">
+                <div class="card-header">
+                    <h1>Yakinda Kısmını Düzenle</h1>
+                </div>
+                <div class="card-body" style="background-color:#191919 ; color:darkred ">
+                    <form asp-action="Create">
+                        <div asp-validation-summary="All"></div>
+                        <div class="row mb-3">
+                            <label asp-for="YakindaAd" class="col-sm-2 col-form-label">@Html.DisplayNameFor(m => m.YakindaAd)</label>
+                            <div class="col-sm-10">
+                                <input asp-for="YakindaAd" class="form-control" placeholder="@Html.DisplayNameFor(m => m.YakindaAd)" />
+                                <span asp-validation-for="YakindaAd" class="form-text text-danger"></span>
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label asp-for="YakindaBaslik" class="col-sm-2 col-form-label">@Html.DisplayNameFor(m => m.YakindaBaslik)</label>
+                            <div class="col-sm-10">
+                                <input asp-for="YakindaBaslik" class="form-control" placeholder="@Html.DisplayNameFor(m => m.YakindaBaslik)" />
+                                <span asp-validation-for="YakindaBaslik" class="form-text text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label asp-for="YakindaAciklama" class="col-sm-2 col-form-label">@Html.DisplayNameFor(m => m.YakindaAciklama)</label>
+                            <div class="col-sm-10">
+                                <input asp-for="YakindaAciklama" class="form-control" placeholder="@Html.DisplayNameFor(m => m.YakindaAciklama)" />
+                                <span asp-validation-for="YakindaAciklama" class="form-text text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label asp-for="YakindaFileName" class="col-sm-2 col-form-label">@Html.DisplayNameFor(m => m.YakindaFileName)</label>
+                            <div class="col-sm-10">
+                                <input asp-for="YakindaFileName" class="form-control" placeholder="@Html.DisplayNameFor(m => m.YakindaFileName)" />
+                                <span asp-validation-for="YakindaFileName" class="form-text text-danger"></span>
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <div class="col-sm-2"></div>
+                            <div class="col-sm-10">
+                                <input type="submit" class="btn btn-success" value="Kaydet" />
+                                <a class="btn btn-danger" asp-controller="Account" asp-action="Index">Anasayfa</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

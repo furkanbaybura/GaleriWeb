@@ -1,86 +1,86 @@
 ﻿@using Galeri.ViewModel.Slider
+@using Galeri.ViewModel.Yakinda
+@using System.Linq
 @model IEnumerable<CategoryViewModel>
 
 @{
     
     ViewBag.Title = "Anasayfa";
 }
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Diğer <head> içeriğiniz -->
+    <link href="~/slidercss/css.css" rel="stylesheet">
+</head>
 <body class="body" style="background-color:#191919;">
-    @* video baslangıc *@
-
-@*     <div class="video-container" >
-    <video style="display:flex" loop="true" autoplay="autoplay" playsinline="" muted="" >
-    <source src="~/images/bmeacilis.MOV" type="video/mp4">
-    </video>
-    </div>
- *@
-    @* video bitis *@
 
 
-    <div>
-
-        <div id="carouselExampleCaptions" class="carousel slide" style="padding-left:400px;padding-right:400px;">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-            </div>
-            <div class="carousel-inner">
-                @foreach (SliderViewModel item in ViewBag.List)
-                {
-                    <div class="carousel-item active">
-                        <img src="~/images/bmw.jpg" class="d-block w-100" alt="..." style="border:5px solid darkred;border-radius:80px;">
-                        <div class="carousel-caption d-none d-md-block" style="background-color:aliceblue;opacity:0.2;position:absolute;margin:auto;width:30%;height:10%">
-                            <h2>@item.Sliderad</h2>
-                            <h4>@item.SliderAciklama</h4>
-                        </div>
+                @* slider başla *@
+                <div id="carouselExampleCaptions" class="carousel slide" style="padding-left:400px;padding-right:400px;">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
                     </div>
-                }
-                         
-                
+                    <div class="carousel-inner">
+                        @foreach (SliderViewModel item in ViewBag.List)
+                        {
+                      <div class="carousel-item @(item == (ViewBag.List as List<SliderViewModel>)?.First() ? "active" : "")">
+                                <img src="~/images/bmw.jpg" class="d-block w-100" alt="..." style="border:5px solid darkred;border-radius:20px;">
+                                <div class="carousel-caption-bottom">
+                                    <h5 style="color:white">@item.Sliderad</h5>
+                                    <p>@item.SliderAciklama</p>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Geri</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">İleri</span>
+                    </button>
+                </div>
+  
+                <br />
+                <br />
+                <br />
+    @* slider bitiş *@
+
+        @* yakında kısmı başlangıç*@
+  
+        <div class="body" style="background-color:#191919; padding: 20px;">
+            <h1 class="hero-text">Çok Yakında!</h1>
+            <div class="container">
+                <div class="row">
+                    @foreach (YakindaViewModel item in ViewBag.Yakinda)
+                    {
+                        <div class="col-md-4 mb-4">
+                            <div class="card">                                
+                                <img class="card-img-top" src="~/images/bmw.jpg" alt="Image" />
+                                <div class="card-body">
+                                    <h2>@item.YakindaAd</h2>
+                                   <h5>@item.YakindaAciklama</h5>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
         </div>
-        <br />
-        <br />
-        <br />
-        @* ilanlar kısmı başlangıç*@
-        <h1 style="text-align:center;color:white">Çok Yakında ! </h1>
-        <div class="body" style="background-color:#191919;">
 
-            <div class="card-deck">
-                @foreach (CategoryViewModel item in Model)
-                {
-                    <div class="card m-3" style="width: 25rem;border:3px solid darkred;">
-                        <div class="card-header">
-                            <h3>@item.Name</h3>
-                        </div>
-                        <img class="card-img-top" src="~/images/bmw.jpg"
-                             asp-append-version="true" />
-                        <div class="card-footer text-center">
-                         
-                           
-                        </div>
-                    </div>
-                }
-            </div>
-            <div class="row grid">
-                <div class="filters-content">
+           
            
 
-            @* ilanlar kısmı bitiş *@
+            @* yakında kısmı bitiş *@
 
-            <!-- Category Index start-->
-            <!-- Category Index end-->
             @* burdan sonra hizmetler *@
-
+        <div class="row grid">
+            <div class="filters-content">
             <section class="ftco-section" style="color:#191919;border:4px solid darkred">
                 <div class="container" style="border:4px solid darkred;background-color:lightgray;border-radius:80px">
                     <div class="row justify-content-center mb-5">

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "QZw3O/jFCWoSgnJjzhmEsr4ABQA5smLYZUYj+WNrc90=",
+  "Hash": "ZuEUEXocDet6xKXXsulcbF6PsO/M66BAtKwc43meKqM=",
   "Source": "GaleriClient",
   "BasePath": "_content/GaleriClient",
   "Mode": "Default",
@@ -2124,6 +2124,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\superb.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\GaleriClient\\wwwroot\\ilanlarcss\\ilanlarcss.css",
+      "SourceId": "GaleriClient",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\GaleriClient\\wwwroot\\",
+      "BasePath": "_content/GaleriClient",
+      "RelativePath": "ilanlarcss/ilanlarcss.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\ilanlarcss\\ilanlarcss.css"
     },
     {
       "Identity": "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\GaleriClient\\wwwroot\\js\\aos.js",
@@ -5508,12 +5527,12 @@
       "OriginalItemSpec": "wwwroot\\scss\\style.scss"
     },
     {
-      "Identity": "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\GaleriClient\\wwwroot\\videos\\bmeacilis.MOV",
+      "Identity": "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\GaleriClient\\wwwroot\\slidercss\\css.css",
       "SourceId": "GaleriClient",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\GaleriClient\\wwwroot\\",
       "BasePath": "_content/GaleriClient",
-      "RelativePath": "videos/bmeacilis.MOV",
+      "RelativePath": "slidercss/css.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -5524,7 +5543,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\videos\\bmeacilis.MOV"
+      "OriginalItemSpec": "wwwroot\\slidercss\\css.css"
     }
   ]
 }

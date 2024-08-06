@@ -1,0 +1,83 @@
+﻿.carousel-caption-bottom {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    width: 80%;
+}
+
+    .carousel-caption-bottom h5 {
+        margin: 0;
+        font-size: 1.5rem;
+    }
+
+    .carousel-caption-bottom p {
+        margin: 0;
+        font-size: 1rem;
+    }
+
+.hero-text {
+    text-align: center;
+    color: #ffffff;
+    font-size: 3rem; 
+    font-weight: bold;
+    margin-top: 50px; 
+    margin-bottom: 30px; 
+    padding: 20px;
+    background: linear-gradient(135deg, rgba(55, 0, 0, 0.8), rgba(200, 0, 0, 0.8)); 
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+
+.card {
+    border: 3px solid #ff4d4d;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position:relative
+}
+
+    .card:hover {
+        transform: scale(1.05); 
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    }
+
+.card-header {
+    background-color: darkred; 
+    color: #ffffff;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.card-img-top {
+    border-bottom: 3px solid #ff4d4d; 
+}
+
+.card-body {
+    padding: 15px;
+    background-color: #fff5f5;
+}
+.container {
+    display:flex;
+    flex-direction: column;
+    align-items:center
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+}
+
+.card-body{
+    background-color:darkred;
+    text-align:center;
+
+}

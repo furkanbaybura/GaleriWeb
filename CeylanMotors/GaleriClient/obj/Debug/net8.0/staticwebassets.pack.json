@@ -445,6 +445,10 @@
       "PackagePath": "staticwebassets\\fonts\\open-iconic\\open-iconic.woff"
     },
     {
+      "Id": "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\GaleriClient\\wwwroot\\ilanlarcss\\ilanlarcss.css",
+      "PackagePath": "staticwebassets\\ilanlarcss\\ilanlarcss.css"
+    },
+    {
       "Id": "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\GaleriClient\\wwwroot\\js\\Category\\index.js",
       "PackagePath": "staticwebassets\\js\\Category\\index.js"
     },
@@ -1157,8 +1161,8 @@
       "PackagePath": "staticwebassets\\scss\\style.scss"
     },
     {
-      "Id": "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\GaleriClient\\wwwroot\\videos\\bmeacilis.MOV",
-      "PackagePath": "staticwebassets\\videos\\bmeacilis.MOV"
+      "Id": "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\GaleriClient\\wwwroot\\slidercss\\css.css",
+      "PackagePath": "staticwebassets\\slidercss\\css.css"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.GaleriClient.Microsoft.AspNetCore.StaticWebAssets.props",
