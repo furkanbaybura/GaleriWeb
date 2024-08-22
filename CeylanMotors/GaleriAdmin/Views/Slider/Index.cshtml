@@ -11,17 +11,43 @@
                 <tr>
                     <th>Adı</th>
                     <th>Başlık</th>
-                    <th>Açıklama</th>
+                    <th>Açıklama</th>                  
+                    <th>Slider Adı</th>
+                    <th>Fotoğraf</th>
                     <th>İşlem</th>
                 </tr>
             </thead>
             <tbody id="slider-list">
+               
                 @foreach (SliderViewModel item in Model)
                 {
-                    <tr>
+                 
+                    <tr>                        
                         <td>@item.Sliderad</td>
                         <td>@item.SliderBaslik</td>
                         <td>@item.SliderAciklama</td>
+                        <td>@item.SliderImage</td>
+                        <td>
+                                <div class="row mt-4">
+                                    @if (item.SliderImage != null && item.SliderImage.Count > 0)
+                                    {
+
+                                        foreach (var imageUrl in item.SliderImage)
+                                        {
+                                            <div class="col-md-3">
+                                                <img src="~/uploads/@imageUrl" class="img-thumbnail" alt="Slider Image">
+                                            </div>
+                                        }
+                                        
+                                    }
+                                    else
+                                    {
+                                        <div class="col-md-4">
+                                            <p>Bu slider için henüz fotoğraf eklenmemiş.</p>                                            
+                                        </div>
+                                    }
+                                </div>
+                        </td>
 
                         <td>
                             <a class="btn btn-info" asp-controller="Slider" asp-action="Edit" asp-route-id="@item.Id">Düzenle</a>
@@ -54,12 +80,15 @@
                         </td>
                     </tr>
                 }
+
             </tbody>
             <tfoot>
                 <tr>
                     <th>Adı</th>
                     <th>Başlık</th>
-                    <th>Açıklama</th>
+                    <th>Açıklama</th>                   
+                    <th>Slider Adı</th>
+                    <th>Fotoğraf</th>
                     <th>İşlem</th>
                 </tr>
             </tfoot>

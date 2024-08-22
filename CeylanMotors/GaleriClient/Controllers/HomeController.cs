@@ -1,4 +1,5 @@
 using Galeri.BLL.Managers.Concrete;
+using Galeri.Entities.Concrete;
 using Galeri.ViewModel.Category;
 using Galeri.ViewModel.Slider;
 using Galeri.ViewModel.Yakinda;
@@ -55,6 +56,7 @@ namespace GaleriClient.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+       
     }
 }
 

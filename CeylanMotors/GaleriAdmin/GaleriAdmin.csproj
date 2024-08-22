@@ -22,4 +22,8 @@
     <ProjectReference Include="..\NTier\Galeri.ViewModel\Galeri.ViewModel.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\uploads\" />
+  </ItemGroup>
+
 </Project>

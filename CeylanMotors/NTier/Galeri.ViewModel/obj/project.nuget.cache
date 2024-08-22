@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "MdMTWUTAzHRVsEVYZJMftX4LCwfjmP66g4668898Rq//1gNWJkVCHCQ6hcC7/o3UvIAgSG8WqlOyIPeJFYWG5w==",
+  "dgSpecHash": "szIV9fwtnO4SJ5RrMFOXQLa8fZF/MKDJ6YV90u8REs7DN+pSiJANwEj5LO32B+H0YaXv3qCjOFPDNwAf7A4MYw==",
   "success": true,
   "projectFilePath": "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\NTier\\Galeri.ViewModel\\Galeri.ViewModel.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\user\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.17\\microsoft.aspnetcore.http.features.5.0.17.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.1\\microsoft.extensions.primitives.5.0.1.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\system.io.pipelines\\5.0.2\\system.io.pipelines.5.0.2.nupkg.sha512"
+  ],
   "logs": []
 }

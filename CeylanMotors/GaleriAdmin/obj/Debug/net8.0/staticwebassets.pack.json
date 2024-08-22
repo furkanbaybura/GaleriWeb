@@ -1605,6 +1605,18 @@
       "PackagePath": "staticwebassets\\scss\\style.scss"
     },
     {
+      "Id": "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\GaleriAdmin\\wwwroot\\uploads\\anadol_65eccebd-882c-47f8-a2b9-adbbc6b48818.jpg",
+      "PackagePath": "staticwebassets\\uploads\\anadol_65eccebd-882c-47f8-a2b9-adbbc6b48818.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\GaleriAdmin\\wwwroot\\uploads\\geo_5c859434-6b94-4ab8-8ad8-892bbcd368f5.jpg",
+      "PackagePath": "staticwebassets\\uploads\\geo_5c859434-6b94-4ab8-8ad8-892bbcd368f5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\GaleriAdmin\\wwwroot\\uploads\\geo_9c3e4dd9-7398-42cc-8525-8aebfdfb59db.jpg",
+      "PackagePath": "staticwebassets\\uploads\\geo_9c3e4dd9-7398-42cc-8525-8aebfdfb59db.jpg"
+    },
+    {
       "Id": "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\GaleriAdmin\\wwwroot\\videos\\bmeacilis.MOV",
       "PackagePath": "staticwebassets\\videos\\bmeacilis.MOV"
     },

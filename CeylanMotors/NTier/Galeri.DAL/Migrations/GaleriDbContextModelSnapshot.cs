@@ -109,7 +109,7 @@ namespace Galeri.DAL.Migrations
                             Id = 1,
                             AccessFailedCount = 0,
                             Birthdate = new DateOnly(2000, 1, 1),
-                            ConcurrencyStamp = "cc8eb312-096e-455c-8054-d3a81ddcf5dc",
+                            ConcurrencyStamp = "faa1a346-7a8b-4a85-8600-81d033e1b9ed",
                             Email = "Admin@mail.com",
                             EmailConfirmed = true,
                             Gender = 0,
@@ -117,7 +117,7 @@ namespace Galeri.DAL.Migrations
                             Name = "Admin",
                             NormalizedEmail = "ADMİN@MAİL.COM",
                             NormalizedUserName = "ADMİN",
-                            PasswordHash = "AQAAAAIAAYagAAAAECa43iq3svJcIw7649mUSL6mHT7d5eDBHl6ezxHSnePWKXuHQr9sQ+ejhhumnRDQpA==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEPSuz+yIOA25uz+NVJfv4HFSeJRC2y9LTjS5Y0BuvMKrl/xgEYbrNuCBfT8vuu7upg==",
                             PhoneNumber = "-",
                             PhoneNumberConfirmed = true,
                             Surname = "Admin",
@@ -138,6 +138,9 @@ namespace Galeri.DAL.Migrations
                         .HasColumnType("int");
 
                     b.Property<int?>("Beygir")
+                        .HasColumnType("int");
+
+                    b.Property<int>("CategoryId")
                         .HasColumnType("int");
 
                     b.Property<DateTime>("CreatedDate")
@@ -189,6 +192,28 @@ namespace Galeri.DAL.Migrations
                     b.ToTable("Categories");
                 });
 
+            modelBuilder.Entity("Galeri.Entities.Concrete.Image", b =>
+                {
+                    b.Property<int>("ImageId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ImageId"));
+
+                    b.Property<int>("CategoryId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("ImageName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("ImageId");
+
+                    b.HasIndex("CategoryId");
+
+                    b.ToTable("Images");
+                });
+
             modelBuilder.Entity("Galeri.Entities.Concrete.Slider", b =>
                 {
                     b.Property<int>("Id")
@@ -210,11 +235,12 @@ namespace Galeri.DAL.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("SliderFileName")
-                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("SliderImage")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Sliderad")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime?>("UpdatedDate")
@@ -424,6 +450,17 @@ namespace Galeri.DAL.Migrations
                     b.Navigation("AppUser");
                 });
 
+            modelBuilder.Entity("Galeri.Entities.Concrete.Image", b =>
+                {
+                    b.HasOne("Galeri.Entities.Concrete.Category", "Category")
+                        .WithMany("Images")
+                        .HasForeignKey("CategoryId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Category");
+                });
+
             modelBuilder.Entity("Galeri.Entities.Concrete.Slider", b =>
                 {
                     b.HasOne("Galeri.Entities.Concrete.AppUser", "AppUser")
@@ -495,6 +532,11 @@ namespace Galeri.DAL.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("Galeri.Entities.Concrete.Category", b =>
+                {
+                    b.Navigation("Images");
                 });
 #pragma warning restore 612, 618
         }

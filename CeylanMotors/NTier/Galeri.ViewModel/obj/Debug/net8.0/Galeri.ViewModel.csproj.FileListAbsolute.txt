@@ -22,3 +22,4 @@ C:\Users\furkan.baybura\Source\Repos\GaleriWeb\CeylanMotors\NTier\Galeri.ViewMod
 C:\Users\furkan.baybura\Source\Repos\GaleriWeb\CeylanMotors\NTier\Galeri.ViewModel\obj\Debug\net8.0\refint\Galeri.ViewModel.dll
 C:\Users\furkan.baybura\Source\Repos\GaleriWeb\CeylanMotors\NTier\Galeri.ViewModel\obj\Debug\net8.0\Galeri.ViewModel.pdb
 C:\Users\furkan.baybura\Source\Repos\GaleriWeb\CeylanMotors\NTier\Galeri.ViewModel\obj\Debug\net8.0\ref\Galeri.ViewModel.dll
+C:\Users\user\source\repos\GaleriWeb\CeylanMotors\NTier\Galeri.ViewModel\obj\Debug\net8.0\Galeri.ViewModel.csproj.AssemblyReference.cache
