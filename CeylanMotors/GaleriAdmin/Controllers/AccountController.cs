@@ -54,7 +54,12 @@ namespace GaleriAdmin.Controllers
             public async Task<IActionResult> Login(LoginViewModel model)
             {
 
-                AppUser user = await _userManager.FindByEmailAsync(model.Email);
+            if (!ModelState.IsValid)
+            {
+                return View(model);
+            }
+
+            AppUser user = await _userManager.FindByEmailAsync(model.Email);
                 if (user == null)
                 {
 
@@ -74,6 +79,14 @@ namespace GaleriAdmin.Controllers
                 ModelState.AddModelError(string.Empty, "Kullanıcı adı veya şifre yanlış");
                 return View(model);
             }
-    
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Logout()
+        {
+            await _signInManager.SignOutAsync();
+            
+            return RedirectToAction("Index", "Home");
+        }
+
     }
 }

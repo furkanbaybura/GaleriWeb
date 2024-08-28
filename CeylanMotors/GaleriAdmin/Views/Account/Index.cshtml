@@ -52,9 +52,10 @@
         <!-- Sidebar Start -->
         <div class="sidebar pe-4 pb-3">
             <nav class="navbar bg-secondary navbar-dark">
-                <a href="index.html" class="navbar-brand mx-4 mb-3">
+                <a asp-action="index" class="navbar-brand mx-4 mb-3">
                     <h3 class="text-primary"><i class="fa fa-user-edit me-2"></i>Ceylan Motors</h3>
                 </a>
+
                 <div class="d-flex align-items-center ms-4 mb-4">
                     <div class="position-relative">
                         <img class="rounded-circle" src="~/Images/bmw.jpg" alt="" style="width: 40px; height: 40px;">
@@ -85,63 +86,22 @@
                 <a href="#" class="sidebar-toggler flex-shrink-0">
                     <i class="fa fa-bars"></i>
                 </a>
-                <form class="d-none d-md-flex ms-4">
-                    <input class="form-control bg-dark border-0" type="search" placeholder="Search">
-                </form>
-                <div class="navbar-nav align-items-center ms-auto">
-                    <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
-                            <i class="fa fa-envelope me-lg-2"></i>
-                            <span class="d-none d-lg-inline-flex">Message</span>
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-end bg-secondary border-0 rounded-0 rounded-bottom m-0">
-                            <a href="#" class="dropdown-item">
-                                <div class="d-flex align-items-center">
-                                    <img class="rounded-circle" src="~/Images/bmw.jpg" alt="" style="width: 40px; height: 40px;">
-                                    <div class="ms-2">
-                                        <h6 class="fw-normal mb-0">Jhon send you a message</h6>
-                                        <small>15 minutes ago</small>
-                                    </div>
-                                </div>
-                            </a>
-                            <hr class="dropdown-divider">
-                            <a href="#" class="dropdown-item">
-                                <div class="d-flex align-items-center">
-                                    <img class="rounded-circle" src="~/Images/bmw.jpg" alt="" style="width: 40px; height: 40px;">
-                                    <div class="ms-2">
-                                        <h6 class="fw-normal mb-0">Jhon send you a message</h6>
-                                        <small>15 minutes ago</small>
-                                    </div>
-                                </div>
-                            </a>
-                            <hr class="dropdown-divider">
-                            <a href="#" class="dropdown-item">
-                                <div class="d-flex align-items-center">
-                                    <img class="rounded-circle" src="~/Images/bmw.jpg" alt="" style="width: 40px; height: 40px;">
-                                    <div class="ms-2">
-                                        <h6 class="fw-normal mb-0">Jhon send you a message</h6>
-                                        <small>15 minutes ago</small>
-                                    </div>
-                                </div>
-                            </a>
-                            <hr class="dropdown-divider">
-                            <a href="#" class="dropdown-item text-center">See all message</a>
-                        </div>
-                    </div>
-                    <div class="nav-item dropdown">
 
-                        <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
-                                <img class="rounded-circle me-lg-2" src="~/Images/bmw.jpg" alt="" style="width: 40px; height: 40px;">
-                                <span class="d-none d-lg-inline-flex">Ceylan Motors</span>
-                            </a>
-                            <div class="dropdown-menu dropdown-menu-end bg-secondary border-0 rounded-0 rounded-bottom m-0">
-                                <a href="#" class="dropdown-item">My Profile</a>
-                                <a href="#" class="dropdown-item">Settings</a>
-                                <a href="#" class="dropdown-item">Log Out</a>
-                            </div>
-                        </div>
-                    </div>
+                <div class="navbar-nav align-items-center ms-auto">
+                    
+                       
+                      <a asp-action="Messages" class="nav-item nav-link"><i class="fa fa-envelope me-lg-2"></i>Mesajlar</a>
+                    
+                      <img class="rounded-circle me-lg-2" src="~/Images/bmw.jpg" alt="" style="width: 40px; height: 40px;margin-left:10px">
+                      <a asp-action="index" class="d-none d-lg-inline-flex">Ceylan Motors</a>
+                    <form id="logoutForm" asp-action="logout" method="post" style="display: inline;margin-left:10px">
+                        @Html.AntiForgeryToken() <!-- CSRF koruması için -->
+                        <button type="submit" class="btn btn-danger">Çıkış</button>
+                    </form>
+                      
+                            
+                        
+                   
             </nav>
 
             <!-- Navbar End -->
@@ -152,7 +112,7 @@
                     <div class="h-100 bg-secondary rounded p-4">
                         <div class="d-flex align-items-center justify-content-between mb-4">
                             <h6 class="mb-0">Takvim</h6>
-                            
+
                         </div>
                         <div id="calender"></div>
                     </div>
@@ -165,6 +125,7 @@
                     <div class="col">
                         <h1>Yakında Listesi</h1>
                         <a class="btn btn-success" asp-controller="Yakinda" asp-action="Create">Yeni</a>
+                        <a class="btn btn-warning" asp-controller="Yakinda" asp-action="Index">Liste</a>
                         <hr />
                         <table class="table">
                             <thead>
@@ -230,12 +191,12 @@
                     </div>
                 </div>
                 <!-- yakinda Index end-->
-
                 <!-- slider Index start-->
                 <div class="row">
                     <div class="col">
                         <h1>Slider Listesi</h1>
                         <a class="btn btn-success" asp-controller="Slider" asp-action="Create">Yeni</a>
+                        <a class="btn btn-warning" asp-controller="Slider" asp-action="Index">Liste</a>
                         <hr />
                         <table class="table">
                             <thead>
@@ -244,7 +205,7 @@
                                     <th>Slider Açıklaması</th>
                                     <th>Slider Başlığı</th>
                                     <th>Slider Dosyası</th>
-                               
+
                                 </tr>
                             </thead>
                             <tbody id="category-list">
@@ -255,7 +216,7 @@
                                         <td>@item.SliderAciklama</td>
                                         <td>@item.SliderBaslik</td>
                                         <td>@item.SliderImage</td>
-                                                                      
+
 
                                         <td>
                                             <a class="btn btn-info" asp-controller="Category" asp-action="Edit" asp-route-id="@item.Id">Düzenle</a>
@@ -301,13 +262,12 @@
                     </div>
                 </div>
                 <!-- slider Index end-->
-
-
                 @* categ Kontrolü başlangıç  *@
                 <div class="row">
                     <div class="col">
                         <h1>İlan Listesi</h1>
                         <a class="btn btn-success" asp-controller="Category" asp-action="Create">Yeni</a>
+                        <a class="btn btn-warning" asp-controller="Category" asp-action="Index">Liste</a>
                         <hr />
                         <table class="table">
                             <thead>
