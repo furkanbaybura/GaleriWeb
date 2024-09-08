@@ -8176,12 +8176,12 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\signindoc\scss\bootstrap\scss\_variables.scss))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\anadol_53335f35-f808-4b79-b2cc-1512aad1439b.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\2008_8ba837a6-3f6a-420d-b2a4-e6d8077826c8.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>GaleriAdmin</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/GaleriAdmin</BasePath>
-      <RelativePath>uploads/anadol_53335f35-f808-4b79-b2cc-1512aad1439b.jpg</RelativePath>
+      <RelativePath>uploads/2008_8ba837a6-3f6a-420d-b2a4-e6d8077826c8.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -8190,14 +8190,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\anadol_53335f35-f808-4b79-b2cc-1512aad1439b.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\2008_8ba837a6-3f6a-420d-b2a4-e6d8077826c8.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\anadol_65eccebd-882c-47f8-a2b9-adbbc6b48818.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\anadol_040c2cfa-5734-45ad-8c99-f665e81095cd.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>GaleriAdmin</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/GaleriAdmin</BasePath>
-      <RelativePath>uploads/anadol_65eccebd-882c-47f8-a2b9-adbbc6b48818.jpg</RelativePath>
+      <RelativePath>uploads/anadol_040c2cfa-5734-45ad-8c99-f665e81095cd.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -8206,14 +8206,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\anadol_65eccebd-882c-47f8-a2b9-adbbc6b48818.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\anadol_040c2cfa-5734-45ad-8c99-f665e81095cd.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\geo_5c859434-6b94-4ab8-8ad8-892bbcd368f5.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\anadol_2069a778-5631-4802-9084-f979a7595615.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>GaleriAdmin</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/GaleriAdmin</BasePath>
-      <RelativePath>uploads/geo_5c859434-6b94-4ab8-8ad8-892bbcd368f5.jpg</RelativePath>
+      <RelativePath>uploads/anadol_2069a778-5631-4802-9084-f979a7595615.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -8222,14 +8222,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\geo_5c859434-6b94-4ab8-8ad8-892bbcd368f5.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\anadol_2069a778-5631-4802-9084-f979a7595615.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\geo_9c3e4dd9-7398-42cc-8525-8aebfdfb59db.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\bmw_0d246420-34ed-4560-ac2f-f0ae55ff4460.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>GaleriAdmin</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/GaleriAdmin</BasePath>
-      <RelativePath>uploads/geo_9c3e4dd9-7398-42cc-8525-8aebfdfb59db.jpg</RelativePath>
+      <RelativePath>uploads/bmw_0d246420-34ed-4560-ac2f-f0ae55ff4460.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -8238,7 +8238,71 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\geo_9c3e4dd9-7398-42cc-8525-8aebfdfb59db.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\bmw_0d246420-34ed-4560-ac2f-f0ae55ff4460.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\bmw_817b9f4a-a0cd-46e1-a28e-60cdecf8b8df.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>GaleriAdmin</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/GaleriAdmin</BasePath>
+      <RelativePath>uploads/bmw_817b9f4a-a0cd-46e1-a28e-60cdecf8b8df.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\bmw_817b9f4a-a0cd-46e1-a28e-60cdecf8b8df.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\et5_805549ad-6394-4a5e-b87a-139ade66a312.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>GaleriAdmin</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/GaleriAdmin</BasePath>
+      <RelativePath>uploads/et5_805549ad-6394-4a5e-b87a-139ade66a312.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\et5_805549ad-6394-4a5e-b87a-139ade66a312.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\passat_b3f4311d-21d8-4e90-9bf6-7c214711c48e.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>GaleriAdmin</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/GaleriAdmin</BasePath>
+      <RelativePath>uploads/passat_b3f4311d-21d8-4e90-9bf6-7c214711c48e.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\passat_b3f4311d-21d8-4e90-9bf6-7c214711c48e.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\superb_855ef792-9b43-4e24-92e1-fe74adaf6e4d.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>GaleriAdmin</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/GaleriAdmin</BasePath>
+      <RelativePath>uploads/superb_855ef792-9b43-4e24-92e1-fe74adaf6e4d.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\uploads\superb_855ef792-9b43-4e24-92e1-fe74adaf6e4d.jpg))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\videos\bmeacilis.MOV))">
       <SourceType>Package</SourceType>

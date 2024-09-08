@@ -9,9 +9,9 @@ namespace Galeri.DTO
     public class SliderDto : BaseDto
     {
 
-        public string? Sliderad { get; set; }
-        public string? SliderFileName { get; set; }
+        public string? Sliderad { get; set; }     
+        public string? SliderBaslik { get; set; }     
         public string? SliderAciklama { get; set; }
-        public string? SliderBaslik { get; set; }
+        public string? SliderImageName { get; set; }
     }
 }

@@ -12,8 +12,7 @@
                 <tr>
                     <th>Adı</th>
                     <th>Başlık</th>
-                    <th>Açıklama</th>                  
-                    <th>Slider Adı</th>
+                    <th>Açıklama</th>  
                     <th>Fotoğraf</th>
                     <th>İşlem</th>
                 </tr>
@@ -26,28 +25,9 @@
                     <tr>                        
                         <td>@item.Sliderad</td>
                         <td>@item.SliderBaslik</td>
-                        <td>@item.SliderAciklama</td>
-                        <td>@item.SliderImage</td>
+                        <td>@item.SliderAciklama</td>                        
                         <td>
-                                <div class="row mt-4">
-                                    @if (item.SliderImage != null && item.SliderImage.Count > 0)
-                                    {
-
-                                        foreach (var imageUrl in item.SliderImage)
-                                        {
-                                            <div class="col-md-3">
-                                                <img src="~/uploads/@imageUrl" class="img-thumbnail" alt="Slider Image">
-                                            </div>
-                                        }
-                                        
-                                    }
-                                    else
-                                    {
-                                        <div class="col-md-4">
-                                            <p>Bu slider için henüz fotoğraf eklenmemiş.</p>                                            
-                                        </div>
-                                    }
-                                </div>
+                               <img style="width:30px" src="~/uploads/@item.SliderImageName" /> 
                         </td>
 
                         <td>
@@ -85,12 +65,11 @@
             </tbody>
             <tfoot>
                 <tr>
-                    <th>Adı</th>
-                    <th>Başlık</th>
-                    <th>Açıklama</th>                   
-                    <th>Slider Adı</th>
-                    <th>Fotoğraf</th>
-                    <th>İşlem</th>
+                        <th>Adı</th>
+                        <th>Başlık</th>
+                        <th>Açıklama</th>
+                        <th>Fotoğraf</th>
+                        <th>İşlem</th>
                 </tr>
             </tfoot>
         </table>

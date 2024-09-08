@@ -109,7 +109,7 @@ namespace Galeri.DAL.Migrations
                             Id = 1,
                             AccessFailedCount = 0,
                             Birthdate = new DateOnly(2000, 1, 1),
-                            ConcurrencyStamp = "faa1a346-7a8b-4a85-8600-81d033e1b9ed",
+                            ConcurrencyStamp = "a6a12957-dc7d-41cc-ab11-8981d0d274de",
                             Email = "Admin@mail.com",
                             EmailConfirmed = true,
                             Gender = 0,
@@ -117,7 +117,7 @@ namespace Galeri.DAL.Migrations
                             Name = "Admin",
                             NormalizedEmail = "ADMİN@MAİL.COM",
                             NormalizedUserName = "ADMİN",
-                            PasswordHash = "AQAAAAIAAYagAAAAEPSuz+yIOA25uz+NVJfv4HFSeJRC2y9LTjS5Y0BuvMKrl/xgEYbrNuCBfT8vuu7upg==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEAfvcMGEq5ifKbt72HIvygJiQCyYFvIblQjIGbQJEjkiEyN8tCULyJWaAdS7zgInpg==",
                             PhoneNumber = "-",
                             PhoneNumberConfirmed = true,
                             Surname = "Admin",
@@ -234,10 +234,7 @@ namespace Galeri.DAL.Migrations
                     b.Property<string>("SliderBaslik")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("SliderFileName")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("SliderImage")
+                    b.Property<string>("SliderImageName")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Sliderad")
@@ -274,14 +271,12 @@ namespace Galeri.DAL.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("YakindaAd")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("YakindaBaslik")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("YakindaFileName")
-                        .IsRequired()
+                    b.Property<string>("YakindaImageName")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");

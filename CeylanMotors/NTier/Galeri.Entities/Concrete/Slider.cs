@@ -12,12 +12,10 @@ namespace Galeri.Entities.Concrete
     public class Slider : BaseEntity
     {
 
-        public string? Sliderad {  get; set; }
-        public string? SliderFileName { get; set; }
+        public string? Sliderad {  get; set; }        
         public string? SliderAciklama { get; set; }
         public string? SliderBaslik { get; set; }
-        public string? SliderImage { get; set; }
-        [NotMapped]
-        public IFormFile? ImageUpload { get; set; }
+        public string? SliderImageName { get; set; }
+        
     }
 }

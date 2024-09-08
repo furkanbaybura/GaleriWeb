@@ -13,6 +13,7 @@
                         <th>Adı</th>
                         <th>Başlık</th>
                         <th>Açıklama</th>
+                        <th>Fotoğraf</th>
                         <th>İşlem</th>
                     </tr>
                 </thead>
@@ -23,7 +24,9 @@
                             <td>@item.YakindaAd</td>
                             <td>@item.YakindaBaslik</td>
                             <td>@item.YakindaAciklama</td>
-
+                            <td>
+                                <img style="width:30px" src="~/uploads/@item.YakindaImageName" />
+                            </td>
                             <td>
                                 <a class="btn btn-info" asp-controller="Yakinda" asp-action="Edit" asp-route-id="@item.Id">Düzenle</a>
                                 <a class="btn btn-secondary" asp-controller="Yakinda" asp-action="Details" asp-route-id="@item.Id">Detay</a>
@@ -62,6 +65,7 @@
                         <th>Adı</th>
                         <th>Başlık</th>
                         <th>Açıklama</th>
+                        <th>Fotoğraf</th>
                         <th>İşlem</th>
                     </tr>
                 </tfoot>

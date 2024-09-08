@@ -1,4 +1,5 @@
 ﻿using Galeri.BLL.Managers.Concrete;
+using Galeri.Entities.Concrete;
 using Galeri.ViewModel.Category;
 using Galeri.ViewModel.Slider;
 using Microsoft.AspNetCore.Authorization;
@@ -7,7 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace GaleriAdmin.Controllers
 {
-    
+
     public class SliderController : Controller
     {
         private readonly IWebHostEnvironment _webHostEnvironment;
@@ -17,12 +18,12 @@ namespace GaleriAdmin.Controllers
             _sliderManager = sliderManager;
             _webHostEnvironment = webHostEnvironment;
         }
-      
+
 
         public IActionResult Index()
         {
             IEnumerable<SliderViewModel> list = _sliderManager.GetAll().ToList();
-            
+
 
             return View(list);
         }
@@ -49,63 +50,39 @@ namespace GaleriAdmin.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create(SliderViewModel model)
         {
-            try
+            ModelState.Remove("Id");
+            ModelState.Remove("RowNum");
+            model.AppUserId = 1;
+
+
+
+            if (!ModelState.IsValid)
             {
-                if (!ModelState.IsValid)
-                {
-                    return View(model);
-                }
-
-                model.AppUserId = 1;
-
-                if (model.SliderImageUpload != null && model.SliderImageUpload.Count > 0)
-                {
-                    model.SliderImage = new List<string>();
-
-                    foreach (var file in model.SliderImageUpload)
-                    {
-                        if (file != null && file.Length > 0)
-                        {
-                            // Benzersiz bir dosya adı oluşturun
-                            var fileName = Path.GetFileNameWithoutExtension(file.FileName);
-                            var extension = Path.GetExtension(file.FileName);
-                            var uniqueFileName = $"{fileName}_{Guid.NewGuid()}{extension}";
-
-                            // Dosya kaydetme yolu
-                            var uploadsFolder = Path.Combine(_webHostEnvironment.WebRootPath, "uploads");
-                            var filePath = Path.Combine(uploadsFolder, uniqueFileName);
-
-                            // Dosyayı kaydet
-                            using (var fileStream = new FileStream(filePath, FileMode.Create))
-                            {
-                                file.CopyTo(fileStream);
-                            }
-
-                            // Kaydedilen dosyanın yolunu veya URL'sini sakla
-                            model.SliderImage.Add("/uploads/" + uniqueFileName);
-                        }
-                    }
-                }
-
-                if (_sliderManager.Add(model) > 0)
-                {
-                    return RedirectToAction("Index", "Slider");
-                }
-                else
-                {
-                    ModelState.AddModelError("DbError", "Veritabanına eklenemedi");
-                    return View(model);
-                }
-            }
-            catch (Exception ex)
-            {
-                ModelState.AddModelError("GeneralException", ex.Message);
                 return View(model);
             }
-    }
-    
-    // GET: CategoryController/Edit/5
-    public ActionResult Edit(int id)
+
+            if (model.SliderImageUpload is not null)
+            {
+                var array = model.SliderImageUpload.FileName.Split('.');
+                var withoutExtension = array[0];
+                var extension = array[1];
+
+                Guid guid = Guid.NewGuid();
+                model.SliderImageName = $"{withoutExtension}_{guid}.{extension}";
+                var konum = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/uploads", model.SliderImageName);
+
+                using (var akisOrtami = new FileStream(konum, FileMode.Create))
+                {
+                    model.SliderImageUpload.CopyTo(akisOrtami);
+                }
+            }
+            _sliderManager.Add(model);
+            return RedirectToAction("Index","Slider");
+
+        }
+
+        // GET: CategoryController/Edit/5
+        public ActionResult Edit(int id)
         {
             SliderViewModel model = _sliderManager.Get(id);
             return View(model);
@@ -116,28 +93,48 @@ namespace GaleriAdmin.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Edit(SliderViewModel model, int id)
         {
-            try
-            {
-                if (!ModelState.IsValid)
-                {
-                    return View(model);
-                }
-                model.AppUserId = 1;
-                if (_sliderManager.Update(model) > 0)
-                    return RedirectToAction("Index", "Slider");
-                else
-                {
-                    ModelState.AddModelError("DbError", "Veritabanına eklenemedi");
-                    return View(model);
-                }
+            ModelState.Remove("Id");
+            ModelState.Remove("RowNum");
+            model.AppUserId = 1;
 
-
-            }
-            catch (Exception ex)
+            if (!ModelState.IsValid)
             {
-                ModelState.AddModelError("GenerelException", ex.Message);
-                return View();
+                return View(model);
             }
+
+            var oldslider = _sliderManager.Get(id);
+
+            if (oldslider is null)
+            {
+                return BadRequest("hata var");
+            }
+
+            if (model.SliderImageUpload is null)
+            {
+                model.SliderImageName = oldslider.SliderImageName;
+            }
+            else
+            {
+                var array = model.SliderImageUpload.FileName.Split('.');
+                var withoutExtension = array[0];
+                var extension = array[1];
+
+                Guid guid = Guid.NewGuid();
+                model.SliderImageName = $"{withoutExtension}_{guid}.{extension}";
+                var konum = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/uploads", model.SliderImageName);
+
+                using (var akisOrtami = new FileStream(konum, FileMode.Create))
+                {
+                    model.SliderImageUpload.CopyTo(akisOrtami);
+                }
+            }
+
+            oldslider.SliderImageName = model.SliderImageName;
+            oldslider.Sliderad = model.Sliderad;
+            oldslider.SliderBaslik=model.SliderBaslik;
+            oldslider.SliderAciklama=model.SliderAciklama;
+            _sliderManager.Update(oldslider);
+            return RedirectToAction("Index", ("Slider"));
         }
 
         // GET: CategoryController/Delete/5

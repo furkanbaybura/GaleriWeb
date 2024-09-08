@@ -8,7 +8,7 @@
                     <h1>Yakında Kısmını Güncelle</h1>
                 </div>
                 <div class="card-body">
-                    <form asp-action="Edit">
+                    <form asp-action="Edit" enctype="multipart/form-data">
                         <div asp-validation-summary="All"></div>
                         <div class="row mb-3">
                             <label asp-for="YakindaAd" class="col-sm-2 col-form-label">@Html.DisplayNameFor(m => m.YakindaAd)</label>
@@ -33,13 +33,11 @@
                             </div>
                         </div>
                         <div class="row mb-3">
-                            <label asp-for="YakindaFileName" class="col-sm-2 col-form-label">@Html.DisplayNameFor(m => m.YakindaFileName)</label>
-                            <div class="col-sm-10">
-                                <input asp-for="YakindaFileName" class="form-control" placeholder="@Html.DisplayNameFor(m => m.YakindaFileName)" />
-                                <span asp-validation-for="YakindaFileName" class="form-text text-danger"></span>
-                            </div>
+                            <label asp-for="YakindaImageUpload" class="control-label"></label>
+                            <input name="YakindaImageUpload" asp-for="YakindaImageUpload" class="form-control" />
+                            <span asp-validation-for="YakindaImageUpload" class="text-danger"></span>
                         </div>
-
+ 
                         <div class="row mb-3">
                             <div class="col-sm-2"></div>
                             <div class="col-sm-10">

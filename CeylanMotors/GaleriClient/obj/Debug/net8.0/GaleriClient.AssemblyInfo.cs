@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GaleriClient")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0f105e387a555d5d82049e1e4358991ef6e3fe46")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0be515e0fe2c7f8144b52745154bfa210d7a1610")]
 [assembly: System.Reflection.AssemblyProductAttribute("GaleriClient")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GaleriClient")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

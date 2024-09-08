@@ -28,7 +28,7 @@
                         @foreach (SliderViewModel item in ViewBag.List)
                         {
                       <div class="carousel-item @(item == (ViewBag.List as List<SliderViewModel>)?.First() ? "active" : "")">
-                                <img src="~/images/bmw.jpg" class="d-block w-100" alt="..." style="border:5px solid darkred;border-radius:20px;">
+                    <img src="https://localhost:7280/uploads/@(item.SliderImageName)" class="d-block w-100" alt="..." style="border:5px solid darkred;border-radius:20px;">
                                 <div class="carousel-caption-bottom">
                                     <h5 style="color:white">@item.Sliderad</h5>
                                     <p>@item.SliderAciklama</p>
@@ -60,8 +60,8 @@
                     @foreach (YakindaViewModel item in ViewBag.Yakinda)
                     {
                         <div class="col-md-4 mb-4">
-                            <div class="card">                                
-                                <img class="card-img-top" src="~/images/bmw.jpg" alt="Image" />
+                            <div class="card">
+                            <img src="https://localhost:7280/uploads/@(item.YakindaImageName)" class="d-block w-100" alt="..." style="border:5px solid darkred;border-radius:20px;">
                                 <div class="card-body">
                                     <h2>@item.YakindaAd</h2>
                                    <h5>@item.YakindaAciklama</h5>

@@ -5,10 +5,10 @@
         <div class="col">
             <div class="card">
                 <div class="card-header">
-                    <h1>Yakinda Kısmını Düzenle</h1>
+                    <h1>Yakinda Kısmını Ekle</h1>
                 </div>
                 <div class="card-body" style="background-color:#191919 ; color:darkred ">
-                    <form asp-action="Create">
+                    <form asp-action="Create" enctype="multipart/form-data">
                         <div asp-validation-summary="All"></div>
                         <div class="row mb-3">
                             <label asp-for="YakindaAd" class="col-sm-2 col-form-label">@Html.DisplayNameFor(m => m.YakindaAd)</label>
@@ -32,12 +32,11 @@
                                 <span asp-validation-for="YakindaAciklama" class="form-text text-danger"></span>
                             </div>
                         </div>
+
                         <div class="row mb-3">
-                            <label asp-for="YakindaFileName" class="col-sm-2 col-form-label">@Html.DisplayNameFor(m => m.YakindaFileName)</label>
-                            <div class="col-sm-10">
-                                <input asp-for="YakindaFileName" class="form-control" placeholder="@Html.DisplayNameFor(m => m.YakindaFileName)" />
-                                <span asp-validation-for="YakindaFileName" class="form-text text-danger"></span>
-                            </div>
+                            <label asp-for="YakindaImageUpload" class="control-label"></label>
+                            <input asp-for="YakindaImageUpload" class="form-control" />
+                            <span asp-validation-for="YakindaImageUpload" class="text-danger"></span>
                         </div>
 
                         <div class="row mb-3">

@@ -144,7 +144,7 @@
                                         <td>@item.YakindaAd</td>
                                         <td>@item.YakindaAciklama</td>
                                         <td>@item.YakindaBaslik</td>
-                                        <td>@item.YakindaFileName</td>
+                                        
 
 
                                         <td>
@@ -215,15 +215,15 @@
                                         <td>@item.Sliderad</td>
                                         <td>@item.SliderAciklama</td>
                                         <td>@item.SliderBaslik</td>
-                                        <td>@item.SliderImage</td>
+                                        <td>@item.SliderImageName</td>
 
 
                                         <td>
-                                            <a class="btn btn-info" asp-controller="Category" asp-action="Edit" asp-route-id="@item.Id">Düzenle</a>
-                                            <a class="btn btn-secondary" asp-controller="Category" asp-action="Details" asp-route-id="@item.Id">Detay</a>
+                                            <a class="btn btn-info" asp-controller="Slider" asp-action="Edit" asp-route-id="@item.Id">Düzenle</a>
+                                            <a class="btn btn-secondary" asp-controller="Slider" asp-action="Details" asp-route-id="@item.Id">Detay</a>
                                             <a class="btn btn-danger"
                                                id="remove-link-@item.Id"
-                                               data-url="@Url.ActionLink("Delete", "Category", new { id = item.Id })"
+                                               data-url="@Url.ActionLink("Delete", "Slider", new { id = item.Id })"
                                                data-bs-toggle="modal"
                                                data-bs-target="#removeConfirm-@item.Id">Sil</a>
 

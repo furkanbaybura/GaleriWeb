@@ -46,27 +46,37 @@ namespace GaleriAdmin.Controllers
             [ValidateAntiForgeryToken]
             public ActionResult Create(YakindaViewModel model)
             {
-                try
+            ModelState.Remove("Id");
+            ModelState.Remove("RowNum");
+            model.AppUserId = 1;
+
+
+
+            if (!ModelState.IsValid)
+            {
+                return View(model);
+            }
+
+            if (model.YakindaImageUpload is not null)
+            {
+                var array = model.YakindaImageUpload.FileName.Split('.');
+                var withoutExtension = array[0];
+                var extension = array[1];
+
+                Guid guid = Guid.NewGuid();
+                model.YakindaImageName = $"{withoutExtension}_{guid}.{extension}";
+                var konum = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/uploads", model.YakindaImageName);
+
+                using (var akisOrtami = new FileStream(konum, FileMode.Create))
                 {
-                    if (!ModelState.IsValid)
-                    {
-                        return View(model);
-                    }
-                    model.AppUserId = 1;
-                    if (_yakindaManager.Add(model) > 0)
-                        return RedirectToAction("Index", "Yakinda");
-                    else
-                    {
-                        ModelState.AddModelError("DbError", "Veritabanına eklenemedi");
-                        return View(model);
-                    }
-                }
-                catch (Exception ex)
-                {
-                    ModelState.AddModelError("GeneralException", ex.Message);
-                    return View();
+                    model.YakindaImageUpload.CopyTo(akisOrtami);
                 }
             }
+            _yakindaManager.Add(model);
+            return RedirectToAction("Index", "Yakinda");
+        }
+
+
             // GET: CategoryController/Edit/5
             public ActionResult Edit(int id)
             {
@@ -79,29 +89,49 @@ namespace GaleriAdmin.Controllers
             [ValidateAntiForgeryToken]
             public ActionResult Edit(YakindaViewModel model, int id)
             {
-                try
-                {
-                    if (!ModelState.IsValid)
-                    {
-                        return View(model);
-                    }
-                    model.AppUserId = 1;
-                    if (_yakindaManager.Update(model) > 0)
-                        return RedirectToAction("Index", "Yakinda");
-                    else
-                    {
-                        ModelState.AddModelError("DbError", "Veritabanına eklenemedi");
-                        return View(model);
-                    }
+            ModelState.Remove("Id");
+            ModelState.Remove("RowNum");
+            model.AppUserId = 1;
 
+            if (!ModelState.IsValid)
+            {
+                return View(model);
+            }
 
-                }
-                catch (Exception ex)
+            var oldslider = _yakindaManager.Get(id);
+
+            if (oldslider is null)
+            {
+                return BadRequest("hata var");
+            }
+
+            if (model.YakindaImageUpload is null)
+            {
+                model.YakindaImageName = oldslider.YakindaImageName;
+            }
+            else
+            {
+                var array = model.YakindaImageUpload.FileName.Split('.');
+                var withoutExtension = array[0];
+                var extension = array[1];
+
+                Guid guid = Guid.NewGuid();
+                model.YakindaImageName = $"{withoutExtension}_{guid}.{extension}";
+                var konum = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/uploads", model.YakindaImageName);
+
+                using (var akisOrtami = new FileStream(konum, FileMode.Create))
                 {
-                    ModelState.AddModelError("GenerelException", ex.Message);
-                    return View();
+                    model.YakindaImageUpload.CopyTo(akisOrtami);
                 }
             }
+
+            oldslider.YakindaImageName = model.YakindaImageName;
+            oldslider.YakindaAd = model.YakindaAd;
+            oldslider.YakindaBaslik = model.YakindaBaslik;
+            oldslider.YakindaAciklama = model.YakindaAciklama;
+           _yakindaManager.Update(oldslider);
+            return RedirectToAction("Index", ("Yakinda"));
+        }
 
             // GET: CategoryController/Delete/5
             public ActionResult Delete(int id)
