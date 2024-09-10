@@ -1,8 +1,12 @@
 using Galeri.BLL.Managers.Concrete;
+using Galeri.DAL.DataContext;
+using Galeri.Entities.Concrete;
+using Galeri.ViewModel.Guest;
 using Galeri.ViewModel.Slider;
 using GaleriAdmin.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System.Diagnostics;
 
 namespace GaleriAdmin.Controllers
@@ -11,7 +15,12 @@ namespace GaleriAdmin.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-       
+        private readonly GaleriDbContext _context;
+        public HomeController(GaleriDbContext context)
+        {
+            _context = context;
+        }
+
         public HomeController(ILogger<HomeController> logger,SliderManager sliderManager)
         {
             
@@ -34,5 +43,6 @@ namespace GaleriAdmin.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+      
     }
 }

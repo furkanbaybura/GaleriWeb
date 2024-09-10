@@ -20,6 +20,7 @@ namespace Galeri.DAL.DataContext
         public DbSet<Slider> Sliders { get; set; }
         public DbSet<Yakinda> Yakindas { get; set; }
         public DbSet<Image> Images { get; set; }
+        public DbSet<Guest> Guests { get; set; }
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);

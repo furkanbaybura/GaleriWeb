@@ -1,12 +1,15 @@
 ﻿using Galeri.BLL.Managers.Concrete;
+using Galeri.DAL.DataContext;
 using Galeri.Entities.Concrete;
 using Galeri.ViewModel.Category;
+using Galeri.ViewModel.Guest;
 using Galeri.ViewModel.Login;
 using Galeri.ViewModel.Slider;
 using Galeri.ViewModel.Yakinda;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 
 namespace GaleriAdmin.Controllers
@@ -19,13 +22,15 @@ namespace GaleriAdmin.Controllers
         private readonly SignInManager<AppUser> _signInManager;
         private readonly SliderManager _sliderManager;
         private readonly YakindaManager _yakindaManager;
-        public AccountController(CategoryManager categoryManager, UserManager<AppUser> userManager, SignInManager<AppUser> signInManager, SliderManager sliderManager,YakindaManager yakindaManager)
+        private readonly GaleriDbContext _context;
+        public AccountController(CategoryManager categoryManager, UserManager<AppUser> userManager, SignInManager<AppUser> signInManager, SliderManager sliderManager,YakindaManager yakindaManager,GaleriDbContext context)
         {
             _categoryManager = categoryManager;
             _userManager = userManager;
             _signInManager = signInManager;
             _sliderManager = sliderManager;
             _yakindaManager= yakindaManager;
+            _context = context;
         }
         
         public IActionResult Index()
@@ -37,12 +42,7 @@ namespace GaleriAdmin.Controllers
             ViewBag.Yakinda=yakinda;
             return View(list);
            
-        }
-        public IActionResult Messages()
-        {
-
-            return View();
-        }
+        }    
 
         public IActionResult Login()
         {
@@ -86,6 +86,24 @@ namespace GaleriAdmin.Controllers
             await _signInManager.SignOutAsync();
             
             return RedirectToAction("Index", "Home");
+        }
+        public IActionResult messages()
+        {
+            List<Guest> guests = _context.Guests.ToList();
+            List<GuestViewModel> models = new List<GuestViewModel>();
+            foreach (var item in guests)
+            {
+                GuestViewModel model = new GuestViewModel();
+                model.Id = item.Id;
+                model.Name = item.Name;
+                model.Surname = item.Surname;
+                model.Description = item.Description;
+                model.Phone = item.Phone;
+                model.Message = item.Message;
+                models.Add(model);
+            }
+
+            return View(models);
         }
 
     }

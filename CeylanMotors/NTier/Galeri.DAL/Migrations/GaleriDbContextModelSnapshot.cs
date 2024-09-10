@@ -109,7 +109,7 @@ namespace Galeri.DAL.Migrations
                             Id = 1,
                             AccessFailedCount = 0,
                             Birthdate = new DateOnly(2000, 1, 1),
-                            ConcurrencyStamp = "a6a12957-dc7d-41cc-ab11-8981d0d274de",
+                            ConcurrencyStamp = "6ff7e183-6da2-4ab5-b620-e60e21016f86",
                             Email = "Admin@mail.com",
                             EmailConfirmed = true,
                             Gender = 0,
@@ -117,7 +117,7 @@ namespace Galeri.DAL.Migrations
                             Name = "Admin",
                             NormalizedEmail = "ADMİN@MAİL.COM",
                             NormalizedUserName = "ADMİN",
-                            PasswordHash = "AQAAAAIAAYagAAAAEAfvcMGEq5ifKbt72HIvygJiQCyYFvIblQjIGbQJEjkiEyN8tCULyJWaAdS7zgInpg==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEHpPa6V7j9PIfw1j5RiJjjOJVc7iCSZ78JgrbpQfBU2UH1eJuHxavkJR8X4aoxu8eQ==",
                             PhoneNumber = "-",
                             PhoneNumberConfirmed = true,
                             Surname = "Admin",
@@ -190,6 +190,40 @@ namespace Galeri.DAL.Migrations
                     b.HasIndex("AppUserId");
 
                     b.ToTable("Categories");
+                });
+
+            modelBuilder.Entity("Galeri.Entities.Concrete.Guest", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Message")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Phone")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Surname")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("UpdatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Guests");
                 });
 
             modelBuilder.Entity("Galeri.Entities.Concrete.Image", b =>

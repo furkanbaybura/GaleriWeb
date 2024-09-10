@@ -1,23 +1,41 @@
-﻿<h1> Gelen Kutusu</h1>
+﻿@using Galeri.ViewModel.Guest
+@model List<GuestViewModel>
+<h1> Gelen Kutusu</h1>
 <table class="table">
     <thead>
         <tr>
-            <th scope="col">Sıra</th>
             <th scope="col">Adı</th>
             <th scope="col">Soyadı</th>
+            <th scope="col">Telefon Numarası</th>
+            <th scope="col">Konu</th>
             <th scope="col">Mesaj</th>
         </tr>
     </thead>
     <tbody>
-        <tr>
-            
-        </tr>
-        <tr>
-           
-        </tr>
-        <tr>
-           
-        </tr>
+        @if (Model != null)
+        {
+            @foreach (var guest in Model)
+            {
+                <tr>
+                    <td>@guest.Name</td>
+                    <td>@guest.Surname</td>
+                    <td>@guest.Phone</td>
+                    <td>@guest.Description</td>
+                    <td>@guest.Message</td>
+
+                </tr>
+
+            }
+        }
+        else
+        {
+            <tr>
+                <td>Mesaj Bulunamadı !</td>
+            </tr>
+
+        }
+
+        
     </tbody>
 </table>
 <a class="btn btn-success" asp-controller="Account" asp-action="Index">AnaSayfa</a>
