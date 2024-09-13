@@ -77,7 +77,7 @@ namespace GaleriAdmin.Controllers
                 }
             }
             _sliderManager.Add(model);
-            return RedirectToAction("Index","Slider");
+            return RedirectToAction("Index", "Slider");
 
         }
 

@@ -109,7 +109,7 @@ namespace Galeri.DAL.Migrations
                             Id = 1,
                             AccessFailedCount = 0,
                             Birthdate = new DateOnly(2000, 1, 1),
-                            ConcurrencyStamp = "6ff7e183-6da2-4ab5-b620-e60e21016f86",
+                            ConcurrencyStamp = "8f536c50-cbab-4d86-83da-682a8d5475d6",
                             Email = "Admin@mail.com",
                             EmailConfirmed = true,
                             Gender = 0,
@@ -117,7 +117,7 @@ namespace Galeri.DAL.Migrations
                             Name = "Admin",
                             NormalizedEmail = "ADMİN@MAİL.COM",
                             NormalizedUserName = "ADMİN",
-                            PasswordHash = "AQAAAAIAAYagAAAAEHpPa6V7j9PIfw1j5RiJjjOJVc7iCSZ78JgrbpQfBU2UH1eJuHxavkJR8X4aoxu8eQ==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEIM2abHeNXfIa78qG/OsLd/yoNMT8Mb/RsTEMR0p4gq6X+r8jixy5aFhrVujKY204A==",
                             PhoneNumber = "-",
                             PhoneNumberConfirmed = true,
                             Surname = "Admin",
@@ -138,9 +138,6 @@ namespace Galeri.DAL.Migrations
                         .HasColumnType("int");
 
                     b.Property<int?>("Beygir")
-                        .HasColumnType("int");
-
-                    b.Property<int>("CategoryId")
                         .HasColumnType("int");
 
                     b.Property<DateTime>("CreatedDate")
@@ -192,6 +189,43 @@ namespace Galeri.DAL.Migrations
                     b.ToTable("Categories");
                 });
 
+            modelBuilder.Entity("Galeri.Entities.Concrete.CategoryImage", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("AppUserId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("CategoryId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<byte[]>("ImageFile")
+                        .IsRequired()
+                        .HasColumnType("varbinary(max)");
+
+                    b.Property<string>("ImageName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("UpdatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AppUserId");
+
+                    b.HasIndex("CategoryId");
+
+                    b.ToTable("CategoryImages");
+                });
+
             modelBuilder.Entity("Galeri.Entities.Concrete.Guest", b =>
                 {
                     b.Property<int>("Id")
@@ -224,28 +258,6 @@ namespace Galeri.DAL.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Guests");
-                });
-
-            modelBuilder.Entity("Galeri.Entities.Concrete.Image", b =>
-                {
-                    b.Property<int>("ImageId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ImageId"));
-
-                    b.Property<int>("CategoryId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("ImageName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("ImageId");
-
-                    b.HasIndex("CategoryId");
-
-                    b.ToTable("Images");
                 });
 
             modelBuilder.Entity("Galeri.Entities.Concrete.Slider", b =>
@@ -479,13 +491,21 @@ namespace Galeri.DAL.Migrations
                     b.Navigation("AppUser");
                 });
 
-            modelBuilder.Entity("Galeri.Entities.Concrete.Image", b =>
+            modelBuilder.Entity("Galeri.Entities.Concrete.CategoryImage", b =>
                 {
+                    b.HasOne("Galeri.Entities.Concrete.AppUser", "AppUser")
+                        .WithMany()
+                        .HasForeignKey("AppUserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("Galeri.Entities.Concrete.Category", "Category")
-                        .WithMany("Images")
+                        .WithMany()
                         .HasForeignKey("CategoryId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("AppUser");
 
                     b.Navigation("Category");
                 });
@@ -561,11 +581,6 @@ namespace Galeri.DAL.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-                });
-
-            modelBuilder.Entity("Galeri.Entities.Concrete.Category", b =>
-                {
-                    b.Navigation("Images");
                 });
 #pragma warning restore 612, 618
         }

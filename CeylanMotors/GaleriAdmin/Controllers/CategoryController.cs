@@ -1,8 +1,11 @@
 ﻿using Galeri.BLL.Managers.Concrete;
+using Galeri.DTO;
 using Galeri.ViewModel.Category;
+using Galeri.ViewModel.Picture;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System.Security.Claims;
 
 namespace GaleriAdmin.Controllers
 {
@@ -10,10 +13,12 @@ namespace GaleriAdmin.Controllers
     public class CategoryController : Controller
     {
         private CategoryManager _categoryManager;
+        private ImageManager _imageManager;
 
-        public CategoryController(CategoryManager categoryManager)
+        public CategoryController(CategoryManager categoryManager, ImageManager imageManager)
         {
             _categoryManager = categoryManager;
+            _imageManager = imageManager;
         }
 
         // GET: CategoryController
@@ -21,6 +26,10 @@ namespace GaleriAdmin.Controllers
         {
 
             IEnumerable<CategoryViewModel> list = _categoryManager.GetAll().ToList();
+
+            IEnumerable<ImageViewModel> imageList = _imageManager.GetAll().ToList();
+
+            ViewBag.ImageList = imageList;
 
             return View(list);
         }
@@ -51,24 +60,100 @@ namespace GaleriAdmin.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create(CategoryViewModel model)
         {
+            //ModelState.Remove("Id");
+            //ModelState.Remove("RowNum");
+            //model.AppUserId = 1;
+            // if (!ModelState.IsValid)
+            //{
+            //    return View(model);
+            //}
+            //if (model.PictureFormFile is not null)
+            //{
+            //    var array = model.PictureFormFile.FileName.Split('.');
+            //    var withoutExtension = array[0];
+            //    var extension = array[1];
+
+            //    Guid guid = Guid.NewGuid();
+            //    model.PictureImageName = $"{withoutExtension}_{guid}.{extension}";
+            //    var konum = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/uploads", model.PictureImageName);
+
+            //    using (var akisOrtami = new FileStream(konum, FileMode.Create))
+            //    {
+            //        model.PictureFormFile.CopyTo(akisOrtami);
+            //    }
+            //}
+
+            //_categoryManager.Add(model);
+            //return RedirectToAction("Index", "Category");
+
+            int appUserId = Convert.ToInt32(HttpContext.User.Claims.Where(c => c.Type == ClaimTypes.NameIdentifier).FirstOrDefault().Value);
+
             try
             {
-                if(!ModelState.IsValid)
+                ModelState.Remove("PictureName");
+                ModelState.Remove("PictureFile");
+
+                if (!ModelState.IsValid)
                 {
                     return View(model);
                 }
-                model.AppUserId = 1 ; 
-               if( _categoryManager.Add(model)>0)
-                    return RedirectToAction("Index", "Account");
-               else
+
+                model.AppUserId = appUserId;
+
+                int insertId = _categoryManager.Add(model,true);
+                if (insertId > 0)
                 {
-                    ModelState.AddModelError("DbError","Veritabanına eklenemedi");
+                    IFormFile[] formFiles = model.FormFile;
+
+                    foreach(IFormFile formFile in formFiles)
+                    {
+                        ImageViewModel imageViewModel = new ImageViewModel();  
+                        string fileName = formFile.FileName;
+
+                        var dosyadakiFileName = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/images", fileName);
+
+                        var konum = dosyadakiFileName;
+
+                        //Kaydetmek için bir akış ortamı oluşturalım
+                        var akisOrtami = new FileStream(konum, FileMode.Create);
+                        var memory = new MemoryStream();
+
+                        //Resmi kaydet
+                        formFile.CopyTo(akisOrtami);
+                        formFile.CopyTo(memory);
+
+                        imageViewModel.ImageName = fileName;
+                        imageViewModel.ImageFile = memory.ToArray();
+                        imageViewModel.AppUserId = appUserId;
+                        imageViewModel.CategoryId = insertId;
+
+                        akisOrtami.Dispose();
+                        memory.Dispose();
+
+                        if(_imageManager.Add(imageViewModel) > 0)
+                        {
+                            // Yüklemeler başarılı oldukça log yazılabilir
+                        }
+                        else
+                        {
+                            // Hatalı ise ayrı bir uyarı yapılabilir.
+                        }
+                    }
+
+                    return RedirectToAction(nameof(Index));
+                }
+                else
+                {
+                    ModelState.AddModelError("DbError", "Veritabanı ekleme hatası");
+
                     return View(model);
                 }
+
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 ModelState.AddModelError("GeneralException", ex.Message);
+                ModelState.AddModelError("GeneralInnerException", ex.InnerException?.Message);
                 return View();
             }
         }

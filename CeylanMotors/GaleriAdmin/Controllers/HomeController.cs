@@ -16,14 +16,11 @@ namespace GaleriAdmin.Controllers
     {
         private readonly ILogger<HomeController> _logger;
         private readonly GaleriDbContext _context;
-        public HomeController(GaleriDbContext context)
+       
+
+        public HomeController(ILogger<HomeController> logger,SliderManager sliderManager, GaleriDbContext context)
         {
             _context = context;
-        }
-
-        public HomeController(ILogger<HomeController> logger,SliderManager sliderManager)
-        {
-            
             _logger = logger;
         }
 

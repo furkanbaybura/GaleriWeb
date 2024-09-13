@@ -10,7 +10,7 @@ namespace Galeri.Entities.Concrete
 {
     public class Category : BaseEntity
     {
-        public int CategoryId { get; set; }
+        //public int CategoryId { get; set; }
         public string? Marka { get; set; }
         public string? Modeli { get; set; }
         public string? Paket { get; set; }
@@ -24,7 +24,6 @@ namespace Galeri.Entities.Concrete
         public string? Description { get; set; }
         public int? Yil { get; set; }
         public int? Fiyat { get; set; }
-        public ICollection<Image> Images { get; set; }
-       
+
     }
 }

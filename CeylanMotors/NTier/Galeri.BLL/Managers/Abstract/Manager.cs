@@ -47,12 +47,12 @@ namespace Galeri.BLL.Managers.Abstract
         //    set { _appUserId = value; }
         //}
 
-        public int Add(TViewModel viewModel)
+        public int Add(TViewModel viewModel, bool isEntityId = false)
         {
             TDto dto = _mapper.Map<TDto>(viewModel);
             //dto.AppUserId = _appUserId;
 
-            return _service.Add(dto);
+            return _service.Add(dto, isEntityId);
         }
 
         public int Delete(TViewModel viewModel)

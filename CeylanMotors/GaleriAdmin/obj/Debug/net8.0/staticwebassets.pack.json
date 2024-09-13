@@ -17,6 +17,10 @@
       "PackagePath": "staticwebassets\\Images\\anadol.jpg"
     },
     {
+      "Id": "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\GaleriAdmin\\wwwroot\\Images\\benimbmw.jpg",
+      "PackagePath": "staticwebassets\\Images\\benimbmw.jpg"
+    },
+    {
       "Id": "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\GaleriAdmin\\wwwroot\\Images\\bg_1.jpg",
       "PackagePath": "staticwebassets\\Images\\bg_1.jpg"
     },
@@ -2045,8 +2049,36 @@
       "PackagePath": "staticwebassets\\signindoc\\scss\\bootstrap\\scss\\vendor\\_rfs.scss"
     },
     {
+      "Id": "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\GaleriAdmin\\wwwroot\\uploads\\2008_50830628-f5e9-45ac-b1ad-d4b971be9359.jpg",
+      "PackagePath": "staticwebassets\\uploads\\2008_50830628-f5e9-45ac-b1ad-d4b971be9359.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\GaleriAdmin\\wwwroot\\uploads\\2008_56057be3-841e-4c01-baf8-cd63215a1145.jpg",
+      "PackagePath": "staticwebassets\\uploads\\2008_56057be3-841e-4c01-baf8-cd63215a1145.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\GaleriAdmin\\wwwroot\\uploads\\2008_78f66b9f-52e6-4320-b1a5-5f85b3206179.jpg",
+      "PackagePath": "staticwebassets\\uploads\\2008_78f66b9f-52e6-4320-b1a5-5f85b3206179.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\GaleriAdmin\\wwwroot\\uploads\\2008_7a512a76-746a-4d24-b778-a0186b97cd3a.jpg",
+      "PackagePath": "staticwebassets\\uploads\\2008_7a512a76-746a-4d24-b778-a0186b97cd3a.jpg"
+    },
+    {
       "Id": "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\GaleriAdmin\\wwwroot\\uploads\\2008_8ba837a6-3f6a-420d-b2a4-e6d8077826c8.jpg",
       "PackagePath": "staticwebassets\\uploads\\2008_8ba837a6-3f6a-420d-b2a4-e6d8077826c8.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\GaleriAdmin\\wwwroot\\uploads\\2008_9a6212f2-df98-4bca-8728-e5bc5a598110.jpg",
+      "PackagePath": "staticwebassets\\uploads\\2008_9a6212f2-df98-4bca-8728-e5bc5a598110.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\GaleriAdmin\\wwwroot\\uploads\\2008_d9099ab8-98e7-4957-b1fe-62103b1de129.jpg",
+      "PackagePath": "staticwebassets\\uploads\\2008_d9099ab8-98e7-4957-b1fe-62103b1de129.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\GaleriAdmin\\wwwroot\\uploads\\2008_dd9d470a-1091-4245-9540-a512f943cd5d.jpg",
+      "PackagePath": "staticwebassets\\uploads\\2008_dd9d470a-1091-4245-9540-a512f943cd5d.jpg"
     },
     {
       "Id": "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\GaleriAdmin\\wwwroot\\uploads\\2008_f3994a4e-5d1a-4ae1-8c70-bcedf637cd16.jpg",
@@ -2067,6 +2099,14 @@
     {
       "Id": "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\GaleriAdmin\\wwwroot\\uploads\\anadol_471b5719-16ff-4315-8af6-810e1f63e21c.jpg",
       "PackagePath": "staticwebassets\\uploads\\anadol_471b5719-16ff-4315-8af6-810e1f63e21c.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\GaleriAdmin\\wwwroot\\uploads\\anadol_5753ad96-4cab-4ca8-b184-cd46f402ed20.jpg",
+      "PackagePath": "staticwebassets\\uploads\\anadol_5753ad96-4cab-4ca8-b184-cd46f402ed20.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\GaleriAdmin\\wwwroot\\uploads\\anadol_72b78c6c-c709-4142-818e-b3c35a4c6bc8.jpg",
+      "PackagePath": "staticwebassets\\uploads\\anadol_72b78c6c-c709-4142-818e-b3c35a4c6bc8.jpg"
     },
     {
       "Id": "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\GaleriAdmin\\wwwroot\\uploads\\anadol_9343be95-b58f-4c87-9910-4e1c4d897130.jpg",
@@ -2101,12 +2141,20 @@
       "PackagePath": "staticwebassets\\uploads\\bmw_935c2512-f705-41c8-ab1a-1604d53faa46.jpg"
     },
     {
+      "Id": "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\GaleriAdmin\\wwwroot\\uploads\\et5_0b33592e-22b9-412d-afb9-863c2d377f6c.jpg",
+      "PackagePath": "staticwebassets\\uploads\\et5_0b33592e-22b9-412d-afb9-863c2d377f6c.jpg"
+    },
+    {
       "Id": "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\GaleriAdmin\\wwwroot\\uploads\\et5_1f4f29d1-5000-4213-b7d9-fb56d96c2132.jpg",
       "PackagePath": "staticwebassets\\uploads\\et5_1f4f29d1-5000-4213-b7d9-fb56d96c2132.jpg"
     },
     {
       "Id": "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\GaleriAdmin\\wwwroot\\uploads\\et5_805549ad-6394-4a5e-b87a-139ade66a312.jpg",
       "PackagePath": "staticwebassets\\uploads\\et5_805549ad-6394-4a5e-b87a-139ade66a312.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\GaleriAdmin\\wwwroot\\uploads\\et5_9fe2a4d7-2463-4b2a-b9f8-6921a4e52218.jpg",
+      "PackagePath": "staticwebassets\\uploads\\et5_9fe2a4d7-2463-4b2a-b9f8-6921a4e52218.jpg"
     },
     {
       "Id": "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\GaleriAdmin\\wwwroot\\uploads\\et5_fa309002-1dbf-4525-9733-73f926bfaef4.jpg",

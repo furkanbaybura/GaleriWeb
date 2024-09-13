@@ -1,8 +1,13 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Http;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations.Schema;
+using Galeri.ViewModel.Picture;
 
 namespace Galeri.ViewModel.Category
 {
@@ -25,7 +30,10 @@ namespace Galeri.ViewModel.Category
         public string? Renk { get; set; }
         public string? Km { get; set; }
         public int? Fiyat { get; set; }
-     
+        [NotMapped]
+        public IFormFile[] FormFile { get; set; }
+
+        public List<ImageViewModel>? Images { get; set; }
 
     }
     

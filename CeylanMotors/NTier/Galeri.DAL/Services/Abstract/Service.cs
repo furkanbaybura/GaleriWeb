@@ -39,10 +39,10 @@ namespace Galeri.DAL.Services.Abstract
             set{ _mapper = value; }
         }
 
-        public int Add(TDto dto)
+        public int Add(TDto dto, bool isEntityId = false)
         {
             TEntity entity = _mapper.Map<TEntity>(dto);
-            return _repo.Add(entity);
+            return _repo.Add(entity, isEntityId);
         }
 
         public int Delete(TDto dto)

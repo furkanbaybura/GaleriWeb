@@ -11,7 +11,7 @@ namespace Galeri.DAL.Services.Abstract
     public interface IService<TDto> where TDto : BaseDto
     {
         IMapper Mapper { set; }
-        int Add(TDto dto);
+        int Add(TDto dto, bool isEntityId = false);
         int Update(TDto dto);
         int Delete(TDto dto);
         int Delete(int id);

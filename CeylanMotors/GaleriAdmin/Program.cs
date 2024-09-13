@@ -47,6 +47,10 @@ builder.Services.AddScoped<YakindaRepo>();
 builder.Services.AddScoped<YakindaService>();
 builder.Services.AddScoped<YakindaManager>();
 
+builder.Services.AddScoped<ImageRepo>();
+builder.Services.AddScoped<ImageService>();
+builder.Services.AddScoped<ImageManager>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

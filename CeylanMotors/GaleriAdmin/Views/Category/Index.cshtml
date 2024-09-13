@@ -1,4 +1,5 @@
-﻿@model IEnumerable<CategoryViewModel>
+﻿@using Galeri.ViewModel.Picture
+@model IEnumerable<CategoryViewModel>
 <body style="background-color:#191919 ; color:darkred ">
 <div class="row">
     <div class="col">
@@ -12,6 +13,7 @@
                     <th>Adı</th>
                     <th>Açıklaması</th>                
                     <th>Yıl</th>
+                    <th>Fotoğraf</th>
                     <th>İşlem</th>
                 </tr>
             </thead>
@@ -22,7 +24,18 @@
                         <td>@item.Name</td>
                         <td>@item.Description</td>
                         <td>@item.Yil</td>
-                     
+                        <td>
+                                @{
+                                    List<ImageViewModel> imageList = ViewBag.ImageList as List<ImageViewModel>;
+
+                                    foreach (ImageViewModel image in imageList.Where(i => i.CategoryId == item.Id))
+                                    {
+                                        <img src="~/images/@image.ImageName" class="img-thumbnail" alt="@image.ImageName" style="width:60px;height:50px" />
+                                        <br />
+                                    }
+
+                                }
+                        </td>
                         <td>
                             <a class="btn btn-info" asp-controller="Category" asp-action="Edit" asp-route-id="@item.Id">Düzenle</a>
                             <a class="btn btn-secondary" asp-controller="Category" asp-action="Details" asp-route-id="@item.Id">Detay</a>
@@ -60,6 +73,7 @@
                     <th>Adı</th>
                     <th>Açıklaması</th>
                     <th>Yıl</th>
+                    <th>Fotoğraf</th>
                     <th>İşlem</th>
                 </tr>
             </tfoot>

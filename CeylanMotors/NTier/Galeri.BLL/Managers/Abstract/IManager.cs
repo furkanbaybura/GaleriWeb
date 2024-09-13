@@ -14,7 +14,7 @@ namespace Galeri.BLL.Managers.Abstract
       where TViewModel : BaseViewModel
     {
         IMapper Mapper { set; }
-        int Add(TViewModel viewmodel);
+        int Add(TViewModel viewmodel,bool isEntityId = false);
         int Update(TViewModel viewmodel);
         int Delete(TViewModel viewmodel);
         int Delete(int id);

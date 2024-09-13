@@ -19,11 +19,12 @@ namespace Galeri.DAL.Repositories.Abstract
             _dbcContext.ChangeTracker.QueryTrackingBehavior = QueryTrackingBehavior.NoTrackingWithIdentityResolution;
         }
 
-        public int Add(TEntity entity)
+        public int Add(TEntity entity, bool isEntityId = false)
         {
            entity.CreatedDate = DateTime.Now;
             _dbcContext.Add(entity);
-            return _dbcContext.SaveChanges();
+            int returnId = _dbcContext.SaveChanges();
+            return isEntityId ? entity.Id : returnId;
         }
 
         public int Delete(TEntity entity)

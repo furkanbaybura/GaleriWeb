@@ -21,7 +21,9 @@ namespace Galeri.DTO
         public string? Description { get; set; }
         public int? Yil { get; set; }
         public int? Fiyat { get; set; }
-       
+        public string PictureName { get; set; }
+        public byte[] PictureFile { get; set; }
+
 
 
     }

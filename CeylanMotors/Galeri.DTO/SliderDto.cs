@@ -13,5 +13,6 @@ namespace Galeri.DTO
         public string? SliderBaslik { get; set; }     
         public string? SliderAciklama { get; set; }
         public string? SliderImageName { get; set; }
+
     }
 }
