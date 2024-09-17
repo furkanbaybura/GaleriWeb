@@ -1,29 +1,67 @@
-﻿@model CategoryViewModel
-@{
-}
+﻿@using Galeri.ViewModel.Picture
+@model CategoryViewModel
 <body style="background-color:#191919 ; color:darkred ">
 
-<div class="card">
-    <h5 class="card-header">@Model.Name</h5>
+    <div class="card">
+        <h5 class="card-header">@Model.Name</h5>
+        @{
+            List<ImageViewModel> imageList = ViewBag.ImageList as List<ImageViewModel>;
+            var imagesForItem = imageList.Where(i => i.CategoryId == Model.Id).ToList();
+            var carouselId = "carousel" + Model.Id; 
+        }
+
+        <div class="container" style="background-color:#191919 ; color:darkred ">
+            <div class="row">
+                @foreach (var image in imagesForItem)
+                {
+                    <div class="col-6 col-md-4 col-lg-2 mb-4">
+                        <a href="~/images/@image.ImageName" data-bs-toggle="modal" data-bs-target="#imageModal-@image.Id">
+                            <img src="~/images/@image.ImageName" class="img-fluid img-thumbnail" alt="@image.ImageName" style="width: 60; height: 80px;" />
+                        </a>
+                    </div>
+
+                    <!-- Modal for enlarged image -->
+                    <div class="modal fade" id="imageModal-@image.Id" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">@image.ImageName</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <img src="~/images/@image.ImageName" class="img-fluid" alt="@image.ImageName" style="width: 100%;" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+
+
+
+
+
+
         <div class="card-body" style="background-color:#191919 ; color:darkred ">
-        @* <h5 class="card-title">Special title treatment</h5> *@
-        <p class="card-text">Marka : @Model.Marka</p>
-        <p class="card-text">Model : @Model.Modeli</p>
-        <p class="card-text">Paket : @Model.Paket</p>
-        <p class="card-text">Kategori :  @Model.Kategori</p>
-        <p class="card-text">Motor Hacmi :  @Model.MotorHacmi</p>
-        <p class="card-text">Vites Tipi:  @Model.Vites</p>
-        <p class="card-text">Torku : @Model.Tork</p>
-        <p class="card-text">Beygir :  @Model.Beygir</p>
-        <p class="card-text">Renk :  @Model.Renk</p>
-        <p class="card-text">Kilometresi : @Model.Km</p>
-        <p class="card-text">Açıklaması :  @Model.Description</p>
-        <p class="card-text">Açıklaması :  @Model.Fiyat</p>
-        <a asp-controller="Category" asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-success">Düzenle</a>
-        <a asp-controller="Account" asp-action="Index" class="btn btn-primary">Geri</a>
-        <!--
-            TODO: Bu kategoriye ait ürünlerin listesi olabilir. bir düşünmek lazım
-        -->
+            @* <h5 class="card-title">Special title treatment</h5> *@
+            <p class="card-text">Marka : @Model.Marka</p>
+            <p class="card-text">Model : @Model.Modeli</p>
+            <p class="card-text">Paket : @Model.Paket</p>
+            <p class="card-text">Kategori :  @Model.Kategori</p>
+            <p class="card-text">Motor Hacmi :  @Model.MotorHacmi</p>
+            <p class="card-text">Vites Tipi:  @Model.Vites</p>
+            <p class="card-text">Torku : @Model.Tork</p>
+            <p class="card-text">Beygir :  @Model.Beygir</p>
+            <p class="card-text">Renk :  @Model.Renk</p>
+            <p class="card-text">Kilometresi : @Model.Km</p>
+            <p class="card-text">Açıklaması :  @Model.Description</p>
+            <p class="card-text">Açıklaması :  @Model.Fiyat</p>
+            <a asp-controller="Category" asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-success">Düzenle</a>
+            <a asp-controller="Account" asp-action="Index" class="btn btn-primary">Geri</a>
+            <!--
+                TODO: Bu kategoriye ait ürünlerin listesi olabilir. bir düşünmek lazım
+            -->
+        </div>
     </div>
-</div>
 </body>

@@ -38,7 +38,8 @@ namespace GaleriAdmin.Controllers
         public ActionResult Details(int id)
         {
             CategoryViewModel? model = _categoryManager.Get(id);
-
+            IEnumerable<ImageViewModel> imageList = _imageManager.GetAll().ToList();
+            ViewBag.ImageList = imageList;
             return View(model);
         }
 
@@ -60,32 +61,7 @@ namespace GaleriAdmin.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create(CategoryViewModel model)
         {
-            //ModelState.Remove("Id");
-            //ModelState.Remove("RowNum");
-            //model.AppUserId = 1;
-            // if (!ModelState.IsValid)
-            //{
-            //    return View(model);
-            //}
-            //if (model.PictureFormFile is not null)
-            //{
-            //    var array = model.PictureFormFile.FileName.Split('.');
-            //    var withoutExtension = array[0];
-            //    var extension = array[1];
-
-            //    Guid guid = Guid.NewGuid();
-            //    model.PictureImageName = $"{withoutExtension}_{guid}.{extension}";
-            //    var konum = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/uploads", model.PictureImageName);
-
-            //    using (var akisOrtami = new FileStream(konum, FileMode.Create))
-            //    {
-            //        model.PictureFormFile.CopyTo(akisOrtami);
-            //    }
-            //}
-
-            //_categoryManager.Add(model);
-            //return RedirectToAction("Index", "Category");
-
+            
             int appUserId = Convert.ToInt32(HttpContext.User.Claims.Where(c => c.Type == ClaimTypes.NameIdentifier).FirstOrDefault().Value);
 
             try

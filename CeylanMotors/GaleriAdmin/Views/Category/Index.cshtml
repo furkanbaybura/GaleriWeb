@@ -21,21 +21,32 @@
                 @foreach (CategoryViewModel item in Model)
                 {
                     <tr>
-                        <td>@item.Name</td>
-                        <td>@item.Description</td>
-                        <td>@item.Yil</td>
-                        <td>
+                            <td>@item.Name</td>
+                            <td>@item.Description</td>
+                            <td>@item.Yil</td>
+                            <td>
                                 @{
                                     List<ImageViewModel> imageList = ViewBag.ImageList as List<ImageViewModel>;
-
-                                    foreach (ImageViewModel image in imageList.Where(i => i.CategoryId == item.Id))
-                                    {
-                                        <img src="~/images/@image.ImageName" class="img-thumbnail" alt="@image.ImageName" style="width:60px;height:50px" />
-                                        <br />
-                                    }
-
+                                    var imagesForItem = imageList.Where(i => i.CategoryId == item.Id).ToList();
+                                    var carouselId = "carousel" + item.Id; // Benzersiz ID oluştur
                                 }
-                        </td>
+
+                                <div id="@carouselId" class="carousel slide" data-bs-ride="carousel">
+                                    <div class="carousel-inner">
+                                        @{
+                                            bool isActive = true; // İlk öğe için active sınıfı eklemek için bir bayrak
+                                            foreach (var image in imagesForItem)
+                                            {
+                                                <div class="carousel-item @(isActive ? "active" : "")">
+                                                    <img src="~/images/@image.ImageName" class="d-block w-80 img-thumbnail" alt="@image.ImageName" style="width:90px;height:80px" />
+                                                </div>
+                                                isActive = false; // Sadece ilk resme active sınıfı verilecek
+                                            }
+                                        }
+                                    </div>
+                                   
+                                </div>
+                            </td>
                         <td>
                             <a class="btn btn-info" asp-controller="Category" asp-action="Edit" asp-route-id="@item.Id">Düzenle</a>
                             <a class="btn btn-secondary" asp-controller="Category" asp-action="Details" asp-route-id="@item.Id">Detay</a>
