@@ -178,3 +178,4 @@ C:\Users\user\source\repos\GaleriWeb\CeylanMotors\GaleriClient\obj\Debug\net8.0\
 C:\Users\user\source\repos\GaleriWeb\CeylanMotors\GaleriClient\obj\Debug\net8.0\GaleriClient.pdb
 C:\Users\user\source\repos\GaleriWeb\CeylanMotors\GaleriClient\obj\Debug\net8.0\GaleriClient.genruntimeconfig.cache
 C:\Users\user\source\repos\GaleriWeb\CeylanMotors\GaleriClient\obj\Debug\net8.0\ref\GaleriClient.dll
+C:\Users\user\source\repos\GaleriWeb\CeylanMotors\GaleriClient\bin\Debug\net8.0\Newtonsoft.Json.dll

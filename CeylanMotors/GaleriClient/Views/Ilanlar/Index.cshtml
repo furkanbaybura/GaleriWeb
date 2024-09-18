@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@using Galeri.ViewModel.Picture
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,80 +9,7 @@
     <link href="~/ilanlarcss/ilanlarcss.css" rel="stylesheet" />
 </head>
 <style>
-    /* Lightbox stil ayarları */
-    .lightbox {
-        display: none;
-        position: fixed;
-        z-index: 1050;
-        padding-top: 100px;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        overflow: auto;
-        background-color: rgb(0,0,0);
-        background-color: rgba(0,0,0,0.9);
-    }
-
-    .lightbox-content {
-        position: relative;
-        margin: auto;
-        padding: 0;
-        width: 80%;
-        max-width: 700px;
-    }
-
-    .lightbox-slides {
-        display: none;
-    }
-
-        .lightbox-slides img {
-            margin-bottom: -4px;
-        }
-
-    .close {
-        position: absolute;
-        top: 15px;
-        right: 35px;
-        color: #fff;
-        font-size: 40px;
-        font-weight: bold;
-        transition: 0.3s;
-    }
-
-        .close:hover,
-        .close:focus {
-            color: #bbb;
-            text-decoration: none;
-            cursor: pointer;
-        }
-
-    .prev,
-    .next {
-        cursor: pointer;
-        position: absolute;
-        top: 50%;
-        width: auto;
-        padding: 16px;
-        margin-top: -50px;
-        color: white;
-        font-weight: bold;
-        font-size: 20px;
-        transition: 0.6s ease;
-        border-radius: 0 3px 3px 0;
-        user-select: none;
-    }
-
-    .next {
-        right: 0;
-        border-radius: 3px 0 0 3px;
-    }
-
-        .prev:hover,
-        .next:hover {
-            background-color: rgba(0,0,0,0.8);
-        }
-
+    /* Same styles as before */
 </style>
 <body class="body" style="background-color:#191919;">
     <h1 style="text-align:center;color:white">Güncel İlanlarımız</h1>
@@ -103,20 +31,35 @@
                  data-description="@item.Description"
                  data-yil="@item.Yil"
                  data-fiyat="@item.Fiyat"
-                 data-image="/images/bmw.jpg">
-                <img src="https://localhost:7280/uploads/2008_50830628-f5e9-45ac-b1ad-d4b971be9359.jpg)" class="card-img-top" alt="Araç Resmi">
+                 data-id="@item.Id">
+                @{
+                    List<ImageViewModel> imageList = ViewBag.ImageList as List<ImageViewModel>;
+                    var imagesForItem = imageList.Where(i => i.CategoryId == item.Id).ToList();
+                    var coverImage = imagesForItem.FirstOrDefault(); // İlk resmi al
+                }
+
+                <!-- Kartın kapak fotoğrafı olarak ilk resmi ekle -->
+                @if (coverImage != null)
+                {
+                    <img src="~/images/@coverImage.ImageName" class="card-img-top" alt="@coverImage.ImageName" />
+                }
+                else
+                {
+                    <!-- Eğer resim yoksa varsayılan bir resim göster -->
+                    <img src="/images/default.jpg" class="card-img-top" alt="default image" />
+                }
+
                 <div class="card-body">
                     <h5 class="card-title" style="text-align:center; color:white;">@item.Marka</h5>
                     <p class="card-text" style="color:white;">Modeli: @item.Modeli</p>
                     <p class="card-text" style="color:white;">Rengi: @item.Renk</p>
                     <p class="card-text" style="color:white;">Fiyatı: @item.Fiyat ₺</p>
-                    <a href="#" class="btn btn-danger detail-btn" style="align-items:end">İlan Detayı</a>
+                    <a href="#" class="btn btn-danger detail-btn" style="align-items:end" data-id="@item.Id">İlan Detayı</a>
                 </div>
-            </div> 
+            </div>
         }
     </div>
 
-    <!-- Modal başla -->
     <!-- Modal -->
     <div class="modal fade" id="detailModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
@@ -128,16 +71,8 @@
                 <div class="modal-body">
                     <!-- Carousel/Slider -->
                     <div id="carouselModalControls" class="carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img src="/Images/2008.jpg" id="modalImage1" class="d-block w-100 lightbox-image" alt="Araç Resmi" onclick="openLightbox();currentSlide(1)">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="/Images/anadol.jpg" id="modalImage2" class="d-block w-100 lightbox-image" alt="Araç Resmi" onclick="openLightbox();currentSlide(2)">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="/Images/car-12.jpg" id="modalImage3" class="d-block w-100 lightbox-image" alt="Araç Resmi" onclick="openLightbox();currentSlide(3)">
-                            </div>
+                        <div class="carousel-inner" id="carousel-inner">
+                            <!-- Images will be added dynamically -->
                         </div>
                         <button class="carousel-control-prev" type="button" data-bs-target="#carouselModalControls" data-bs-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -160,31 +95,12 @@
         </div>
     </div>
 
-    <!-- Lightbox Modal -->
-    <div id="lightboxModal" class="lightbox">
-        <span class="close cursor" onclick="closeLightbox()">&times;</span>
-        <div class="lightbox-content">
-            <div class="lightbox-slides">
-                <img id="lightboxImage1" src="/Images/2008.jpg" style="width:100%">
-            </div>
-            <div class="lightbox-slides">
-                <img id="lightboxImage2" src="/Images/anadol.jpg" style="width:100%">
-            </div>
-            <div class="lightbox-slides">
-                <img id="lightboxImage3" src="/Images/car-5.jpg" style="width:100%">
-            </div>
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
-        </div>
-    </div>
-
-
-
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <script>
         $(document).ready(function () {
             $('.detail-btn').click(function () {
+                var id = $(this).data('id');
                 var card = $(this).closest('.detail-card');
                 var marka = card.data('marka');
                 var modeli = card.data('modeli');
@@ -199,77 +115,55 @@
                 var description = card.data('description');
                 var yil = card.data('yil');
                 var fiyat = card.data('fiyat');
-                var image = card.data('image');
 
+                // Araç detayları güncelle
                 var aracDetails = `
-                    <h3>${marka} ${modeli}</h3>
-                    <p><strong>Paket:</strong> ${paket}</p>
-                    <p><strong>Kategori:</strong> ${kategori}</p>
-                    <p><strong>Motor Hacmi:</strong> ${motorHacmi} cc</p>
-                    <p><strong>Vites:</strong> ${vites}</p>
-                    <p><strong>Tork:</strong> ${tork} Nm</p>
-                    <p><strong>Beygir:</strong> ${beygir} hp</p>
-                    <p><strong>Renk:</strong> ${renk}</p>
-                    <p><strong>Km:</strong> ${km} km</p>
-                    <p><strong>Açıklama:</strong> ${description}</p>
-                    <p><strong>Yıl:</strong> ${yil}</p>
-                    <p><strong>Fiyat:</strong> ${fiyat} ₺</p>
-                `;
+                            <h3>${marka} ${modeli}</h3>
+                            <p><strong>Paket:</strong> ${paket}</p>
+                            <p><strong>Kategori:</strong> ${kategori}</p>
+                            <p><strong>Motor Hacmi:</strong> ${motorHacmi} cc</p>
+                            <p><strong>Vites:</strong> ${vites}</p>
+                            <p><strong>Tork:</strong> ${tork} Nm</p>
+                            <p><strong>Beygir:</strong> ${beygir} hp</p>
+                            <p><strong>Renk:</strong> ${renk}</p>
+                            <p><strong>Km:</strong> ${km} km</p>
+                            <p><strong>Açıklama:</strong> ${description}</p>
+                            <p><strong>Yıl:</strong> ${yil}</p>
+                            <p><strong>Fiyat:</strong> ${fiyat} ₺</p>
+                        `;
 
                 // Modal içeriğini güncelle
-                $('#modalImage1').attr('src', image);
-                $('#modalImage2').attr('src', "/images/bmw.jpg"); // Örnek ikinci resim
-                $('#modalImage3').attr('src', "/images/audi.jpg"); // Örnek üçüncü resim
-                $('#lightboxImage1').attr('src', image);
-                $('#lightboxImage2').attr('src', "/images/bmw.jpg");
-                $('#lightboxImage3').attr('src', "/images/audi.jpg");
                 $('#detailModal .details').html(aracDetails);
+
+                // Carousel images için AJAX ile imageList'ten çek
+                var imageList = @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(ViewBag.ImageList));
+                var imagesForItem = imageList.filter(i => i.CategoryId === id);
+                var carouselInner = $('#carousel-inner');
+                carouselInner.empty(); // Önceki resimleri temizle
+
+                if (imagesForItem.length > 0) {
+                    imagesForItem.forEach((image, index) => {
+                        var isActive = index === 0 ? 'active' : '';
+                        var imageHtml = `
+                                    <div class="carousel-item ${isActive}">
+                                        <img src="/images/${image.ImageName}" class="d-block w-100" alt="${image.ImageName}">
+                                    </div>`;
+                        carouselInner.append(imageHtml);
+                    });
+                } else {
+                    // Eğer resim yoksa varsayılan bir resim göster
+                    carouselInner.append(`
+                                <div class="carousel-item active">
+                                    <img src="/images/default.jpg" class="d-block w-100" alt="default image">
+                                </div>
+                            `);
+                }
 
                 // Modal'ı aç
                 var detailModal = new bootstrap.Modal(document.getElementById('detailModal'));
                 detailModal.show();
             });
-
-            // Lightbox fonksiyonları
-            function openLightbox() {
-                document.getElementById("lightboxModal").style.display = "block";
-                showSlides(slideIndex);
-            }
-
-            function closeLightbox() {
-                document.getElementById("lightboxModal").style.display = "none";
-            }
-
-            var slideIndex = 1;
-
-            function plusSlides(n) {
-                showSlides(slideIndex += n);
-            }
-
-            function currentSlide(n) {
-                showSlides(slideIndex = n);
-            }
-
-            function showSlides(n) {
-                var i;
-                var slides = document.getElementsByClassName("lightbox-slides");
-                if (n > slides.length) { slideIndex = 1 }
-                if (n < 1) { slideIndex = slides.length }
-                for (i = 0; i < slides.length; i++) {
-                    slides[i].style.display = "none";
-                }
-                slides[slideIndex - 1].style.display = "block";
-            }
-
-            window.openLightbox = openLightbox;
-            window.closeLightbox = closeLightbox;
-            window.plusSlides = plusSlides;
-            window.currentSlide = currentSlide;
         });
-
-     
-
-
     </script>
 </body>
 </html>

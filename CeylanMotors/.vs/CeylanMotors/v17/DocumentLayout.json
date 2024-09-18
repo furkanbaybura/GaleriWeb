@@ -7,6 +7,14 @@
       "RelativeMoniker": "D:0:0:{280BB1DC-5932-4BA7-A065-AA48C81539E2}|GaleriClient\\GaleriClient.csproj|solutionrelative:galericlient\\views\\ilanlar\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{869FFA3F-6509-4685-ADBC-F62F2C3DCAC5}|GaleriAdmin\\GaleriAdmin.csproj|c:\\users\\user\\source\\repos\\galeriweb\\ceylanmotors\\galeriadmin\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{869FFA3F-6509-4685-ADBC-F62F2C3DCAC5}|GaleriAdmin\\GaleriAdmin.csproj|solutionrelative:galeriadmin\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{869FFA3F-6509-4685-ADBC-F62F2C3DCAC5}|GaleriAdmin\\GaleriAdmin.csproj|c:\\users\\user\\source\\repos\\galeriweb\\ceylanmotors\\galeriadmin\\views\\category\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{869FFA3F-6509-4685-ADBC-F62F2C3DCAC5}|GaleriAdmin\\GaleriAdmin.csproj|solutionrelative:galeriadmin\\views\\category\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{280BB1DC-5932-4BA7-A065-AA48C81539E2}|GaleriClient\\GaleriClient.csproj|c:\\users\\user\\source\\repos\\galeriweb\\ceylanmotors\\galericlient\\controllers\\ilanlarcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{280BB1DC-5932-4BA7-A065-AA48C81539E2}|GaleriClient\\GaleriClient.csproj|solutionrelative:galericlient\\controllers\\ilanlarcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -18,30 +26,68 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 5,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\GaleriAdmin\\Views\\Category\\Index.cshtml",
+              "RelativeDocumentMoniker": "GaleriAdmin\\Views\\Category\\Index.cshtml",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\GaleriAdmin\\Views\\Category\\Index.cshtml",
+              "RelativeToolTip": "GaleriAdmin\\Views\\Category\\Index.cshtml",
+              "ViewState": "AQIAABUAAAAAAAAAAAAAACMAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-18T20:34:14.545Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CategoryController.cs",
+              "DocumentMoniker": "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\GaleriAdmin\\Controllers\\CategoryController.cs",
+              "RelativeDocumentMoniker": "GaleriAdmin\\Controllers\\CategoryController.cs",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\GaleriAdmin\\Controllers\\CategoryController.cs",
+              "RelativeToolTip": "GaleriAdmin\\Controllers\\CategoryController.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAACAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-18T20:25:45.134Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\GaleriClient\\Views\\Ilanlar\\Index.cshtml",
               "RelativeDocumentMoniker": "GaleriClient\\Views\\Ilanlar\\Index.cshtml",
-              "ToolTip": "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\GaleriClient\\Views\\Ilanlar\\Index.cshtml",
-              "RelativeToolTip": "GaleriClient\\Views\\Ilanlar\\Index.cshtml",
-              "ViewState": "AQIAAFoAAAAAAAAAAAAAAGMAAAArAAAA",
+              "ToolTip": "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\GaleriClient\\Views\\Ilanlar\\Index.cshtml*",
+              "RelativeToolTip": "GaleriClient\\Views\\Ilanlar\\Index.cshtml*",
+              "ViewState": "AQIAAIcAAAAAAAAAAAAswIoAAAAwAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-09-16T23:57:12.736Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "IlanlarController.cs",
               "DocumentMoniker": "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\GaleriClient\\Controllers\\IlanlarController.cs",
               "RelativeDocumentMoniker": "GaleriClient\\Controllers\\IlanlarController.cs",
               "ToolTip": "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\GaleriClient\\Controllers\\IlanlarController.cs",
               "RelativeToolTip": "GaleriClient\\Controllers\\IlanlarController.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAkAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAvAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-16T23:53:23.269Z",
               "EditorCaption": ""
