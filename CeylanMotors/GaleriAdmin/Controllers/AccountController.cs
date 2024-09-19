@@ -32,7 +32,7 @@ namespace GaleriAdmin.Controllers
             _yakindaManager= yakindaManager;
             _context = context;
         }
-        
+        [Authorize(Roles = "Admin")]
         public IActionResult Index()
         {
             IEnumerable<CategoryViewModel> list = _categoryManager.GetAll();
@@ -84,7 +84,7 @@ namespace GaleriAdmin.Controllers
         public async Task<IActionResult> Logout()
         {
             await _signInManager.SignOutAsync();
-            
+            HttpContext.Response.Cookies.Delete("galeri");
             return RedirectToAction("Index", "Home");
         }
         public IActionResult messages()

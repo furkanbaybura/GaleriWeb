@@ -18,5 +18,10 @@ namespace Galeri.BLL.Managers.Concrete
         {
 
         }
+
+        public IEnumerable<object> GetImagesByCategoryId(int id)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

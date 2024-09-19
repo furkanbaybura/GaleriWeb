@@ -44,6 +44,16 @@
             "related": ".xml"
           }
         }
+      },
+      "Galeri.Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/Galeri.Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Galeri.Common.dll": {}
+        }
       }
     }
   },
@@ -114,10 +124,16 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "Galeri.Common/1.0.0": {
+      "type": "project",
+      "path": "../Galeri.Common/Galeri.Common.csproj",
+      "msbuildProject": "../Galeri.Common/Galeri.Common.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
+      "Galeri.Common >= 1.0.0",
       "Microsoft.AspNetCore.Http.Features >= 5.0.17"
     ]
   },
@@ -147,7 +163,11 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\NTier\\Galeri.Common\\Galeri.Common.csproj": {
+              "projectPath": "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\NTier\\Galeri.Common\\Galeri.Common.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

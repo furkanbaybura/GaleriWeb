@@ -8,9 +8,7 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
     <link href="~/ilanlarcss/ilanlarcss.css" rel="stylesheet" />
 </head>
-<style>
-    /* Same styles as before */
-</style>
+
 <body class="body" style="background-color:#191919;">
     <h1 style="text-align:center;color:white">Güncel İlanlarımız</h1>
 
@@ -46,7 +44,7 @@
                 else
                 {
                     <!-- Eğer resim yoksa varsayılan bir resim göster -->
-                    <img src="/images/default.jpg" class="card-img-top" alt="default image" />
+                    <img src="/images/car-10.jpg" class="card-img-top" alt="default image" />
                 }
 
                 <div class="card-body">
@@ -146,7 +144,7 @@
                         var isActive = index === 0 ? 'active' : '';
                         var imageHtml = `
                                     <div class="carousel-item ${isActive}">
-                                        <img src="/images/${image.ImageName}" class="d-block w-100" alt="${image.ImageName}">
+                                                <img style="border:5px solid darkred;border-radius:20px; object-fit:cover; width:600px;height:500px;" src="/images/${image.ImageName}" class="d-block w-100" alt="${image.ImageName}">
                                     </div>`;
                         carouselInner.append(imageHtml);
                     });
@@ -154,7 +152,7 @@
                     // Eğer resim yoksa varsayılan bir resim göster
                     carouselInner.append(`
                                 <div class="carousel-item active">
-                                    <img src="/images/default.jpg" class="d-block w-100" alt="default image">
+                                    <img src="/images/car-10.jpg" class="d-block w-100" alt="default image">
                                 </div>
                             `);
                 }

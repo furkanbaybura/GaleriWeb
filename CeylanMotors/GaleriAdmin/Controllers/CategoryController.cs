@@ -138,6 +138,7 @@ namespace GaleriAdmin.Controllers
         public ActionResult Edit(int id)
         {
             CategoryViewModel model = _categoryManager.Get(id);
+
             return View(model);
         }
 
@@ -148,27 +149,62 @@ namespace GaleriAdmin.Controllers
         {
             try
             {
-                if(!ModelState.IsValid)
+                if (!ModelState.IsValid)
                 {
-                    return View(model);
-                }
-                model.AppUserId=1 ;
-                if (_categoryManager.Update(model)>0)
-                    return RedirectToAction("Index", "Account");
-                else
-                {
-                    ModelState.AddModelError("DbError","Veritabanına eklenemedi");
                     return View(model);
                 }
 
-                                
+                model.AppUserId = 1;  // AppUserId'yi doğru bir şekilde set ediyorsunuz, örnekte 1.
+
+                // Kategori güncellemesi
+                if (_categoryManager.Update(model) > 0)
+                {
+                    // Yeni resimler eklendiyse işlemi yap
+                    if (model.FormFile != null && model.FormFile.Length > 0)
+                    {
+                        foreach (IFormFile formFile in model.FormFile)
+                        {
+                            ImageViewModel imageViewModel = new ImageViewModel();
+                            string fileName = formFile.FileName;
+
+                            var dosyadakiFileName = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/images", fileName);
+                            var konum = dosyadakiFileName;
+
+                            // Dosyayı kaydet
+                            using (var akisOrtami = new FileStream(konum, FileMode.Create))
+                            {
+                                formFile.CopyTo(akisOrtami);
+                            }
+
+                            // Hafızaya yükleyip image modelini doldur
+                            using (var memory = new MemoryStream())
+                            {
+                                formFile.CopyTo(memory);
+                                imageViewModel.ImageName = fileName;
+                                imageViewModel.ImageFile = memory.ToArray();
+                                imageViewModel.AppUserId = model.AppUserId;
+                                imageViewModel.CategoryId = id;
+
+                                _imageManager.Add(imageViewModel);
+                            }
+                        }
+                    }
+
+                    return RedirectToAction("Index", "Account");
+                }
+                else
+                {
+                    ModelState.AddModelError("DbError", "Veritabanına güncelleme yapılamadı");
+                    return View(model);
+                }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
-                ModelState.AddModelError("GenerelException",ex.Message);
+                ModelState.AddModelError("GeneralException", ex.Message);
                 return View();
             }
         }
+
 
         // GET: CategoryController/Delete/5
         public ActionResult Delete(int id)

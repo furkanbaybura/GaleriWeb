@@ -109,7 +109,7 @@ namespace Galeri.DAL.Migrations
                             Id = 1,
                             AccessFailedCount = 0,
                             Birthdate = new DateOnly(2000, 1, 1),
-                            ConcurrencyStamp = "8f536c50-cbab-4d86-83da-682a8d5475d6",
+                            ConcurrencyStamp = "a3488a3c-3a3f-4219-9762-866f5ec9b764",
                             Email = "Admin@mail.com",
                             EmailConfirmed = true,
                             Gender = 0,
@@ -117,7 +117,7 @@ namespace Galeri.DAL.Migrations
                             Name = "Admin",
                             NormalizedEmail = "ADMİN@MAİL.COM",
                             NormalizedUserName = "ADMİN",
-                            PasswordHash = "AQAAAAIAAYagAAAAEIM2abHeNXfIa78qG/OsLd/yoNMT8Mb/RsTEMR0p4gq6X+r8jixy5aFhrVujKY204A==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEIBXoJ6yxVNZxC8omwt6qvP6SncsbE7rWrOsAghY9FIYaDJhq0++/JBAl4T1T2Ox9A==",
                             PhoneNumber = "-",
                             PhoneNumberConfirmed = true,
                             Surname = "Admin",
@@ -149,8 +149,8 @@ namespace Galeri.DAL.Migrations
                     b.Property<int?>("Fiyat")
                         .HasColumnType("int");
 
-                    b.Property<string>("Kategori")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int?>("Kategori")
+                        .HasColumnType("int");
 
                     b.Property<string>("Km")
                         .HasColumnType("nvarchar(max)");
@@ -176,8 +176,8 @@ namespace Galeri.DAL.Migrations
                     b.Property<DateTime?>("UpdatedDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<bool?>("Vites")
-                        .HasColumnType("bit");
+                    b.Property<int?>("Vites")
+                        .HasColumnType("int");
 
                     b.Property<int?>("Yil")
                         .HasColumnType("int");

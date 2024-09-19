@@ -8,6 +8,7 @@ using Galeri.ViewModel.Yakinda;
 
 namespace GaleriAdmin.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class YakindaController : Controller
     {        
             private YakindaManager _yakindaManager;

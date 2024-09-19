@@ -11,47 +11,43 @@
 <html lang="en">
 
 <head>
-    <!-- Diğer <head> içeriğiniz -->
+   
     <link href="~/slidercss/css.css" rel="stylesheet">
 </head>
-<body class="body" style="background-color:#191919;">
+<body class="body" style="background-color:#191919;overflow-x: hidden;">
 
 
-                @* slider başla *@
-                <div id="carouselExampleCaptions" class="carousel slide" style="padding-left:400px;padding-right:400px;">
-                    
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                      
+    <div id="carouselExampleCaptions" class="carousel slide container">
+        <div class="carousel-indicators">
+            @for (int i = 0; i < (ViewBag.List as List<SliderViewModel>).Count; i++)
+            {
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="@i" class="@(i == 0 ? "active" : "")" aria-current="@(i == 0 ? "true" : "false")" aria-label="Slide @(i + 1)"></button>
+            }
+        </div>
+
+        <div class="carousel-inner">
+            @foreach (SliderViewModel item in ViewBag.List)
+            {
+                <div class="carousel-item @(item == (ViewBag.List as List<SliderViewModel>)?.First() ? "active" : "")">
+                    <img src="https://localhost:7280/uploads/@(item.SliderImageName)" class="d-block w-100 img-fluid" alt="..." style="border:5px solid darkred;border-radius:20px; object-fit:cover; height: 750px;">
+                    <div class="carousel-caption-bottom">
+                        <h5 style="color:white">@item.Sliderad</h5>
+                        <p>@item.SliderAciklama</p>
                     </div>
-                    <div class="carousel-inner">
-                        @foreach (SliderViewModel item in ViewBag.List)
-                        {
-                      <div class="carousel-item @(item == (ViewBag.List as List<SliderViewModel>)?.First() ? "active" : "")">
-                    <img src="https://localhost:7280/uploads/@(item.SliderImageName)" class="d-block w-100" alt="..." style="border:5px solid darkred;border-radius:20px;">
-                                <div class="carousel-caption-bottom">
-                                    <h5 style="color:white">@item.Sliderad</h5>
-                                    <p>@item.SliderAciklama</p>
-                                </div>
-                            </div>
-                        }
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Geri</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">İleri</span>
-                    </button>
                 </div>
-  
-                <br />
-                <br />
-                <br />
-    @* slider bitiş *@
+            }
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Geri</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">İleri</span>
+        </button>
+    </div>
+
 
         @* yakında kısmı başlangıç*@
   

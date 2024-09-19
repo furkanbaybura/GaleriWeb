@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace GaleriAdmin.Controllers
 {
-
+    [Authorize(Roles = "Admin")]
     public class SliderController : Controller
     {
         private readonly IWebHostEnvironment _webHostEnvironment;

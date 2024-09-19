@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Galeri.Common;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,9 +12,9 @@ namespace Galeri.DTO
         public string? Marka { get; set; }
         public string? Modeli { get; set; }
         public string? Paket { get; set; }
-        public string? Kategori { get; set; }
+        public Kategori? Kategori { get; set; }
         public double? MotorHacmi { get; set; }
-        public bool? Vites { get; set; }
+        public Vites? Vites { get; set; }
         public int? Tork { get; set; }
         public int? Beygir { get; set; }
         public string? Renk { get; set; }
