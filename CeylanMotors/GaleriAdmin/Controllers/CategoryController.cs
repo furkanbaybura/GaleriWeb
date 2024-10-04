@@ -84,7 +84,7 @@ namespace GaleriAdmin.Controllers
                     foreach(IFormFile formFile in formFiles)
                     {
                         ImageViewModel imageViewModel = new ImageViewModel();  
-                        string fileName = formFile.FileName;
+                        string fileName = insertId + "_" + DateTime.Now.ToString("ddMMyyyyHHmmss") + "_" + formFile.FileName; // 1066_image_3.jpeg, 1070_image_3.jpeg
 
                         var dosyadakiFileName = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/images", fileName);
 
@@ -106,14 +106,15 @@ namespace GaleriAdmin.Controllers
                         akisOrtami.Dispose();
                         memory.Dispose();
 
-                        if(_imageManager.Add(imageViewModel) > 0)
+                        if (_imageManager.Add(imageViewModel) > 0)
                         {
-                            // Yüklemeler başarılı oldukça log yazılabilir
+                            TempData["SuccessMessage"] = "Yükleme başarılı oldu!";
                         }
                         else
                         {
-                            // Hatalı ise ayrı bir uyarı yapılabilir.
+                            TempData["ErrorMessage"] = "Yükleme sırasında bir hata oluştu!";
                         }
+                                               
                     }
 
                     return RedirectToAction(nameof(Index));
@@ -159,9 +160,31 @@ namespace GaleriAdmin.Controllers
                 // Kategori güncellemesi
                 if (_categoryManager.Update(model) > 0)
                 {
+
                     // Yeni resimler eklendiyse işlemi yap
                     if (model.FormFile != null && model.FormFile.Length > 0)
                     {
+                        List<ImageViewModel> imageVmlist = _imageManager.GetImagesByCategoryId(id).ToList();
+
+                        foreach (ImageViewModel imageVm in imageVmlist)
+                        {
+                            string imagePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/images", imageVm.ImageName);
+
+                            if (_imageManager.Delete(imageVm) > 0)
+                            {
+                                try
+                                {
+                                    System.IO.File.Delete(imagePath);
+                                }
+                                catch (Exception ex)
+                                {
+                                    Console.WriteLine(ex.Message);
+                                }
+
+                            }
+                        }
+
+
                         foreach (IFormFile formFile in model.FormFile)
                         {
                             ImageViewModel imageViewModel = new ImageViewModel();
@@ -190,6 +213,7 @@ namespace GaleriAdmin.Controllers
                         }
                     }
 
+
                     return RedirectToAction("Index", "Account");
                 }
                 else
@@ -204,39 +228,92 @@ namespace GaleriAdmin.Controllers
                 return View();
             }
         }
+        
+        //[HttpGet]
+        //public IActionResult Delete(int id)
+        //{
+        //    CategoryViewModel model = _categoryManager.Get(id);
 
+        //    return View(model);
+        //}
 
-        // GET: CategoryController/Delete/5
-        public ActionResult Delete(int id)
+        [HttpPost]
+        //[ValidateAntiForgeryToken]
+        public IActionResult Delete(int id)
         {
             try
             {
+                // Kategoriyi getirin
+                CategoryViewModel category = _categoryManager.Get(id);
+                if (category == null)
+                {
+                    return NotFound();
+                }
+
+                // Kategoriye bağlı tüm fotoğrafları getirin
+                List<ImageViewModel> imageList = _imageManager.GetImagesByCategoryId(id).ToList();
+
+                // Her bir fotoğrafı sil
+                foreach (var image in imageList)
+                {
+                    // Fotoğrafın dosya sistemindeki yolunu oluştur
+                    string imagePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/images", image.ImageName);
+
+                    // Dosya sisteminden fotoğrafı sil
+                    if (System.IO.File.Exists(imagePath))
+                    {
+                        System.IO.File.Delete(imagePath);
+                    }
+
+                    // Fotoğrafı veritabanından sil
+                    _imageManager.Delete(image);
+                }
+
+                // Kategoriyi sil
                 _categoryManager.Delete(id);
 
+                return Ok();
             }
             catch (Exception ex)
             {
-
-                return RedirectToAction("Index", "Account");
+                // Hata durumunda 500 statü kodu döndürün
+                return StatusCode(500, new { message = ex.Message });
             }
-
-
-            return RedirectToAction("Index", "Account");
         }
 
-        // POST: CategoryController/Delete/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
+
+        public ActionResult DeleteImage(int id)
         {
-            try
+            ImageViewModel imageViewModel = _imageManager.Get(id);
+
+            int categoryId = imageViewModel.CategoryId;
+
+            string imagePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/images", imageViewModel.ImageName);
+
+            bool deleteStatus = false;
+
+            if(_imageManager.Delete(imageViewModel) > 0)
             {
-                return RedirectToAction("Index", "Account");
+                try
+                {
+                    System.IO.File.Delete(imagePath);
+                    deleteStatus = true;
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                    
+                }
+                
             }
-            catch
-            {
-                return View();
-            }
+
+            ViewBag.DeleteMessage = deleteStatus ? "Resim başarıyla silindi." : "Resim silme başarısız oldu";
+
+            CategoryViewModel? model = _categoryManager.Get(categoryId);
+            IEnumerable<ImageViewModel> imageList = _imageManager.GetAll().ToList();
+            ViewBag.ImageList = imageList;
+
+            return RedirectToAction("Details", "Category", model);
         }
     }
 }

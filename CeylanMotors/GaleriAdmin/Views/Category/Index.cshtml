@@ -28,19 +28,19 @@
                                 @{
                                     List<ImageViewModel> imageList = ViewBag.ImageList as List<ImageViewModel>;
                                     var imagesForItem = imageList.Where(i => i.CategoryId == item.Id).ToList();
-                                    var carouselId = "carousel" + item.Id; // Benzersiz ID oluştur
+                                    var carouselId = "carousel" + item.Id;
                                 }
 
                                 <div id="@carouselId" class="carousel slide" data-bs-ride="carousel">
                                     <div class="carousel-inner">
                                         @{
-                                            bool isActive = true; // İlk öğe için active sınıfı eklemek için bir bayrak
+                                            bool isActive = true; 
                                             foreach (var image in imagesForItem)
                                             {
                                                 <div class="carousel-item @(isActive ? "active" : "")">
                                                     <img src="~/images/@image.ImageName" class="d-block w-80 img-thumbnail" alt="@image.ImageName" style="width:90px;height:80px" />
                                                 </div>
-                                                isActive = false; // Sadece ilk resme active sınıfı verilecek
+                                                isActive = false; 
                                             }
                                         }
                                     </div>
@@ -50,30 +50,31 @@
                         <td>
                             <a class="btn btn-info" asp-controller="Category" asp-action="Edit" asp-route-id="@item.Id">Düzenle</a>
                             <a class="btn btn-secondary" asp-controller="Category" asp-action="Details" asp-route-id="@item.Id">Detay</a>
-                            <a class="btn btn-danger"
-                               id="remove-link-@item.Id"
-                               data-url="@Url.ActionLink("Delete", "Category", new { id = item.Id })"
-                               data-bs-toggle="modal"
-                               data-bs-target="#removeConfirm-@item.Id">Sil</a>
+                                <a class="btn btn-danger"
+                                   id="remove-link-@item.Id"
+                                   data-url="@Url.Action("Delete", "Category", new { id = item.Id })"
+                                   data-bs-toggle="modal"
+                                   data-bs-target="#removeConfirm-@item.Id">Sil</a>
 
-                            <!-- Modal -->
-                            <div class="modal fade" id="removeConfirm-@item.Id" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h1 class="modal-title fs-5" id="exampleModalLabel">İlan Silme</h1>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                        </div>
-                                        <div class="modal-body">
-                                            <p><strong>@item.Name</strong> kategorisini silmek istediğinizden emin misiniz?</p>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Geri</button>
-                                            <button type="button" class="btn btn-danger" onclick="DeleteItem(@item.Id)">Evet</button>
+                                <!-- Modal -->
+                                <div class="modal fade" id="removeConfirm-@item.Id" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h1 class="modal-title fs-5" id="exampleModalLabel">İlan Silme</h1>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <p><strong>@item.Name</strong> İlanı Silmek İstediğinizden Emin misiniz?</p>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Geri</button>
+                                                @Html.AntiForgeryToken()
+                                                <button type="button" class="btn btn-danger" onclick="DeleteItem(@item.Id)">Evet</button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
 
                         </td>
                     </tr>
@@ -91,7 +92,30 @@
         </table>
     </div>
 </div>
+  <script type="text/javascript" >
+        function DeleteItem(id) {
+            var url = $('#remove-link-' + id).attr('data-url');
+
+            $.ajax({
+                url: url, // Silme işlemi için URL
+                type: 'POST', // HTTP yöntemi (POST)
+                data: {
+                    __RequestVerificationToken: $('input[name="__RequestVerificationToken"]').val(), // CSRF koruma token'ı
+                    id: id // Silinecek kategori ID'si
+                },
+                success: function (response) {
+                    // Başarılı olursa sayfayı yenile
+                    location.reload();
+                },
+                error: function (xhr, status, error) {
+                    // Hata alındığında kullanıcıya mesaj göster
+                    alert('Silme işlemi başarısız oldu: ' + error);
+                }
+            });
+        }
+</script>
 </body>
 @section Scripts {
     <script type="text/javascript" src="~/js/Category/index.js"></script>
 }
+  

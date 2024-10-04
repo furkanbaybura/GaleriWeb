@@ -1,0 +1,116 @@
+﻿@using Galeri.ViewModel.Picture
+@model CategoryViewModel
+@{
+    Layout = "_Layout";
+}
+<body style="background-color:#191919; color:darkred">
+    <div class="row">
+        <div class="col">
+            <h1>İlan Listesi</h1>
+            <a class="btn btn-success" asp-controller="Category" asp-action="Create">Yeni</a>
+            <a class="btn btn-warning" asp-controller="Account" asp-action="Index">Anasayfa</a>
+            <hr />
+            <table class="table" style="background-color:#191919; color:darkred">
+                <thead>
+                    <tr>
+                        <th>Adı</th>
+                        <th>Açıklaması</th>
+                        <th>Yıl</th>
+                        <th>Fotoğraf</th>
+                        <th>İşlem</th>
+                    </tr>
+                </thead>
+                <tbody id="category-list">
+                    <tr>
+                        <td>@Model.Name</td>
+                        <td>@Model.Description</td>
+                        <td>@Model.Yil</td>
+                        <td>
+                            @* Carousel için kod *@
+                            @{
+                                List<ImageViewModel> imageList = ViewBag.ImageList as List<ImageViewModel>;
+                                var imagesForItem = imageList.Where(i => i.CategoryId == Model.Id).ToList();
+                                var carouselId = "carousel" + Model.Id; // Benzersiz ID oluştur
+                            }
+
+                            <div id="@carouselId" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-inner">
+                                    @{
+                                        bool isActive = true; // İlk öğe için active sınıfı eklemek için bir bayrak
+                                        foreach (var image in imagesForItem)
+                                        {
+                                            <div class="carousel-item @(isActive ? "active" : "")">
+                                                <img src="~/images/@image.ImageName" class="d-block w-80 img-thumbnail" alt="@image.ImageName" style="width:90px;height:80px" />
+                                            </div>
+                                            isActive = false; // Sadece ilk resme active sınıfı verilecek
+                                        }
+                                    }
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <a class="btn btn-info" asp-controller="Category" asp-action="Edit" asp-route-id="@Model.Id">Düzenle</a>
+                            <a class="btn btn-secondary" asp-controller="Category" asp-action="Details" asp-route-id="@Model.Id">Detay</a>
+                            <a class="btn btn-danger"
+                               data-id="@Model.Id"
+                               data-bs-toggle="modal"
+                               data-bs-target="#deleteConfirmModal">Sil</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="deleteConfirmModal" tabindex="-1" aria-labelledby="deleteConfirmModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="deleteConfirmModalLabel">Silme Onayı</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Silmek istediğinize emin misiniz?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hayır</button>
+                    <button type="button" class="btn btn-danger" id="confirmDeleteButton">Evet</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        var deleteId = 0; // Silinecek ID'yi saklamak için değişken
+
+        // Modal açıldığında silinecek ID'yi ayarla
+        $('#deleteConfirmModal').on('show.bs.modal', function (event) {
+            var button = $(event.relatedTarget); // Tıklanan buton
+            deleteId = button.data('id'); // ID'yi butondan al
+
+            // Silme işlemi için butona tıklama olayını ekle
+            $('#confirmDeleteButton').off('click').on('click', function () {
+                $.ajax({
+                    url: '@Url.Action("Delete", "Category")', // Silme işlemi için URL
+                    type: 'POST',
+                    data: {
+                        __RequestVerificationToken: $('input[name="__RequestVerificationToken"]').val(), // CSRF tokeni
+                        id: deleteId
+                    },
+                    success: function (response) {
+                        // Başarıyla silme işlemi gerçekleştirildiyse sayfayı yenile
+                        location.reload();
+                    },
+                    error: function (xhr, status, error) {
+                        // Hata oluşursa kullanıcıya bildirim yap
+                        alert('Silme işlemi başarısız oldu: ' + error);
+                    }
+                });
+
+                // Modalı kapat
+                $('#deleteConfirmModal').modal('hide');
+            });
+        });
+    </script>
+</body>

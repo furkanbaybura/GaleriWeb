@@ -19,9 +19,10 @@ namespace Galeri.BLL.Managers.Concrete
 
         }
 
-        public IEnumerable<object> GetImagesByCategoryId(int id)
+        public IEnumerable<ImageViewModel> GetImagesByCategoryId(int id)
         {
-            throw new NotImplementedException();
+            List<ImageDto> imageDtos = _service.GetAll().Where(ci => ci.CategoryId == id).ToList();
+            return _mapper.Map<List<ImageViewModel>>(imageDtos);
         }
     }
 }

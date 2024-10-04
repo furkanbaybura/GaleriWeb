@@ -10,6 +10,8 @@
             var carouselId = "carousel" + Model.Id; 
         }
 
+        <div>@ViewBag.DeleteMessage</div>
+
         <div class="container" style="background-color:#191919 ; color:darkred ">
             <div class="row">
                 @foreach (var image in imagesForItem)
@@ -18,6 +20,7 @@
                         <a href="~/images/@image.ImageName" data-bs-toggle="modal" data-bs-target="#imageModal-@image.Id">
                             <img src="~/images/@image.ImageName" class="img-fluid img-thumbnail" alt="@image.ImageName" style="width: 60; height: 80px;" />
                         </a>
+                        <a asp-controller="Category" asp-action="DeleteImage" asp-route-id="@image.Id">SİL</a>
                     </div>
 
                     <!-- Modal for enlarged image -->
@@ -58,7 +61,8 @@
             <p class="card-text">Açıklaması :  @Model.Description</p>
             <p class="card-text">Açıklaması :  @Model.Fiyat</p>
             <a asp-controller="Category" asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-success">Düzenle</a>
-            <a asp-controller="Account" asp-action="Index" class="btn btn-primary">Geri</a>
+            <a asp-controller="Category" asp-action="Index" class="btn btn-primary">Geri</a>
+            <a asp-controller="Account" asp-action="Index" class="btn btn-primary">Anasayfa</a>
             <!--
                 TODO: Bu kategoriye ait ürünlerin listesi olabilir. bir düşünmek lazım
             -->
