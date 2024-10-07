@@ -6,7 +6,7 @@ namespace CeylanMotors.Controllers
     {
         public IActionResult Index()
         {
-            ViewBag.resim ="./images/anadol.jpg";
+            ViewBag.resim ="./images/hakkimizda.png";
             return View();
         }
     }

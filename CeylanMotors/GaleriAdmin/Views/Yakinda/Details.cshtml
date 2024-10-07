@@ -4,7 +4,7 @@
 }
 <body style="background-color:#191919 ; color:darkred ">
     <div class="card">
-        <h2>Yakında Detay Listesi</h2>
+        <h2>Satılan Araçlar Detay Listesi</h2>
         <h5 class="card-header">@Model.Id Numaralı Kayıt</h5>
         <div class="card-body" style="background-color:#191919 ; color:darkred ">
 
@@ -12,8 +12,9 @@
             <p class="card-text">Model : @Model.YakindaBaslik</p>
             <p class="card-text">Paket : @Model.YakindaAciklama</p>
             <p class="card-text">Paket : @Model.YakindaImageName</p>
+            <img src="~/uploads/@Model.YakindaImageName" class="card-img-top" alt="default image" style="height:200px;width:300px" />
             
-
+            <hr />
             <a asp-controller="Yakinda" asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-success">Düzenle</a>
             <a asp-controller="Yakinda" asp-action="Index" class="btn btn-primary">Geri</a>
             <a asp-controller="Account" asp-action="Index" class="btn btn-primary">Anasayfa</a>

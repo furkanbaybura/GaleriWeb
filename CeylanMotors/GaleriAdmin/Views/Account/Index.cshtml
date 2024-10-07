@@ -58,7 +58,7 @@
 
                 <div class="d-flex align-items-center ms-4 mb-4">
                     <div class="position-relative">
-                        <img class="rounded-circle" src="~/Images/bmw.jpg" alt="" style="width: 40px; height: 40px;">
+                        <img class="rounded-circle" src="~/Images/hakkimizda.png" alt="" style="width: 40px; height: 40px;">
                         <div class="bg-success rounded-circle border border-2 border-white position-absolute end-0 bottom-0 p-1"></div>
                     </div>
                     <div class="ms-3">
@@ -92,7 +92,7 @@
                        
                       <a asp-action="Messages" class="nav-item nav-link"><i class="fa fa-envelope me-lg-2"></i>Mesajlar</a>
                     
-                      <img class="rounded-circle me-lg-2" src="~/Images/bmw.jpg" alt="" style="width: 40px; height: 40px;margin-left:10px">
+                      <img class="rounded-circle me-lg-2" src="~/Images/hakkimizda.png" alt="" style="width: 40px; height: 40px;margin-left:10px">
                       <a asp-action="index" class="d-none d-lg-inline-flex">Ceylan Motors</a>
                     <form id="logoutForm" asp-action="logout" method="post" style="display: inline;margin-left:10px">
                         @Html.AntiForgeryToken() <!-- CSRF koruması için -->
@@ -123,7 +123,7 @@
                 <!-- yakinda Index start-->
                 <div class="row">
                     <div class="col">
-                        <h1>Yakında Listesi</h1>
+                        <h1>Satılan Araclar Listesi</h1>
                         <a class="btn btn-success" asp-controller="Yakinda" asp-action="Create">Yeni</a>
                         <a class="btn btn-warning" asp-controller="Yakinda" asp-action="Index">Liste</a>
                         <hr />

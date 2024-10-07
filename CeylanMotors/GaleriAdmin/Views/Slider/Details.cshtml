@@ -11,7 +11,8 @@
         <p class="card-text">Model : @Model.SliderBaslik</p>
         <p class="card-text">Paket : @Model.SliderAciklama</p>
             <p class="card-text">Kategori :  @Model.SliderImageName</p>
-      
+            <img src="~/uploads/@Model.SliderImageName" class="card-img-top" alt="default image" style="height:200px;width:300px" />
+      <hr />
         <a asp-controller="Slider" asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-success">Düzenle</a>
             <a asp-controller="Slider" asp-action="Index" class="btn btn-primary">Geri</a>
             <a asp-controller="Account" asp-action="Index" class="btn btn-primary">Anasayfa</a>

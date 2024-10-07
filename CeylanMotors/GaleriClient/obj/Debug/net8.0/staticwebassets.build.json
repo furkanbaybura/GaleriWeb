@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ZuEUEXocDet6xKXXsulcbF6PsO/M66BAtKwc43meKqM=",
+  "Hash": "npQ+/fhTZ0JC438797RDP8P2QEbbYxua2oRk/JcVnw4=",
   "Source": "GaleriClient",
   "BasePath": "_content/GaleriClient",
   "Mode": "Default",
@@ -1877,6 +1877,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\et5.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\GaleriClient\\wwwroot\\Images\\hakkimizda.PNG",
+      "SourceId": "GaleriClient",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\GaleriClient\\wwwroot\\",
+      "BasePath": "_content/GaleriClient",
+      "RelativePath": "Images/hakkimizda.PNG",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\hakkimizda.PNG"
     },
     {
       "Identity": "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\GaleriClient\\wwwroot\\Images\\image_1.jpg",

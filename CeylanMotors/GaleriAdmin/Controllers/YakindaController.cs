@@ -134,37 +134,20 @@ namespace GaleriAdmin.Controllers
             return RedirectToAction("Index", ("Yakinda"));
         }
 
-            // GET: CategoryController/Delete/5
-            public ActionResult Delete(int id)
+        [HttpPost]
+
+        public ActionResult Delete(int id)
+        {
+            try
             {
-                try
-                {
-                    _yakindaManager.Delete(id);
-
-                }
-                catch (Exception ex)
-                {
-
-                    return RedirectToAction("Index", "Yakinda");
-                }
-
-
+                _yakindaManager.Delete(id);
                 return RedirectToAction("Index", "Yakinda");
             }
-
-            // POST: CategoryController/Delete/5
-            [HttpPost]
-            [ValidateAntiForgeryToken]
-            public ActionResult Delete(int id, IFormCollection collection)
+            catch (Exception ex)
             {
-                try
-                {
-                    return RedirectToAction("Index", "Yakinda");
-                }
-                catch
-                {
-                    return View();
-                }
+                // Hata yönetimi yapılabilir
+                return RedirectToAction("Index", "Yakinda");
             }
-     }
+        }
+    }
 }

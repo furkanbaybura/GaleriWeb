@@ -85,6 +85,10 @@
       "PackagePath": "staticwebassets\\Images\\et5.jpg"
     },
     {
+      "Id": "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\GaleriClient\\wwwroot\\Images\\hakkimizda.PNG",
+      "PackagePath": "staticwebassets\\Images\\hakkimizda.PNG"
+    },
+    {
       "Id": "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\GaleriClient\\wwwroot\\Images\\image_1.jpg",
       "PackagePath": "staticwebassets\\Images\\image_1.jpg"
     },
