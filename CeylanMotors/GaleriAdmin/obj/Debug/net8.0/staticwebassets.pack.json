@@ -13,14 +13,6 @@
       "PackagePath": "staticwebassets\\Images\\about.jpg"
     },
     {
-      "Id": "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\GaleriAdmin\\wwwroot\\Images\\anadol.jpg",
-      "PackagePath": "staticwebassets\\Images\\anadol.jpg"
-    },
-    {
-      "Id": "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\GaleriAdmin\\wwwroot\\Images\\benimbmw.jpg",
-      "PackagePath": "staticwebassets\\Images\\benimbmw.jpg"
-    },
-    {
       "Id": "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\GaleriAdmin\\wwwroot\\Images\\bg_1.jpg",
       "PackagePath": "staticwebassets\\Images\\bg_1.jpg"
     },
@@ -35,10 +27,6 @@
     {
       "Id": "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\GaleriAdmin\\wwwroot\\Images\\bmeacilis.MOV",
       "PackagePath": "staticwebassets\\Images\\bmeacilis.MOV"
-    },
-    {
-      "Id": "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\GaleriAdmin\\wwwroot\\Images\\bmw.jpg",
-      "PackagePath": "staticwebassets\\Images\\bmw.jpg"
     },
     {
       "Id": "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\GaleriAdmin\\wwwroot\\Images\\car-1.jpg",
@@ -89,8 +77,8 @@
       "PackagePath": "staticwebassets\\Images\\car-9.jpg"
     },
     {
-      "Id": "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\GaleriAdmin\\wwwroot\\Images\\et5.jpg",
-      "PackagePath": "staticwebassets\\Images\\et5.jpg"
+      "Id": "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\GaleriAdmin\\wwwroot\\Images\\hakkimizda.PNG",
+      "PackagePath": "staticwebassets\\Images\\hakkimizda.PNG"
     },
     {
       "Id": "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\GaleriAdmin\\wwwroot\\Images\\image_1.jpg",
@@ -125,12 +113,8 @@
       "PackagePath": "staticwebassets\\Images\\passat.jpg"
     },
     {
-      "Id": "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\GaleriAdmin\\wwwroot\\Images\\person_2.jpg",
-      "PackagePath": "staticwebassets\\Images\\person_2.jpg"
-    },
-    {
-      "Id": "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\GaleriAdmin\\wwwroot\\Images\\person_3.jpg",
-      "PackagePath": "staticwebassets\\Images\\person_3.jpg"
+      "Id": "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\GaleriAdmin\\wwwroot\\Images\\superb.jpg",
+      "PackagePath": "staticwebassets\\Images\\superb.jpg"
     },
     {
       "Id": "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\GaleriAdmin\\wwwroot\\css\\ajax-loader.gif",
@@ -2039,6 +2023,14 @@
     {
       "Id": "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\GaleriAdmin\\wwwroot\\uploads\\2008_ca1613b5-1874-4ad7-b632-12b85a632128.jpg",
       "PackagePath": "staticwebassets\\uploads\\2008_ca1613b5-1874-4ad7-b632-12b85a632128.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\GaleriAdmin\\wwwroot\\uploads\\anadol_c4424b5e-8436-4558-a08b-ab30f883159b.jpg",
+      "PackagePath": "staticwebassets\\uploads\\anadol_c4424b5e-8436-4558-a08b-ab30f883159b.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\GaleriAdmin\\wwwroot\\uploads\\benimbmw_925cac25-d78c-413d-ba2e-dfb13c2b01d7.jpg",
+      "PackagePath": "staticwebassets\\uploads\\benimbmw_925cac25-d78c-413d-ba2e-dfb13c2b01d7.jpg"
     },
     {
       "Id": "C:\\Users\\user\\source\\repos\\GaleriWeb\\CeylanMotors\\GaleriAdmin\\wwwroot\\uploads\\bmw_885afc49-e9ff-4304-90c3-9bfba8c81f4a.jpg",
