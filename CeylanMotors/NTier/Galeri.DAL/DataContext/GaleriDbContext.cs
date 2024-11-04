@@ -25,8 +25,8 @@ namespace Galeri.DAL.DataContext
         {
             base.OnModelCreating(builder);
 
-            string admin = "Admin";
-            string mail = admin + "@mail.com";
+            string admin = "ceylanmotors3";
+            string mail = admin + "@gmail.com";
             var hasher = new PasswordHasher<AppUser>();
 
             builder.Entity<AppUser>()
@@ -43,7 +43,7 @@ namespace Galeri.DAL.DataContext
                    EmailConfirmed = true,
                    PhoneNumberConfirmed = true,
                    PhoneNumber = "-",
-                   PasswordHash = hasher.HashPassword(null,"Az-123456")
+                   PasswordHash = hasher.HashPassword(null,"Ceylan-0303")
                    });
             //admin role add
 

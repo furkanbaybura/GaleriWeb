@@ -40,6 +40,7 @@ namespace GaleriAdmin.Controllers
             IEnumerable<YakindaViewModel> yakinda = _yakindaManager.GetAll();
             ViewBag.List=slider;
             ViewBag.Yakinda=yakinda;
+            //boş comment
             return View(list);
            
         }    
@@ -53,17 +54,21 @@ namespace GaleriAdmin.Controllers
         [HttpPost]
             public async Task<IActionResult> Login(LoginViewModel model)
             {
-
+           
             if (!ModelState.IsValid)
             {
+                ViewBag.ErrorData = "Geçersiz Giriş";
                 return View(model);
             }
+
+            var x = _userManager.Users.ToList();
 
             AppUser user = await _userManager.FindByEmailAsync(model.Email);
                 if (user == null)
                 {
+                    ViewBag.ErrorData = "Kullanıcı bulunamadı";
 
-                    ModelState.AddModelError(string.Empty, "Kullanıcı adı veya şifre yanlış");
+                    ModelState.AddModelError(string.Empty, "Kullanıcı bulunamadı");
                     return View(model);
                 }
 
@@ -75,8 +80,8 @@ namespace GaleriAdmin.Controllers
                     return RedirectToAction("Index", "Account");
                 }
 
-
-                ModelState.AddModelError(string.Empty, "Kullanıcı adı veya şifre yanlış");
+            ViewBag.ErrorData = "Son hata ";
+            ModelState.AddModelError(string.Empty, "Bilinmeyen Hata");
                 return View(model);
             }
         [HttpPost]

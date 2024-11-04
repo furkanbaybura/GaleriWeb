@@ -1,4 +1,16 @@
 ﻿@using Galeri.ViewModel.Picture
+@{
+
+    ViewBag.Title = "Anasayfa";
+
+    string baseUrl = "https://admin.ceylanmotorsafyon.com";
+
+    // if (Context.Request.Host.Host == "localhost")
+    //     baseUrl = "https://localhost:7280";
+    // else
+    //     baseUrl = "https://admin.ceylanmotorsafyon.com";
+
+}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -39,7 +51,7 @@
                 <!-- Kartın kapak fotoğrafı olarak ilk resmi ekle -->
                 @if (coverImage != null)
                 {
-                    <img src="~/images/@coverImage.ImageName" class="card-img-top" alt="@coverImage.ImageName" />
+                    <img src="@baseUrl/images/@coverImage.ImageName" class="card-img-top" alt="@coverImage.ImageName" />
                 }
                 else
                 {

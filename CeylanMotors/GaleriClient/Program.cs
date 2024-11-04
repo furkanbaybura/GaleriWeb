@@ -11,7 +11,7 @@ builder.Services.AddControllersWithViews();
 
 builder.Services.AddDbContext<GaleriDbContext>(opt =>
 {
-    opt.UseSqlServer(builder.Configuration.GetConnectionString("GaleriConStr"));
+    opt.UseSqlServer(builder.Configuration.GetConnectionString("GaleriConStrRemote"));
 }, ServiceLifetime.Scoped);
 
 builder.Services.AddScoped<CategoryRepo>();

@@ -9,7 +9,7 @@ namespace Galeri.ViewModel.Login
 {
     public class LoginViewModel
     {
-        [EmailAddress]
+       
         public string Email { get; set; }
 
 

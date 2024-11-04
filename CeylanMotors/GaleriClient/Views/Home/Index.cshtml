@@ -4,8 +4,16 @@
 @model IEnumerable<CategoryViewModel>
 
 @{
-    
+
     ViewBag.Title = "Anasayfa";
+
+    string baseUrl = "https://admin.ceylanmotorsafyon.com";
+
+    // if (Context.Request.Host.Host == "localhost")
+    //     baseUrl = "https://localhost:7280";
+    // else
+    //     baseUrl = "https://admin.ceylanmotorsafyon.com";
+
 }
 <!DOCTYPE html>
 <html lang="en">
@@ -29,7 +37,7 @@
             @foreach (SliderViewModel item in ViewBag.List)
             {
                 <div class="carousel-item @(item == (ViewBag.List as List<SliderViewModel>)?.First() ? "active" : "")">
-                    <img src="https://localhost:7280/uploads/@(item.SliderImageName)" class="d-block w-100 img-fluid" alt="..." style="border:5px solid darkred;border-radius:20px; object-fit:cover; height: 750px;">
+                    <img src="@baseUrl/uploads/@(item.SliderImageName)" class="d-block w-100 img-fluid" alt="..." style="border:5px solid darkred;border-radius:20px; object-fit:cover; height: 750px;">
                     <div class="carousel-caption-bottom">
                         <h5 style="color:white">@item.Sliderad</h5>
                         <p>@item.SliderAciklama</p>
@@ -59,7 +67,7 @@
                 {
                     <div class="col-md-3 mb-3">
                         <div class="card">
-                            <img src="https://localhost:7280/uploads/@(item.YakindaImageName)" class="d-block w-100" alt="..."
+                            <img src="@baseUrl/uploads/@(item.YakindaImageName)" class="d-block w-100" alt="..."
                                  style="border:5px solid darkred; border-radius:20px; width: 100%; height: 250px; object-fit: cover;">
                             <div class="card-body">
                                 <h2>@item.YakindaAd</h2>

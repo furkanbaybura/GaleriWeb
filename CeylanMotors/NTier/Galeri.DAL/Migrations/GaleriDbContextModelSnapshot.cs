@@ -109,20 +109,20 @@ namespace Galeri.DAL.Migrations
                             Id = 1,
                             AccessFailedCount = 0,
                             Birthdate = new DateOnly(2000, 1, 1),
-                            ConcurrencyStamp = "a3488a3c-3a3f-4219-9762-866f5ec9b764",
-                            Email = "Admin@mail.com",
+                            ConcurrencyStamp = "c42e4828-863d-408a-80b8-a8f3e4a0aaa2",
+                            Email = "ceylanmotors3@gmail.com",
                             EmailConfirmed = true,
                             Gender = 0,
                             LockoutEnabled = false,
-                            Name = "Admin",
-                            NormalizedEmail = "ADMİN@MAİL.COM",
-                            NormalizedUserName = "ADMİN",
-                            PasswordHash = "AQAAAAIAAYagAAAAEIBXoJ6yxVNZxC8omwt6qvP6SncsbE7rWrOsAghY9FIYaDJhq0++/JBAl4T1T2Ox9A==",
+                            Name = "ceylanmotors3",
+                            NormalizedEmail = "CEYLANMOTORS3@GMAİL.COM",
+                            NormalizedUserName = "CEYLANMOTORS3",
+                            PasswordHash = "AQAAAAIAAYagAAAAEGzRSeqGCpvXt+RSHtPO0l0gAw0UmoYkJvlW1Yd8HEFGq4VfuGWRJbN/1fU2Qe6kHw==",
                             PhoneNumber = "-",
                             PhoneNumberConfirmed = true,
-                            Surname = "Admin",
+                            Surname = "ceylanmotors3",
                             TwoFactorEnabled = false,
-                            UserName = "Admin"
+                            UserName = "ceylanmotors3"
                         });
                 });
 
@@ -365,8 +365,8 @@ namespace Galeri.DAL.Migrations
                         new
                         {
                             Id = 1,
-                            Name = "Admin",
-                            NormalizedName = "ADMİN"
+                            Name = "ceylanmotors3",
+                            NormalizedName = "CEYLANMOTORS3"
                         });
                 });
 
