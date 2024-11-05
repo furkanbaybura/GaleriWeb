@@ -41,3 +41,44 @@
     transform: scale(1.05);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
+/* Genel stiller */
+body {
+    background-color: #191919;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    margin-bottom: 20px; /* Başlık ile kartlar arasında boşluk */
+}
+
+/* Kart düzenlemeleri */
+.detail-card {
+    margin: 10px auto; /* Kartları ortala ve aralarına boşluk bırak */
+    border: 2px solid darkred; /* Kenarlık */
+    border-radius: 10px; /* Kenarları yuvarlama */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Kart gölgesi */
+    width: 100%; /* Kartın genişliğini %100 yap */
+    max-width: 300px; /* Kartın maksimum genişliğini ayarlama */
+}
+
+.card-img-top {
+    width: 100%; /* Resmin genişliği %100 */
+    height: auto; /* Yüksekliği otomatik ayarlama */
+    border-radius: 10px 10px 0 0; /* Üst kenarları yuvarla */
+}
+
+/* Mobil görünüm için düzenlemeler */
+@media only screen and (max-width: 768px) {
+    .detail-card {
+        flex: 1 0 100%; /* Kartlar için tam genişlik ayarla */
+        margin: 5px 0; /* Kartlar arasında daha az boşluk bırak */
+        width: 90%; /* Kartın genişliğini %90 yap */
+    }
+
+    /* Flex konteyner için düzenleme */
+    div[style*="display:flex"] {
+        justify-content: center; /* Kartları ortala */
+        padding-left: 0; /* Sol dolgu kaldır */
+    }
+}

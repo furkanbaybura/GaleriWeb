@@ -1,0 +1,36 @@
+﻿/* Mobil cihazlar için düzenlemeler */
+@media (max-width: 576px) {
+    /* Başlık ve ana container */
+    body {
+        padding: 0;
+    }
+
+    h1.mb-6 {
+        font-size: 1.5rem;
+    }
+
+    .container-xxl {
+        padding: 1rem;
+    }
+
+    /* Kartlar ve form elementleri */
+    .col-md-4 {
+        width: 100%;
+    }
+
+    /* Google Maps iframe boyutu */
+    iframe {
+        width: 100%;
+        height: 300px;
+    }
+
+    /* Form elemanları */
+    .form-floating {
+        margin-bottom: 1rem;
+    }
+
+    /* Butonun tam genişlikte görünmesi */
+    .btn {
+        width: 100%;
+    }
+}

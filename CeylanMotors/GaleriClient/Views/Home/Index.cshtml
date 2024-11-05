@@ -9,10 +9,10 @@
 
     string baseUrl = "https://admin.ceylanmotorsafyon.com";
 
-    // if (Context.Request.Host.Host == "localhost")
-    //     baseUrl = "https://localhost:7280";
-    // else
-    //     baseUrl = "https://admin.ceylanmotorsafyon.com";
+    if (Context.Request.Host.Host == "localhost")
+        baseUrl = "https://localhost:7280";
+    else
+        baseUrl = "https://admin.ceylanmotorsafyon.com";
 
 }
 <!DOCTYPE html>
@@ -68,7 +68,7 @@
                     <div class="col-md-3 mb-3">
                         <div class="card">
                             <img src="@baseUrl/uploads/@(item.YakindaImageName)" class="d-block w-100" alt="..."
-                                 style="border:5px solid darkred; border-radius:20px; width: 100%; height: 250px; object-fit: cover;">
+                                 style="border:5px solid darkred; border-radius:20px; object-fit: cover;">
                             <div class="card-body">
                                 <h2>@item.YakindaAd</h2>
                                 <h5>@item.YakindaAciklama</h5>

@@ -1,15 +1,13 @@
 ﻿@using Galeri.ViewModel.Picture
 @{
-
-    ViewBag.Title = "Anasayfa";
+    ViewBag.Title = "Ilanlarımız";
 
     string baseUrl = "https://admin.ceylanmotorsafyon.com";
 
-    // if (Context.Request.Host.Host == "localhost")
-    //     baseUrl = "https://localhost:7280";
-    // else
-    //     baseUrl = "https://admin.ceylanmotorsafyon.com";
-
+    if (Context.Request.Host.Host == "localhost")
+        baseUrl = "https://localhost:7280";
+    else
+        baseUrl = "https://admin.ceylanmotorsafyon.com";
 }
 <!DOCTYPE html>
 <html lang="en">
@@ -18,16 +16,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Araç Detayları</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
-    <link href="~/ilanlarcss/ilanlarcss.css" rel="stylesheet" />
+    <link href="~/ilanlarcss/ilanlarcss.css" rel="stylesheet" />  
 </head>
 
 <body class="body" style="background-color:#191919;">
-    <h1 style="text-align:center;color:white">Güncel İlanlarımız</h1>
+    <h1>Güncel İlanlarımız</h1>
 
-    <div style="display:flex;flex-wrap:wrap;gap:2px;padding-left:400px">
+    <div class="d-flex flex-wrap justify-content-center">
         @foreach (var item in Model)
         {
-            <div class="col col-3 mt-3 detail-card" style="width: 25rem; border:2px solid darkred;"
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 mt-3 detail-card"
                  data-marka="@item.Marka"
                  data-modeli="@item.Modeli"
                  data-paket="@item.Paket"
@@ -48,23 +46,21 @@
                     var coverImage = imagesForItem.FirstOrDefault(); // İlk resmi al
                 }
 
-                <!-- Kartın kapak fotoğrafı olarak ilk resmi ekle -->
                 @if (coverImage != null)
                 {
                     <img src="@baseUrl/images/@coverImage.ImageName" class="card-img-top" alt="@coverImage.ImageName" />
                 }
                 else
                 {
-                    <!-- Eğer resim yoksa varsayılan bir resim göster -->
                     <img src="/images/car-10.jpg" class="card-img-top" alt="default image" />
                 }
 
                 <div class="card-body">
-                    <h5 class="card-title" style="text-align:center; color:white;">@item.Marka</h5>
-                    <p class="card-text" style="color:white;">Modeli: @item.Modeli</p>
-                    <p class="card-text" style="color:white;">Rengi: @item.Renk</p>
-                    <p class="card-text" style="color:white;">Fiyatı: @item.Fiyat ₺</p>
-                    <a href="#" class="btn btn-danger detail-btn" style="align-items:end" data-id="@item.Id">İlan Detayı</a>
+                    <h5 class="card-title text-center">@item.Marka</h5>
+                    <p class="card-text">Modeli: @item.Modeli</p>
+                    <p class="card-text">Rengi: @item.Renk</p>
+                    <p class="card-text">Fiyatı: @item.Fiyat ₺</p>
+                    <a href="#" class="btn btn-danger detail-btn" data-id="@item.Id">İlan Detayı</a>
                 </div>
             </div>
         }
@@ -79,7 +75,6 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <!-- Carousel/Slider -->
                     <div id="carouselModalControls" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-inner" id="carousel-inner">
                             <!-- Images will be added dynamically -->
@@ -109,6 +104,9 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <script>
         $(document).ready(function () {
+            // baseUrl'ü JavaScript değişkenine atayın
+            var baseUrl = '@baseUrl';
+
             $('.detail-btn').click(function () {
                 var id = $(this).data('id');
                 var card = $(this).closest('.detail-card');
@@ -128,19 +126,19 @@
 
                 // Araç detayları güncelle
                 var aracDetails = `
-                            <h3>${marka} ${modeli}</h3>
-                            <p><strong>Paket:</strong> ${paket}</p>
-                            <p><strong>Kategori:</strong> ${kategori}</p>
-                            <p><strong>Motor Hacmi:</strong> ${motorHacmi} cc</p>
-                            <p><strong>Vites:</strong> ${vites}</p>
-                            <p><strong>Tork:</strong> ${tork} Nm</p>
-                            <p><strong>Beygir:</strong> ${beygir} hp</p>
-                            <p><strong>Renk:</strong> ${renk}</p>
-                            <p><strong>Km:</strong> ${km} km</p>
-                            <p><strong>Açıklama:</strong> ${description}</p>
-                            <p><strong>Yıl:</strong> ${yil}</p>
-                            <p><strong>Fiyat:</strong> ${fiyat} ₺</p>
-                        `;
+                                <h3>${marka} ${modeli}</h3>
+                                <p><strong>Paket:</strong> ${paket}</p>
+                                <p><strong>Kategori:</strong> ${kategori}</p>
+                                <p><strong>Motor Hacmi:</strong> ${motorHacmi} cc</p>
+                                <p><strong>Vites:</strong> ${vites}</p>
+                                <p><strong>Tork:</strong> ${tork} Nm</p>
+                                <p><strong>Beygir:</strong> ${beygir} hp</p>
+                                <p><strong>Renk:</strong> ${renk}</p>
+                                <p><strong>Km:</strong> ${km} km</p>
+                                <p><strong>Açıklama:</strong> ${description}</p>
+                                <p><strong>Yıl:</strong> ${yil}</p>
+                                <p><strong>Fiyat:</strong> ${fiyat} ₺</p>
+                            `;
 
                 // Modal içeriğini güncelle
                 $('#detailModal .details').html(aracDetails);
@@ -155,23 +153,22 @@
                     imagesForItem.forEach((image, index) => {
                         var isActive = index === 0 ? 'active' : '';
                         var imageHtml = `
-                                    <div class="carousel-item ${isActive}">
-                                                <img style="border:5px solid darkred;border-radius:20px; object-fit:cover; width:600px;height:500px;" src="/images/${image.ImageName}" class="d-block w-100" alt="${image.ImageName}">
-                                    </div>`;
+                                        <div class="carousel-item ${isActive}">
+                                            <img src="${baseUrl}/images/${image.ImageName}" class="d-block w-100" alt="${image.ImageName}">
+                                        </div>`;
                         carouselInner.append(imageHtml);
                     });
                 } else {
                     // Eğer resim yoksa varsayılan bir resim göster
                     carouselInner.append(`
-                                <div class="carousel-item active">
-                                    <img src="/images/car-10.jpg" class="d-block w-100" alt="default image">
-                                </div>
-                            `);
+                                    <div class="carousel-item active">
+                                        <img src="${baseUrl}/images/car-10.jpg" class="d-block w-100" alt="default image">
+                                    </div>
+                                `);
                 }
 
-                // Modal'ı aç
-                var detailModal = new bootstrap.Modal(document.getElementById('detailModal'));
-                detailModal.show();
+                // Modal'ı göster
+                $('#detailModal').modal('show');
             });
         });
     </script>
